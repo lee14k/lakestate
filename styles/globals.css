@@ -19,6 +19,13 @@
   /* Adjust if necessary to fit your design */
 }
 
+.storehome {
+background: rgb(91,113,199);
+background: linear-gradient(180deg, rgba(91,113,199,1) 0%, rgba(255,255,255,1) 86%);
+height:450px;
+
+}
+
 @media (max-width: 900px) {
   .waves {
 top: 560px;
