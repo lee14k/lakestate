@@ -4,16 +4,16 @@ const ImageWithBorder = () => {
   return (
     <div>
     <div className="header" >
-        <div>
-          <Image
-    src='/wave.png'
-      width={7500}
-      height={50}
-    />
+        <div className="waves">
+            <Image
+        src='/wave.png'
+        width={7500}
+        height={100}
+      />
+      </div>
     </div>
     </div>
-  
-    </div>
+    
   );
 };
 
