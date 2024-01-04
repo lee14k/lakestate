@@ -8,22 +8,28 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  position:relative;
+  display:flex;
+  justify-content:end;
+  align-items:end;
 }
 
-.waves{
+.wave{
   position:absolute;
-  top:500px;
-  width: 100%;
-  height:100%;
+  top:320px;
+  width: 2000px;
+  height:1000px;
   /* Adjust if necessary to fit your design */
 }
 
 .storehome {
 background: rgb(91,113,199);
-background: linear-gradient(180deg, rgba(91,113,199,1) 0%, rgba(255,255,255,1) 86%);
+background: linear-gradient(180deg, rgba(29, 91, 121, 1) 0%, rgba(255,255,255,1) 86%);
 height:450px;
 
+}
+
+.handcraftheadline {
+color:#eb8334;
 }
 
 @media (max-width: 900px) {
