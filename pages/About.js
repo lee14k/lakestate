@@ -1,9 +1,9 @@
-
+import AboutFill from "@/components/AboutFill";
 const About = () => {
     return (
         <div>
-            <h1>About Page</h1>
-            <p>Welcome to our About page!</p>
+         
+         <AboutFill />
         </div>
     );
 };
