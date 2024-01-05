@@ -1,12 +1,13 @@
 
-
+import ServiceGrid from "@/components/ServiceGrid";
+import Navbar from "@/components/Navbar";
 const HireUs = () => {
     return (
         <div>
-            <h1>About Page</h1>
-            <p>Welcome to our About page!</p>
+            <Navbar />
+          <ServiceGrid/>
         </div>
     );
 };
 
-export default About;
+export default HireUs;
