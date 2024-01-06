@@ -1,31 +1,14 @@
 import React from 'react';
+import Image from 'next/image';
 
-const ImageWithBorder = ({
-  fill = '#ffffff',
-  fillOpacity = 0.8,
-  headerHeight = '900px',
-  waveStyle = {} // Default to an empty object
-}) => {
-  // Default wave styles
-  const defaultWaveStyles = {
-    position: 'absolute',
-    top: '320px',
-    bottom:'0px',
-    width: '2000px',
-    height: '1000px',
-    
-  };
-
-  // Combine default styles with provided styles
-  const combinedWaveStyles = { ...defaultWaveStyles, ...waveStyle };
-
+const ImageWithBorder = ({ fill = '#ffffff', fillOpacity = 0.8 }) => {
   return (
     <div>
-      <div className="header" style={{ height: headerHeight }}>
-        {/* Header content */}
+      <div className="header">
+        {/* Other content */}
       </div>
     
-      <div className='wave mt-28 pt-24' style={combinedWaveStyles}>
+      <div className='wave '>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path 
             fill={fill} 
