@@ -11,7 +11,7 @@ const leckerli = Leckerli_One({weight: ["400"],
 
 export default function Community({header}) {
     return (
-        <div className="my-24 flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center bg-white">
             <div className="flex flex-col justify-center mx-48 text-center">
             <h1 className="text-4xl">{header}</h1>
             <p>

@@ -2,11 +2,13 @@ import ImageWithBorder from "./ImageBorder";
 export default function ServiceGrid() {
   return (
     <div>
+    <div className="">
       <ImageWithBorder
-        className="pb-16"
+        className=""
         fill="rgba(29, 91, 121, 1)"
         fillOpacity={1}
       />
+      </div>
       <div className="flex flex-col justify-center items-center gridheadline">
         <h1 className="text-6xl text-white gridheadline">
           Quality Services for Hire
@@ -21,14 +23,16 @@ export default function ServiceGrid() {
       </div>
       <div className="grid grid-cols-2 gap-4 mb-16">
         <div className="servicewrapper">
-          <h1></h1>
+          <h1>Confidential Shredding and Document Destruction</h1>
           <p></p>
           <button>Call for more information</button>
         </div>
-        <div className="servicewrapper bluewrapper">Service 1 blue</div>
-        <div className="servicewrapper bluewrapper">Service 1 blue</div>
+        <div className="servicewrapper shredwrapper">Service 1 blue</div>
+        <div className="servicewrapper cleanwrapper">Service 1 blue</div>
 
-        <div className="servicewrapper ">Service 1</div>
+        <div className="servicewrapper "> <h1>Confidential Shredding and Document Destruction</h1>
+          <p></p>
+          <button>Call for more information</button></div>
       </div>
     </div>
   );

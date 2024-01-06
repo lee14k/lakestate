@@ -5,10 +5,9 @@ const ImageWithBorder = ({ fill = '#ffffff', fillOpacity = 0.8 }) => {
   return (
     <div>
       <div className="header">
-        {/* Other content */}
       </div>
     
-      <div className='wave'>
+      <div className='wave mt-28 pt-24'>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path 
             fill={fill} 

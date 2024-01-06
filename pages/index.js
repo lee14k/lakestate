@@ -4,17 +4,23 @@ import ImageBorder from "@/components/ImageBorder";
 import Community from "@/components/Community";
 import StoreCTA from "@/components/StoreCTA";
 import Link from "next/link";
+import Parallax from "@/components/Parallax";
+import Parafill from "@/components/Parafill";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
+    <div className='homewrapper'>
+                    <Parallax imageUrl="/lsstockone.jpg">
+
       <Navbar />
       <div>
+
         <ImageBorder />
       </div>
 
-      <div className="flex flex-col mt-24 items-center justify-center">
+      <div className="flex flex-col items-center justify-center bg-white">
         <h1 className="text-6xl font-bold handcraftheadline">
           Lakesate Industries
         </h1>
@@ -47,6 +53,10 @@ export default function Home() {
 
       <StoreCTA />
       <Community header="Community & Vocation" />
+      <Parafill/>
+            <Footer/>
+
+      </Parallax>
     </div>
   );
 }
