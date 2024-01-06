@@ -1,21 +1,14 @@
 import ImageWithBorder from "./ImageBorder";
+import SecondBorder from "./SecondBorder";
 export default function ServiceGrid() {
   return (
     <div>
     <div className="">
-      <ImageWithBorder
-        headerHeight="500px"
-        className=""
-        fill="rgba(29, 91, 121, 1)"
-        fillOpacity={1}
-  waveStyle={{height: '10px',  top:'0px', width: '2000px',
-}}
-        
-      />
+     <SecondBorder/>
       
       </div>
       <div className="flex flex-col justify-center items-center gridheadline">
-        <h1 className="text-6xl text-white gridheadline mt-2">
+        <h1 className="text-6xl text-white gridheadline">
           Quality Services for Hire
         </h1>
         <p className="mx-48 text-white text-xl my-4">

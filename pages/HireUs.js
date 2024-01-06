@@ -5,7 +5,9 @@ const HireUs = () => {
     return (
         <div>
             <Navbar />
+            <div className='homewrapper'>
           <ServiceGrid/>
+          </div>
         </div>
     );
 };
