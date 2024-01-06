@@ -4,12 +4,16 @@ export default function ServiceGrid() {
     <div>
     <div className="">
       <ImageWithBorder
+        headerHeight="580px"
         className=""
         fill="rgba(29, 91, 121, 1)"
         fillOpacity={1}
+  waveStyle={{height: '200px', bottom: '-100px', top:'20px'}}
+        
       />
+      
       </div>
-      <div className="flex flex-col justify-center items-center gridheadline">
+      <div className="flex flex-col justify-center items-center gridheadline mt-24">
         <h1 className="text-6xl text-white gridheadline">
           Quality Services for Hire
         </h1>
