@@ -1,11 +1,33 @@
 
+import ServiceGrid from "@/components/ServiceGrid";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const VocationalTraining = () => {
-    return (
+        return (
         <div>
-            <h1>About Page</h1>
-            <p>Welcome to our About page!</p>
+            <Navbar />
+            <div className='homewrapper'>
+          <ServiceGrid
+          headerOne="Vocational Training"
+          headerTwo="Confidential Shredding and Document Destruction"
+        headerThree="Confidential Shredding and Document Destruction"
+           paraOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
+          at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
+          accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
+          provident blanditiis."
+          paraTwo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
+          at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
+          accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
+          provident blanditiis."
+          paraThree="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
+          at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
+          accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
+          provident blanditiis."
+          />
+          </div>
+          <Footer/>
         </div>
     );
 };
 
-export default About;
+export default VocationalTraining;

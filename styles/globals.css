@@ -109,12 +109,10 @@ nav{
 }
 
 .shredwrapper {
-  background-image: url('/shredded.png');
   height:500px;
   width:auto;
 }
 .cleanwrapper{
-  background-image: url('/cleaning.png');
   height:500px;
   width:auto;
   background-position:center;
