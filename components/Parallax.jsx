@@ -9,7 +9,7 @@ const Parallax = ({ children, imageUrl }) => {
         {/* Background Image Here */}
       </div>
       <div className="content">
-        {children} {/* Place for other components or content */}
+        {children}
       </div>
     </div>
   );
