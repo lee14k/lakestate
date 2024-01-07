@@ -9,4 +9,4 @@ const Donate = () => {
     );
 };
 
-export default About;
+export default Donate;
