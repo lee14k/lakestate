@@ -9,4 +9,4 @@ const Forms = () => {
     );
 };
 
-export default About;
+export default Forms;
