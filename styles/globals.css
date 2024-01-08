@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .header {
-  background-image: url("/lsstock2.jpg");
+  background-image: url("/lslogo.png");
   height: 900px;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   display: flex;
   justify-content: end;
@@ -125,7 +125,7 @@ nav{
   height: 1000px;
 }
 .headers{
-  background-image: url("/lsstock2.jpg");
+  background-image: url("/lsstockone.jpg");
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -137,7 +137,13 @@ nav{
 .homewrapper {
   width:1500px;
 }
+.lakerhead{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
+  .bluewrapper{
+    background-color:rgba(29, 91, 121, 1);
+  }
 @media (max-width: 900px) {
   .waves {
     top: 560px;

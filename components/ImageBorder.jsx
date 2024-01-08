@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const ImageWithBorder = ({ fill = '#ffffff', fillOpacity = 0.8 }) => {
+const ImageWithBorder = ({ fill = '#ffffff', fillOpacity = 0.5 }) => {
   return (
     <div>
       <div className="header">

@@ -8,7 +8,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-white text-xl">Looking to use our services?</h1>
-            <button className="text-l font-semibold shadow-sm border-solid border-white border-2 text-white">
+            <button className="text-l font-semibold shadow-sm border-solid border-white border-2 text-white py-2 px-2">
               Learn More
             </button>
           </div>
@@ -21,7 +21,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-white text-xl">Looking to use our services?</h1>
-            <button className="text-l font-semibold shadow-sm border-solid border-white border-2 text-white">
+            <button className="text-l font-semibold shadow-sm border-solid border-white border-2 text-white py-2 px-2">
               Learn More
             </button>
           </div>
