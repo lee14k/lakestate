@@ -20,7 +20,7 @@ export default function Home() {
         <ImageBorder />
       </div>
 
-      <div className="flex flex-col items-center justify-center bg-white">
+      <div className="flex flex-col items-center justify-center bg-white py-24">
         <h1 className="text-6xl font-bold handcraftheadline">
           Lakesate Industries
         </h1>

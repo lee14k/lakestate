@@ -18,9 +18,9 @@ export default function ServiceGrid({
           {paraOne}
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4 mb-16">
-        <div className="servicewrapper">
-          <h1>Confidential Shredding and Document Destruction{headerTwo}</h1>
+      <div className="grid grid-cols-2 gap-4 mb-16 ">
+        <div className="servicewrapper flex flex-col justify-center items-center mx-24">
+          <h1 className='text-2xl'>{headerTwo}</h1>
           <p>{paraTwo}</p>
           <button>Call for more information</button>
         </div>
@@ -31,7 +31,7 @@ export default function ServiceGrid({
           Service 1 blue
         </div>
         <div 
-          className="servicewrapper cleanwrapper"
+          className=" cleanwrapper"
           style={{ backgroundImage: `url(${bgImageClean})` }}
         >
           Service 1 blue
