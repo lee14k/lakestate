@@ -4,13 +4,15 @@
 
 .header {
   background-image: url("/lslogo.png");
-  height: 900px;
+  height: 500px;
   width: 100%;
   background-size: contain;
   background-position: center;
   display: flex;
   justify-content: end;
   align-items: end;
+  background-repeat:no-repeat;
+  background-color:white;
 }
 
 .wave {
@@ -117,8 +119,7 @@ nav{
   height:500px;
   width:auto;
   background-position:center;
-    background-size:cover;
-
+  
 }
 
 .waver{
