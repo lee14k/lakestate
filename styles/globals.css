@@ -111,11 +111,14 @@ nav{
 .shredwrapper {
   height:500px;
   width:auto;
+  background-size:cover;
 }
 .cleanwrapper{
   height:500px;
   width:auto;
   background-position:center;
+    background-size:cover;
+
 }
 
 .waver{

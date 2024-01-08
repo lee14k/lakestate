@@ -14,15 +14,24 @@ export default function ServiceGrid({
         <h1 className="text-6xl text-white gridheadline lakerhead">
           {headerOne}
         </h1>
-        <p className="mx-48 text-white text-xl my-4">
+        <p className="mx-96 text-center text-white text-xl my-4">
           {paraOne}
         </p>
+        <div className="mb-16">
+         <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+              <span>Contact Us</span>
+              </span>
+              </div>
       </div>
       <div className="grid grid-cols-2  mb-16 ">
         <div className="servicewrapper  flex flex-col justify-center items-center ">
           <h1 className='mx-48 text-center text-4xl handcraftheadline '>{headerTwo}</h1>
           <p className="mx-48 my-2 text-center ">{paraTwo}</p>
-          <button>Call for more information</button>
+           <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+              <span>Learn More</span>
+              </span>
         </div>
         <div 
           className="servicewrapper shredwrapper"
@@ -38,7 +47,10 @@ export default function ServiceGrid({
         <div className="servicewrapper bluewrapper  flex flex-col justify-center items-center">
           <h1 className='mx-48 text-center text-4xl handcraftheadline '>{headerThree}</h1>
           <p className="mx-48 my-2 text-center text-white ">{paraThree}</p>
-          <button>Call for more information</button>
+              <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+              <span>Learn More</span>
+              </span>
         </div>
       </div>
     </div>

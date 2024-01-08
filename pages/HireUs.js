@@ -11,7 +11,7 @@ const HireUs = () => {
           <ServiceGrid
           headerOne="Quality Services for Hire"
           headerTwo="Confidential Shredding and Document Destruction"
-        headerThree="Confidential Shredding and Document Destruction"
+        headerThree="Janitorial Services"
            paraOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
           at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
           accusamus beatae? Iusto facere consequuntur quas, autem nesciunt

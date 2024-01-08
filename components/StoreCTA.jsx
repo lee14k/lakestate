@@ -31,10 +31,10 @@ export default function StoreCTA() {
       <PictureGrid />
       <Link href="/Donate">
           <div className="mb-48">
-            <span className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+         <span className="rounded-md bg-orange-400 px-10 py-6 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 >
-              <span>Shop Now</span>
-            </span>
+              <span>Shop now</span>
+              </span>
           </div>
         </Link>
     </div>

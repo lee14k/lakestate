@@ -9,8 +9,8 @@ const VocationalTraining = () => {
             <div className='homewrapper'>
           <ServiceGrid
           headerOne="Vocational Training"
-          headerTwo="Confidential Shredding and Document Destruction"
-        headerThree="Confidential Shredding and Document Destruction"
+          headerTwo="Community Employment Program"
+        headerThree="Student Services Program"
            paraOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
           at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
           accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
@@ -23,6 +23,8 @@ const VocationalTraining = () => {
           at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
           accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
           provident blanditiis."
+          bgImageShred="/bigabout.jpg"
+          bgImageClean="/lsstock2.jpg"
           />
           </div>
           <Footer/>
