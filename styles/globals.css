@@ -9,8 +9,7 @@
   background-size: contain;
   background-position: center;
   display: flex;
-  justify-content: end;
-  align-items: end;
+
   background-repeat:no-repeat;
   background-color:white;
 }
@@ -69,8 +68,7 @@ border-radius: 20px;
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: end;
-  align-items: end;
+ 
 }
 
 .gridheadline{
@@ -135,8 +133,7 @@ nav{
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: end;
-  align-items: end;
+
 }
 .homewrapper {
   width:1500px;
