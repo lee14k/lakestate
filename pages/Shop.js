@@ -3,17 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Shop.module.css';
 
+
 export async function getStaticProps() {
   const url = new URL('http://localhost:3000');
   url.pathname = '/api/products';
 
   const res = await fetch(url.toString());
-
   if (!res.ok) {
-    console.error(res);
-    return { props: {} };
+    console.error(res)
+    return {props:{}};
   }
-
   const data = await res.json();
 
   const products = data.products.edges
@@ -36,26 +35,8 @@ export async function getStaticProps() {
 
   return {
     props: { products },
-    // In case you're building this yourself, the first deployment can't call
-    // the API because it hasn't been deployed yet. This dummy product will get
-    // you through that first deploy.
-    // props: {
-    //   products: [
-    //     {
-    //       id: 'a1',
-    //       title: 'Test',
-    //       description: 'Test',
-    //       imageSrc:
-    //         'https://cdn.shopify.com/s/files/1/0589/5798/8049/products/corgi-toy.jpg',
-    //       imageAlt: 'test',
-    //       price: '19.99',
-    //       slug: 'test',
-    //     },
-    //   ],
-    // },
   };
 }
-
 function Product({ product }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -78,7 +59,6 @@ function Product({ product }) {
     </div>
   );
 }
-
 export default function Shop({ products }) {
   return (
     <div className={styles.container}>

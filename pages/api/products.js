@@ -4,7 +4,7 @@ export default async function handler(_req, res) {
   const data = await postToShopify({
     query: `
       query getProductList {
-        products(sortKey: PRICE, first: 500, reverse: true) {
+        products(sortKey: PRICE, first: 200, reverse: true) {
           edges {
             node {
               id
