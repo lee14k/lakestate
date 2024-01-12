@@ -2,7 +2,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Shop.module.css';
-
+import dynamic from 'next/dynamic';
+import { CartProvider } from '../context/CartContext'; // Update the path to CartContext
+import Cart from '../components/Cart'; // Update the path to Cart component
+import BuyButton from '../components/BuyButton'
 
 export async function getStaticProps() {
   const url = new URL('http://localhost:3000');
@@ -59,18 +62,20 @@ function Product({ product }) {
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <p className={styles.price}>{formattedPrice.format(product.price)}</p>
+      <BuyButton product={product} /> {/* Add the BuyButton here */}
+
     </div>
   );
 }
 export default function Shop({ products }) {
   return (
+    <CartProvider>
     <div className={styles.container}>
-     
-     {  console.log(products)}
+    <Cart/>
 
       <main className={styles.main}>
         <h1 className={styles.title}>Store</h1>
-
+        
         <div className={styles.products}>
           {products.map((product) => (
             <Product key={product.id} product={product} />
@@ -78,5 +83,6 @@ export default function Shop({ products }) {
         </div>
       </main>
     </div>
+    </CartProvider>
   );
 }

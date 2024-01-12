@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@shopify/buy-button-js": "^2.4.0",
     "@shopify/shopify-api": "^8.1.1",
     "autoprefixer": "10.4.16",
     "next": "14.0.1",
