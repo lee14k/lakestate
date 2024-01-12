@@ -14,29 +14,31 @@ export async function getStaticProps() {
     return {props:{}};
   }
   const data = await res.json();
+  console.log(data.products.edges)
+  
+  const defaultImageSrc = '/lakestatelogo.png'; // Replace with your default image path
+  const products = data.products.edges.map(({ node }) => {
+    const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
+      ? node.images.edges[0].node.src
+      : defaultImageSrc;
 
-  const products = data.products.edges
-    .map(({ node }) => {
-      if (node.totalInventory <= 0) {
-        return false;
-      }
-
-      return {
-        id: node.id,
-        title: node.title,
-        description: node.description,
-        imageSrc: node.images.edges[0].node.src,
-        imageAlt: node.title,
-        price: node.variants.edges[0].node.priceV2.amount,
-        slug: node.handle,
-      };
-    })
-    .filter(Boolean);
+    return {
+      id: node.id,
+      title: node.title,
+      description: node.description,
+      imageSrc: imageSrc,
+      imageAlt: node.title || 'Product Image',
+      price: node.variants.edges[0]?.node.priceV2.amount,
+      slug: node.handle,
+    };
+  });
 
   return {
     props: { products },
   };
 }
+
+
 function Product({ product }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -45,6 +47,7 @@ function Product({ product }) {
 
   return (
     <div className={styles.product}>
+      
       <Link href={`/product/${product.slug}`}>
         <Image
           src={product.imageSrc}
@@ -62,13 +65,8 @@ function Product({ product }) {
 export default function Shop({ products }) {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Learn With Jason Store (Please buy a duck)</title>
-        <meta
-          name="description"
-          content="Jason has so many ducks. Please help."
-        />
-      </Head>
+     
+     {  console.log(products)}
 
       <main className={styles.main}>
         <h1 className={styles.title}>Store</h1>

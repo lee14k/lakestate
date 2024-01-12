@@ -18,10 +18,7 @@ export async function getStaticPaths() {
 
   return {
     paths: data.products.edges.map(({ node }) => `/product/${node.handle}`),
-    // In case you're building this yourself, the first deployment can't call
-    // the API because it hasn't been deployed yet. This test path will get you
-    // through that first deploy.
-    // paths: ['/product/test'],
+    
     fallback: true,
   };
 }
