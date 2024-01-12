@@ -1,4 +1,4 @@
-const createCheckout = async (cartItems) => {
+export const createCheckout = async (cartItems) => {
     // Format the cart items into line items required by Shopify's API
     const lineItems = cartItems.map(item => ({
       variantId: item.variantId,
