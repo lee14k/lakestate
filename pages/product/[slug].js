@@ -9,20 +9,25 @@ export async function getStaticPaths() {
 
   const res = await fetch(url.toString());
 
+  // Check for a successful response
   if (!res.ok) {
-    console.error(res);
-    return { props: {} };
+    console.error('Failed to fetch products:', res);
+    // Return an empty paths array in case of an error
+    return { paths: [], fallback: false };
   }
 
   const data = await res.json();
 
+  // Map data to paths
+  const paths = data.products.edges.map(({ node }) => ({
+    params: { slug: node.handle },
+  }));
+
   return {
-    paths: data.products.edges.map(({ node }) => `/product/${node.handle}`),
-    
+    paths,
     fallback: true,
   };
 }
-
 export async function getStaticProps({ params }) {
   const url = new URL(process.env.URL || 'http://localhost:3000');
   url.pathname = '/api/products';
@@ -55,22 +60,7 @@ export async function getStaticProps({ params }) {
     .find(({ slug }) => slug === params.slug);
 
   return {
-    props: { product },
-    // In case you're building this yourself, the first deployment can't call
-    // the API because it hasn't been deployed yet. This dummy product will get
-    // you through that first deploy.
-    // props: {
-    //   product: {
-    //     id: 'a1',
-    //     title: 'Test',
-    //     description: 'Test',
-    //     imageSrc:
-    //       'https://cdn.shopify.com/s/files/1/0589/5798/8049/products/corgi-toy.jpg',
-    //     imageAlt: 'test',
-    //     price: '19.99',
-    //     slug: 'test',
-    //   },
-    // },
+    props: { product }, 
   };
 }
 
