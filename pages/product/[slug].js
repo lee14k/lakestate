@@ -58,13 +58,18 @@ export async function getStaticProps({ params }) {
       };
     })
     .find(({ slug }) => slug === params.slug);
-
-  return {
-    props: { product }, 
-  };
+    if (!product) {
+      // Return null or a not found state if no product is found
+      return { props: { product: null }, revalidate: 10 };
+    }
+  
+    return {
+      props: { product },
+      revalidate: 10, // In seconds
+    };
 }
 
-function Product({ slug, imageSrc, imageAlt, title, description, price }) {
+function ProductPage({ slug, imageSrc, imageAlt, title, description, price }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -83,6 +88,10 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 }
 
 export default function ProductPage({ product }) {
+  if (!product) {
+    // Render a not found message or redirect, etc.
+    return <div>Product not found.</div>;
+  }
   return (
     <div className={styles.container}>
       <Head>
