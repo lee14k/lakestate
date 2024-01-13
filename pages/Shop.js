@@ -14,23 +14,23 @@ export async function getStaticProps() {
   const res = await fetch(url.toString());
   if (!res.ok) {
     console.error(res)
-    return {props:{}};
+    return { props: {} };
   }
   const data = await res.json();
   console.log(data.products.edges)
-  
+
   const defaultImageSrc = '/lakestatelogo.png'; // Replace with your default image path
   const products = data.products.edges.map(({ node }) => {
     const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
       ? node.images.edges[0].node.src
       : defaultImageSrc;
-      const variants = node.variants.edges.map(({ node }) => ({
-        id: node.id,
-        title: node.title,
-        price: node.priceV2.amount,
-        quantityAvailable: node.quantityAvailable
-        // Add more variant details here if needed
-      }));
+    const variants = node.variants.edges.map(({ node }) => ({
+      id: node.id,
+      title: node.title,
+      price: node.priceV2.amount,
+      quantityAvailable: node.quantityAvailable
+      // Add more variant details here if needed
+    }));
     return {
       id: node.id,
       title: node.title,
@@ -58,7 +58,7 @@ function Product({ product }) {
 
   return (
     <div className={styles.product}>
-      
+
       <Link href={`/product/${product.slug}`}>
         <Image
           src={product.imageSrc}
@@ -78,19 +78,19 @@ function Product({ product }) {
 export default function Shop({ products }) {
   return (
     <CartProvider>
-    <div className={styles.container}>
-    <Cart/>
+      <div className={styles.container}>
+        <Cart />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Store</h1>
-        
-        <div className={styles.products}>
-          {products.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
-        </div>
-      </main>
-    </div>
+        <main className={styles.main}>
+          <h1 className={styles.title}>Store</h1>
+
+          <div className={styles.products}>
+            {products && products.map((product) => (
+              <Product key={product.id} product={product} />
+            ))}
+          </div>
+        </main>
+      </div>
     </CartProvider>
   );
 }
