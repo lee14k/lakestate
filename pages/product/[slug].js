@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
   }
 
   const data = await res.json();
-
+  console.log("Fetched data:", data)
   const product = data.products.edges
     .map(({ node }) => {
       if (node.totalInventory <= 0) {
@@ -59,16 +59,18 @@ export async function getStaticProps({ params }) {
       };
     })
     .find(({ slug }) => slug === params.slug);
+    console.log("Product for slug", params.slug, ":", product); // Log the found product
+
     if (!product) {
-      // Return null or a not found state if no product is found
+      console.log("No product found for slug:", params.slug);
       return { props: { product: null }, revalidate: 10 };
     }
   
     return {
       props: { product },
-      revalidate: 10, // In seconds
+      revalidate: 10,
     };
-}
+  }
 
 function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
