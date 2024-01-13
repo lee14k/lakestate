@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
   }
 
   const data = await res.json();
-  console.log("Fetched data:", data)
+  console.log("Fetched data:", JSON.stringify(data, null, 2));
   const product = data.products.edges
     .map(({ node }) => {
       if (node.totalInventory <= 0) {
