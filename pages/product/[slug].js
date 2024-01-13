@@ -69,7 +69,7 @@ export async function getStaticProps({ params }) {
     };
 }
 
-function ProductPage({ slug, imageSrc, imageAlt, title, description, price }) {
+function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
