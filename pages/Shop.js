@@ -13,8 +13,8 @@ export async function getStaticProps() {
 
   const res = await fetch(url.toString());
   if (!res.ok) {
-    console.error(res)
-    return { props: {} };
+    console.error('Failed to fetch:', res);
+    return { props: { products: [] } };
   }
   const data = await res.json();
   console.log(data.products.edges)
