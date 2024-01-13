@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../../styles/Shop.module.css';
 
 export async function getStaticPaths() {
-  const url = new URL(process.env.URL || 'http://localhost:3000');
+  const url = new URL(process.env.URL);
   url.pathname = '/api/products';
 
   const res = await fetch(url.toString());
@@ -22,6 +22,7 @@ export async function getStaticPaths() {
   const paths = data.products.edges.map(({ node }) => ({
     params: { slug: node.handle },
   }));
+  
 
   return {
     paths,
