@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../../styles/Shop.module.css';
 
 export async function getStaticPaths() {
-  const url = new URL('https://lakestate.vercel.app/');
+  const url = new URL('https://lakestate.vercel.app');
   url.pathname = '/api/products';
 
   const res = await fetch(url.toString());
