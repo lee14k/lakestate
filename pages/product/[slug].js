@@ -30,7 +30,7 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps({ params }) {
-  const url = new URL(process.env.URL || 'http://localhost:3000');
+  const url = new URL(process.env.URL);
   url.pathname = '/api/products';
 
   const res = await fetch(url.toString());
