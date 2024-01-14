@@ -91,10 +91,7 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 }
 
 export default function ProductPage({ product }) {
-  if (!product) {
-    // Render a not found message or redirect, etc.
-    return <div>Product not found.</div>;
-  }
+
   return (
     <div className={styles.container}>
       <Head>
