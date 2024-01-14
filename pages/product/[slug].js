@@ -43,20 +43,22 @@ export async function getStaticProps({ params }) {
   const data = await res.json();
   console.log("Fetched data:", JSON.stringify(data, null, 2));
   const product = data.products.edges
-    .map(({ node }) => {
-   
+  .filter(({ node }) => node.totalInventory > 0)
+  .map(({ node }) => {
+    const imageSrc = node.images.edges.length > 0 ? node.images.edges[0].node.src : 'defaultImage.jpg';
+    const price = node.variants.edges.length > 0 ? node.variants.edges[0].node.priceV2.amount : '0';
 
-      return {
-        id: node.id,
-        title: node.title,
-        description: node.description,
-        imageSrc: node.images.edges[0].node.src,
-        imageAlt: node.title,
-        price: node.variants.edges[0].node.priceV2.amount,
-        slug: node.handle,
-      };
-    })
-    .find(({ slug }) => slug === params.slug);
+    return {
+      id: node.id,
+      title: node.title,
+      description: node.description,
+      imageSrc: imageSrc,
+      imageAlt: node.title,
+      price: price,
+      slug: node.handle,
+    };
+  })
+  .find(({ slug }) => slug === params.slug);
     console.log("Product for slug", params.slug, ":", product); // Log the found product
 
     if (!product) {
