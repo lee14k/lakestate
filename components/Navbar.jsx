@@ -18,7 +18,6 @@ export default function Navbar() {
       href: "/VocationalTraining",
       current: false,
     },
-    { name: "Shop", href: "/Shop", current: false },
     { name: "Forms", href: "Forms", current: false },
     { name: "Contact", href: "/Contact", current: false },
   ]);
