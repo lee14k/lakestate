@@ -42,6 +42,8 @@ export async function getStaticProps({ params }) {
 
   const data = await res.json();
   console.log("Fetched data:", JSON.stringify(data, null, 2));
+  const defaultImageSrc = '/lakestatelogo.png';
+
   const products = data.products.edges.map(({ node }) => {
     const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
     ? node.images.edges[0].node.src

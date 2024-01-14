@@ -19,7 +19,7 @@ export async function getStaticProps() {
   const data = await res.json();
   console.log(data.products.edges)
 
-  const defaultImageSrc = '/lakestatelogo.png'; // Replace with your default image path
+  const defaultImageSrc = '/lakestatelogo.png';
   const products = data.products.edges.map(({ node }) => {
     const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
       ? node.images.edges[0].node.src
