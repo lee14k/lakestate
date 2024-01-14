@@ -42,20 +42,27 @@ export async function getStaticProps({ params }) {
 
   const data = await res.json();
   console.log("Fetched data:", JSON.stringify(data, null, 2));
-  const product = data.products.edges
-  .filter(({ node }) => node.totalInventory > 0)
-  .map(({ node }) => {
-    const imageSrc = node.images.edges.length > 0 ? node.images.edges[0].node.src : 'defaultImage.jpg';
-    const price = node.variants.edges.length > 0 ? node.variants.edges[0].node.priceV2.amount : '0';
-
+  const products = data.products.edges.map(({ node }) => {
+    const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
+    ? node.images.edges[0].node.src
+    : defaultImageSrc;
+  const variants = node.variants.edges.map(({ node }) => ({
+    id: node.id,
+    title: node.title,
+    price: node.priceV2.amount,
+    quantityAvailable: node.quantityAvailable
+    // Add more variant details here if needed
+  }));
     return {
       id: node.id,
       title: node.title,
       description: node.description,
       imageSrc: imageSrc,
-      imageAlt: node.title,
-      price: price,
+      imageAlt: node.title || 'Product Image',
+      price: node.variants.edges[0]?.node.priceV2.amount,
       slug: node.handle,
+      variants: variants // Include variants array
+
     };
   })
   .find(({ slug }) => slug === params.slug);
