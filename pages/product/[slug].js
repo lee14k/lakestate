@@ -44,42 +44,45 @@ export async function getStaticProps({ params }) {
   console.log("Fetched data:", JSON.stringify(data, null, 2));
   const defaultImageSrc = '/lakestatelogo.png';
 
-  const products = data.products.edges.map(({ node }) => {
-    const imageSrc = node.images.edges.length > 0 && node.images.edges[0].node.src
-    ? node.images.edges[0].node.src
-    : defaultImageSrc;
-  const variants = node.variants.edges.map(({ node }) => ({
-    id: node.id,
-    title: node.title,
-    price: node.priceV2.amount,
-    quantityAvailable: node.quantityAvailable
-    // Add more variant details here if needed
-  }));
-    return {
-      id: node.id,
-      title: node.title,
-      description: node.description,
-      imageSrc: imageSrc,
-      imageAlt: node.title || 'Product Image',
-      price: node.variants.edges[0]?.node.priceV2.amount,
-      slug: node.handle,
-      variants: variants // Include variants array
+ 
+  let product = null; // Define product variable
 
-    };
-  })
-  .find(({ slug }) => slug === params.slug);
-    console.log("Product for slug", params.slug, ":", product); // Log the found product
+  data.products.edges.forEach(({ node }) => {
+    if (node.handle === params.slug) { // Find the product with matching slug
+      const imageSrc = node.images.edges.length > 0 ? node.images.edges[0].node.src : defaultImageSrc;
 
-    if (!product) {
-      console.log("No product found for slug:", params.slug);
-      return { props: { product: null }, revalidate: 10 };
+      const variants = node.variants.edges.map(({ node }) => ({
+        id: node.id,
+        title: node.title,
+        price: node.priceV2.amount,
+        quantityAvailable: node.quantityAvailable,
+      }));
+
+      product = {
+        id: node.id,
+        title: node.title,
+        description: node.description,
+        imageSrc,
+        imageAlt: node.title || 'Product Image',
+        price: node.variants.edges[0]?.node.priceV2.amount,
+        slug: node.handle,
+        variants,
+      };
     }
-  
-    return {
-      props: { product },
-      revalidate: 10,
-    };
+  });
+
+  console.log("Product for slug", params.slug, ":", product);
+
+  if (!product) {
+    console.log("No product found for slug:", params.slug);
+    return { props: { product: null }, revalidate: 10 };
   }
+
+  return {
+    props: { product },
+    revalidate: 10,
+  };
+}
 
 function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
