@@ -107,11 +107,8 @@ export default function ProductPage({ product }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Learn With Jason Store (Please buy a duck)</title>
-        <meta
-          name="description"
-          content="Jason has so many ducks. Please help."
-        />
+        <title>Lakestate Industries</title>
+
       </Head>
 
       <main className={styles.main}>
