@@ -36,12 +36,10 @@ export async function getStaticProps({ params }) {
   const res = await fetch(url.toString());
 
   if (!res.ok) {
-    console.error(res);
     return { props: {} };
   }
 
   const data = await res.json();
-  console.log("Fetched data:", JSON.stringify(data, null, 2));
   const defaultImageSrc = '/lakestatelogo.png';
 
  
@@ -71,7 +69,6 @@ export async function getStaticProps({ params }) {
     }
   });
 
-  console.log("Product for slug", params.slug, ":", product);
 
   if (!product) {
     console.log("No product found for slug:", params.slug);
