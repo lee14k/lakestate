@@ -17,7 +17,6 @@ export async function getStaticProps() {
     return { props: { products: [] } };
   }
   const data = await res.json();
-  console.log(data.products.edges)
 
   const defaultImageSrc = '/lakestatelogo.png';
   const products = data.products.edges.map(({ node }) => {
