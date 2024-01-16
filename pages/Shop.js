@@ -7,6 +7,7 @@ import { CartProvider } from '../context/CartContext'; // Update the path to Car
 import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
 
+
 export async function getStaticProps() {
   const url = new URL(process.env.URL);
   url.pathname = '/api/products';

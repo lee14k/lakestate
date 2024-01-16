@@ -1,5 +1,7 @@
 import { useCart } from '../context/CartContext';
 import { createCheckout } from '../utils/createCheckout';
+import { Popover, Transition } from '@headlessui/react'
+
 export default function NewCart() {
     const { cartItems } = useCart();
 
