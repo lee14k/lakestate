@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from '../styles/Shop.module.css';
 import dynamic from 'next/dynamic';
 import { CartProvider } from '../context/CartContext'; // Update the path to CartContext
-import NewCart from '../components/Cart'; // Update the path to Cart component
 import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
 
