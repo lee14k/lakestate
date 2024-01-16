@@ -8,6 +8,7 @@ import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
 
 
+
 export async function getStaticProps() {
   const url = new URL(process.env.URL);
   url.pathname = '/api/products';

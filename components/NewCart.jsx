@@ -1,7 +1,8 @@
 import { useCart } from '../context/CartContext';
 import { createCheckout } from '../utils/createCheckout';
 import { Popover, Transition } from '@headlessui/react'
-
+import { Fragment } from 'react'
+import { MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 export default function NewCart() {
     const { cartItems } = useCart();
 
