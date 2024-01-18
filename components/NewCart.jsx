@@ -40,7 +40,7 @@ export default function NewCart() {
             <Popover.Panel className="absolute inset-x-0 top-16 mt-px bg-white pb-6 shadow-lg sm:px-2 lg:left-auto lg:right-0 lg:top-full lg:-mr-1.5 lg:mt-3 lg:w-80 lg:rounded-lg lg:ring-1 lg:ring-black lg:ring-opacity-5">
                 <h2 className="sr-only">Shopping Cart</h2>
 
-                <form className="mx-auto max-w-2xl px-4">
+                <div className="mx-auto max-w-2xl px-4">
                 <ul role="list" className="divide-y divide-gray-200">
   {cartItems.map((item, index) => (
     <li key={index}>
@@ -54,7 +54,7 @@ export default function NewCart() {
 
 
               
-                </form>
+                </div>
             </Popover.Panel>
         </Transition>
     </Popover>
