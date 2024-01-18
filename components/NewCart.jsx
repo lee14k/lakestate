@@ -38,9 +38,14 @@ export default function NewCart() {
                 <h2 className="sr-only">Shopping Cart</h2>
 
                 <form className="mx-auto max-w-2xl px-4">
-                    <ul role="list" className="divide-y divide-gray-200">
-               
-                    </ul>
+                <ul role="list" className="divide-y divide-gray-200">
+  {cartItems.map((item, index) => (
+    <li key={index}>
+      {/* Display item details */}
+      {item.title} - {item.price}
+    </li>
+  ))}
+</ul>
 
                     <button
                         onClick={handleCheckout}
