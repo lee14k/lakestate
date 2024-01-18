@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { CartProvider } from '../context/CartContext'; // Update the path to CartContext
 import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
+import Navbar from '@/components/Navbar';
 
 
 
@@ -78,6 +79,8 @@ function Product({ product }) {
 }
 export default function Shop({ products }) {
   return (
+    <div>
+      <Navbar/>
     <CartProvider>
       <div className={styles.container}>
         <NewCart />
@@ -93,5 +96,6 @@ export default function Shop({ products }) {
         </main>
       </div>
     </CartProvider>
+    </div>
   );
 }
