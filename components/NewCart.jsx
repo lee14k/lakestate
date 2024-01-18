@@ -15,6 +15,7 @@ export default function NewCart() {
           // Handle the error appropriately
         }
       };
+      return(
     <Popover className="ml-4 flow-root text-sm lg:relative lg:ml-8">
         <Popover.Button className="group -m-2 flex items-center p-2">
             <ShoppingBagIcon
@@ -57,4 +58,5 @@ export default function NewCart() {
             </Popover.Panel>
         </Transition>
     </Popover>
+      )
 }
