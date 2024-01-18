@@ -8,9 +8,9 @@ export default function NewCart() {
 
     const handleCheckout = async () => {
         try {
-          const checkoutUrl = await createCheckout(cartItems);
-          window.location.href = checkoutUrl;
-          console.log(checkoutUrl)
+            const checkoutUrl = await createCheckout(cartItems);
+            console.log("Checkout URL:", checkoutUrl); // Add this line
+            window.location.href = checkoutUrl;
         } catch (error) {
           console.error('Error during checkout:', error);
           // Handle the error appropriately
