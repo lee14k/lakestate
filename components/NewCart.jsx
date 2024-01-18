@@ -17,7 +17,7 @@ export default function NewCart() {
         }
       };
       return(
-    <Popover className="ml-4 flow-root text-sm lg:relative lg:ml-8">
+    <Popover className="ml-4 flow-root text-sm lg:relative lg:ml-8 mt-24 ">
         <Popover.Button className="group -m-2 flex items-center p-2">
             <ShoppingBagIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
