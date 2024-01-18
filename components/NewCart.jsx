@@ -10,6 +10,7 @@ export default function NewCart() {
         try {
           const checkoutUrl = await createCheckout(cartItems);
           window.location.href = checkoutUrl;
+          console.log(checkoutUrl)
         } catch (error) {
           console.error('Error during checkout:', error);
           // Handle the error appropriately
@@ -52,11 +53,7 @@ export default function NewCart() {
 <button onClick={handleCheckout}>Checkout</button>
 
 
-                    <p className="mt-6 text-center">
-                        <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                            View Shopping Bag
-                        </a>
-                    </p>
+              
                 </form>
             </Popover.Panel>
         </Transition>
