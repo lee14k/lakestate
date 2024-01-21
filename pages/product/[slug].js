@@ -111,7 +111,7 @@ export default function ProductPage({ product }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Store</h1>
 
-        <Link href="/">&larr; back home</Link>
+        <Link href="/Shop">&larr; back to the store</Link>
 
         <div className={styles.products}>
           <Product {...product} />
