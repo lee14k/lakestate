@@ -29,7 +29,6 @@ export default function StoreCTA() {
         </div>
       </div>
       <PictureGrid />
-      <Link href="/Donate">
           <div className="mb-48">
             <Link href="/Shop">
          <span className="rounded-md bg-orange-400 px-10 py-6 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -39,7 +38,6 @@ export default function StoreCTA() {
               </Link>
               
           </div>
-        </Link>
     </div>
   );
 }

@@ -145,9 +145,41 @@ nav{
   .bluewrapper{
     background-color:rgba(29, 91, 121, 1);
   }
-@media (max-width: 900px) {
-  .waves {
-    top: 560px;
-    width: 900px;
+@media screen and (max-width: 1000px) {
+
+  .homewrapper{
+    width:1000px;
+    overflow-x:hidden;
+    z-index:300;
+    height:100vh;
+
   }
+  .content{
+    width:1000px;
+    overflow-x:hidden;
+
+  }
+  .fixed-background{
+    overflow-y:hidden !important;
+    height:800px;
+    
+  
+  }
+  .footer{
+    padding-bottom:100px;
+    width:1000px;
+    overflow-x:hidden;
+    margin-top:700px;
+
+  }
+  .background-cutout{
+  height:1000px; 
+  
+}
+
+.paracontainer{
+  padding-bottom:100px;
+  height: 100vh;
+  overflow: auto;
+}
 }

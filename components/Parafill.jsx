@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function Parafill() {
     return (
         <div className="paracontainer flex flex-col justify-center items-center lakerhead">
