@@ -36,7 +36,6 @@ export async function getStaticProps() {
     return {
       id: node.id,
       title: node.title,
-      description: node.description,
       imageSrc: imageSrc,
       imageAlt: node.title || 'Product Image',
       price: node.variants.edges[0]?.node.priceV2.amount,
