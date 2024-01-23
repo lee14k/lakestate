@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/Shop.module.css';
-
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 export async function getStaticPaths() {
   const url = new URL('https://lakestate.vercel.app');
   url.pathname = '/api/products';
@@ -109,6 +110,7 @@ export default function ProductPage({ product }) {
       </Head>
 
       <main className={styles.main}>
+        <Navbar/>
         <h1 className={styles.title}>Store</h1>
 
         <Link href="/Shop">&larr; back to the store</Link>
@@ -117,6 +119,7 @@ export default function ProductPage({ product }) {
           <Product {...product} />
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }
