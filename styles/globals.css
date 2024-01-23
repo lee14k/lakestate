@@ -158,9 +158,9 @@ nav{
   
   .footer{
     padding-bottom:100px;
-    width:1000px;
+    width:100%;
     overflow-x:hidden;
-    margin-top:700px;
+    margin-top:00px;
 
   }
   .background-cutout{
@@ -172,5 +172,9 @@ nav{
   padding-bottom:100px;
   height: 100vh;
   overflow: auto;
+}
+.aboutcontainer {
+  width:100vw;
+  overflow-x: hidden;
 }
 }

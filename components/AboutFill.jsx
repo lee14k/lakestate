@@ -10,6 +10,7 @@ import {
   SunIcon,
   UserGroupIcon,
 } from '@heroicons/react/20/solid'
+import Footer from './Footer'
 import Navbar from './Navbar'
 const navigation = [
   { name: 'Product', href: '#' },
@@ -153,7 +154,7 @@ export default function AboutFill() {
     <div className>
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="mx-auto flex items-center justify-between p-6 lg:px-8 bg-white w-100" aria-label="Global">
+        <nav className="mx-auto flex items-center justify-between p-6 bg-white w-100" aria-label="Global">
         <Navbar/>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -342,8 +343,7 @@ export default function AboutFill() {
           </div>
         </div>
       </main>
-
-    
+<Footer/>
     </div>
   )
 }
