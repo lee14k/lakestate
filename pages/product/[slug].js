@@ -111,7 +111,6 @@ export default function ProductPage({ product }) {
 
       <main className={styles.main}>
         <Navbar/>
-        <h1 className={styles.title}>Store</h1>
 
         <Link href="/Shop">&larr; back to the store</Link>
 
