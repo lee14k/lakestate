@@ -19,7 +19,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center mt-4">
-            <h1 className="text-white text-xl mb-6">Interested in hiring us?</h1>
+            <h1 className="text-white text-xl mb-6">Looking to hire us?</h1>
             <button className="text-l font-semibold shadow-sm border-solid border-white border-2 text-white py-2 px-2">
               Learn More
             </button>
