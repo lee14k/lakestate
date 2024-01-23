@@ -97,7 +97,7 @@ border-radius: 20px;
 .content {
   position: relative;
   z-index: 2;
-  /* Add padding/margin as needed to ensure content is visible */
+  width:100vw;
 }
 nav{
   background-color:white;
