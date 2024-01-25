@@ -114,7 +114,7 @@ export default function ProductPage({ product }) {
 
         <Link href="/Shop">&larr; back to the store</Link>
 
-        <div className={styles.products}>
+        <div >
           <Product {...product} />
         </div>
       </main>
