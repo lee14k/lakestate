@@ -103,7 +103,7 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 export default function ProductPage({ product }) {
 
   return (
-    <div className={styles.container}>
+    <div className={styles.pagecontainer}>
       <Head>
         <title>Lakestate Industries</title>
 
