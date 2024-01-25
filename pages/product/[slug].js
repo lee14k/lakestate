@@ -91,7 +91,7 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   return (
     <div className={styles.product}>
       <a href={`/product/${slug}`}>
-        <Image src={imageSrc} alt={imageAlt} width={400} height={400} />
+        <Image src={imageSrc} alt={imageAlt} width={600} height={600} />
       </a>
       <h2>{title}</h2>
       <p>{description}</p>
