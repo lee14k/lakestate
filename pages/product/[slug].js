@@ -4,6 +4,9 @@ import Link from 'next/link';
 import styles from '../../styles/Shop.module.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import NewCart from '@/components/NewCart';
+import { CartProvider } from '../../context/CartContext'; // Update the path to CartContext
+import BuyButton from '@/components/BuyButton';
 export async function getStaticPaths() {
   const url = new URL('https://lakestate.vercel.app');
   url.pathname = '/api/products';
@@ -31,7 +34,7 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps({ params }) {
-  const url = new URL(process.env.URL);
+  const url = new URL('https://lakestate.vercel.app');
   url.pathname = '/api/products';
 
   const res = await fetch(url.toString());
@@ -89,13 +92,23 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   });
 
   return (
-    <div className={styles.product}>
+    <div>
+    <div className="flex mx-12 my-24">
       <a href={`/product/${slug}`}>
         <Image src={imageSrc} alt={imageAlt} width={600} height={600} />
       </a>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p className={styles.price}>{formattedPrice.format(price)}</p>
+      <div className="flex flex-col items-center mr-12">
+        <div className="flex flex-col">
+      <h2 className="text-2xl">{title}</h2>
+      <p className>{formattedPrice.format(price)}</p>
+      <p >{description}</p>
+      <BuyButton product={Product} />
+
+      </div>
+
+
+      </div>
+    </div>
     </div>
   );
 }
@@ -103,22 +116,27 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 export default function ProductPage({ product }) {
 
   return (
-    <div className={styles.pagecontainer}>
+    <div className>
+          <CartProvider>
+
       <Head>
         <title>Lakestate Industries</title>
 
       </Head>
 
-      <main className={styles.main}>
+      <main >
         <Navbar/>
 
         <Link href="/Shop">&larr; back to the store</Link>
 
         <div >
+          <NewCart/>
           <Product {...product} />
+          
         </div>
       </main>
       <Footer/>
+      </CartProvider>
     </div>
   );
 }
