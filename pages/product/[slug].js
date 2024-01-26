@@ -135,8 +135,9 @@ export default function ProductPage({ product }) {
           
         </div>
       </main>
-      <Footer/>
       </CartProvider>
+            <Footer/>
+
     </div>
   );
 }
