@@ -7,7 +7,7 @@ import { CartProvider } from '../context/CartContext'; // Update the path to Car
 import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
 import Navbar from '@/components/Navbar';
-
+import Footer from '@/components/Footer';
 
 
 export async function getStaticProps() {
@@ -95,6 +95,7 @@ export default function Shop({ products }) {
         </main>
       </div>
     </CartProvider>
+    <Footer/>
     </div>
   );
 }
