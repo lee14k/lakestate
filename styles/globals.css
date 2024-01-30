@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header {
-  background-image: url("/lslogo.png");
+  background-image: url("/lilogo.png");
   height: 500px;
   width: 100%;
   background-size: contain;

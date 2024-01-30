@@ -31,7 +31,7 @@ export default function Navbar() {
               <div className="flex flex-shrink-0 items-center">
                 <img
                   className="h-16 w-auto"
-                  src="/lakestatelogo.png"
+                  src="/lilogo.png"
                   alt="Your Company"
                 />
               </div>
