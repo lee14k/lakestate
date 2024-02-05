@@ -7,6 +7,9 @@ import Link from "next/link";
 import Parallax from "@/components/Parallax";
 import Parafill from "@/components/Parafill";
 import Footer from "@/components/Footer";
+import SecondBorder from "@/components/SecondBorder";
+import HomeBorder from "@/components/HomeBorder";
+import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -16,8 +19,8 @@ export default function Home() {
 
         <Navbar />
         <div>
-
-          <ImageBorder />
+       
+        <HomeBorder/>
         </div>
 
         <div className="flex flex-col items-center justify-center bg-white py-24">

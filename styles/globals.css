@@ -140,6 +140,13 @@ nav{
   padding-top:200px;
 
 }
+
+.homeheaderscontainer{
+  background-image:url('/stok.jpeg');
+  background-size:cover;
+  height:800px;
+  padding-top:00px;
+}
 .headers{
   background-image:url('/layers.png');
 }
