@@ -72,7 +72,6 @@ border-radius: 20px;
 
 .gridheadline{
   z-index: 10;  
-  background-color:rgba(29, 91, 121, 1);
 }
 
 /* BackgroundCutout.css */
@@ -126,17 +125,15 @@ nav{
   height: 1000px;
 }
 .headers{
-  background-image: url("/lsstockone.jpg");
+  background-image: url("/lsbg.png");
   height: 600px;
   width: 100%;
   background-size: cover;
-  background-position: center;
   display: flex;
+  background-position: bottom;
 
 }
-.homewrapper {
-  width:2500px;
-}
+
 .lakerhead{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
