@@ -11,7 +11,7 @@ export default function ServiceGrid({
         <SecondBorder/>
       </div>
       <div className="flex flex-col justify-center items-center gridheadline">
-        <h1 className="text-6xl text-white gridheadline lakerhead">
+        <h1 className="text-8xl text-white gridheadline lakerhead pt-24">
           {headerOne}
         </h1>
         <p className="mx-96 text-center text-white text-xl my-4">

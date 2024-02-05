@@ -1,6 +1,6 @@
 export default function SecondBorder() {
   return (
-    <div>
+    <div className="headerscontainer">
       <div className="headers"></div>
       
     </div>

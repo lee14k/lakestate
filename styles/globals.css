@@ -125,7 +125,7 @@ nav{
   height: 1000px;
 }
 .headers{
-  background-image: url("/lsbg.png");
+
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -133,7 +133,16 @@ nav{
   background-position: bottom;
 
 }
+.headerscontainer{
+  background-image:url('/stok.jpeg');
+  background-size:cover;
+  height:600px;
+  padding-top:200px;
 
+}
+.headers{
+  background-image:url('/layers.png');
+}
 .lakerhead{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
