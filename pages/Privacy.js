@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer";
-
+import Navbar from "@/components/Navbar";
 export default function Privacy() {
   return (
+    <div>
+      <Navbar/>
     <div className="privacywrap p-10 ">
       <h1 className="text-4xl mb-6 font-semibold">Privacy Policy</h1>
       <p className="text-lg mb-3">Last updated: 01/01/2024</p>
@@ -92,6 +94,7 @@ export default function Privacy() {
         </p>
       </h2>
       <Footer/>
+    </div>
     </div>
   );
 }

@@ -154,7 +154,7 @@ export default function AboutFill() {
     <div className>
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="mx-auto flex items-center justify-between p-6 bg-white w-100" aria-label="Global">
+        <nav >
         <Navbar/>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

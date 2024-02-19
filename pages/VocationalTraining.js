@@ -26,6 +26,10 @@ const VocationalTraining = () => {
           bgImageShred="/bigabout.jpg"
           bgImageClean="/lsstock2.jpg"
           bgImage2="/lsstock2.jpg"
+          services={[
+            { header: "Dynamic Header One", para: "Dynamic paragraph one.", buttonText: "Dynamic Button One", backgroundImage: "/path/to/dynamic-background1.jpg" },
+            // Add more service objects as needed
+          ]}
 
           />
           </div>

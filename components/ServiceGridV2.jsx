@@ -1,7 +1,7 @@
 import SecondBorder from "./SecondBorder";
 
-export default function ServiceGrid({
-  headerOne, paraOne, buttonOne,
+export default function ServiceGridV2({
+  mainHead, paraOne, buttonOne,
   headerTwo, paraTwo, buttonTwo, bgImageShred,
   headerThree, paraThree, buttonThree, bgImageClean,  bgImage1,
   bgImage2 
