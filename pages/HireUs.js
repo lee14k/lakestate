@@ -12,19 +12,24 @@ const HireUs = () => {
           headerOne="Quality Services for Hire"
           headerTwo="Confidential Shredding and Document Destruction"
         headerThree="Janitorial Services"
+        bgImage1='/cleaner.jpg'
           
-          paraTwo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
-          at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
-          accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
-          provident blanditiis."
-          paraThree="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
-          at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
-          accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
-          provident blanditiis."
-          bgImageShred="/shreds.jpg"
-          bgImageClean="/cleaner.jpg"
-          bgImage1="/stok.jpeg"
-          />
+        services={[
+          {
+            header: "Service One",
+            para: "Description for Service One.",
+            buttonText: "Learn More",
+            backgroundImage: "/cleaner.jpg"
+          },
+          {
+            header: "Service Two",
+            para: "Description for Service Two.",
+            buttonText: "Discover",
+            backgroundImage: "/shreds.jpg"
+          },
+          // Add more service objects as needed
+        ]}
+      />
           </div>
           <Footer/>
         </div>

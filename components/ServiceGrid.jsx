@@ -1,59 +1,26 @@
 import SecondBorder from "./SecondBorder";
 
 export default function ServiceGrid({
-  headerOne, paraOne, buttonOne,
-  headerTwo, paraTwo, buttonTwo, bgImageShred,
-  headerThree, paraThree, buttonThree, bgImageClean,  bgImage1,
-  bgImage2 
+  headerOne, paraOne, buttonOne, services = [], bgImage1
 }) {
   return (
     <div>
-      <div className="">
-      {bgImage1 && <SecondBorder backgroundImage={bgImage1} />}
-      {bgImage2 && <SecondBorder backgroundImage={bgImage2} />}     </div>
-      <div className="flex flex-col justify-center items-center gridheadline">
-        <h1 className="text-8xl text-white gridheadline lakerhead pt-24">
-          {headerOne}
-        </h1>
-        <p className="mx-96 text-center text-white text-xl my-4">
-          {paraOne}
-        </p>
-        <div className="mb-16">
-         <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
->
-              <span>Contact Us</span>
-              </span>
-              </div>
-      </div>
-      <div className="grid grid-cols-2  mb-16 ">
-        <div className="servicewrapper  flex flex-col justify-center items-center ">
-          <h1 className='mx-48 text-center text-4xl handcraftheadline '>{headerTwo}</h1>
-          <p className="mx-48 my-2 text-center ">{paraTwo}</p>
-           <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
->
-              <span>Learn More</span>
-              </span>
-        </div>
-        <div 
-          className="servicewrapper shredwrapper"
-          style={{ backgroundImage: `url(${bgImageShred})` }}
-        >
-        </div>
-        <div 
-          className=" cleanwrapper"
-          style={{ backgroundImage: `url(${bgImageClean})` }}
-        >
-        </div>
+      <SecondBorder backgroundImage={bgImage1} />
 
-        <div className="servicewrapper bluewrapper  flex flex-col justify-center items-center">
-          <h1 className='mx-48 text-center text-4xl handcraftheadline '>{headerThree}</h1>
-          <p className="mx-48 my-2 text-center text-white ">{paraThree}</p>
-              <span className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
->
-              <span>Learn More</span>
-              </span>
+      {services.map((service, index) => (
+        <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center mb-8`}>
+          <div className="service-image w-1/2">
+            {service.backgroundImage && <img src= {service.backgroundImage} style={{ width: '100%', height: 'auto' }}/>}
+          </div>
+          <div className="service-content w-1/2 flex flex-col justify-center items-start px-4">
+            {service.header && <h2 className="text-4xl mb-4">{service.header}</h2>}
+            {service.para && <p className="mb-4">{service.para}</p>}
+            {service.buttonText && (
+              <button className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500">{service.buttonText}</button>
+            )}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

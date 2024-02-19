@@ -57,3 +57,17 @@ export default function ServiceGridV2({
     </div>
   );
 }
+
+
+<div>
+
+    {services.map((service, index) => (
+    <div key={index}>
+            <div style={serviceStyle}></div>
+            <div></div>
+
+        </div>    
+    
+    
+    ))}
+</div>
