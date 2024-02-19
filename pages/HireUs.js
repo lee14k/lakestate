@@ -21,8 +21,9 @@ const HireUs = () => {
           at ipsum quam debitis eum cumque! Voluptas explicabo illum cupiditate
           accusamus beatae? Iusto facere consequuntur quas, autem nesciunt
           provident blanditiis."
-          bgImageShred="/shredded.png"
-          bgImageClean="/cleaning.png"
+          bgImageShred="/shreds.jpg"
+          bgImageClean="/cleaner.jpg"
+          bgImage1="/stok.jpeg"
           />
           </div>
           <Footer/>

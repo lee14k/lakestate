@@ -3,13 +3,18 @@ import SecondBorder from "./SecondBorder";
 export default function ServiceGrid({
   headerOne, paraOne, buttonOne,
   headerTwo, paraTwo, buttonTwo, bgImageShred,
-  headerThree, paraThree, buttonThree, bgImageClean
+  headerThree, paraThree, buttonThree, bgImageClean,  bgImage1,
+  bgImage2 
 }) {
   return (
     <div>
       <div className="">
-        <SecondBorder/>
-      </div>
+      {bgImage1 && <SecondBorder backgroundImage={bgImage1} />}
+      
+      {/* Your ServiceGrid content */}
+      
+      {/* Conditionally render the second SecondBorder instance if bgImage2 is provided */}
+      {bgImage2 && <SecondBorder backgroundImage={bgImage2} />}     </div>
       <div className="flex flex-col justify-center items-center gridheadline">
         <h1 className="text-8xl text-white gridheadline lakerhead pt-24">
           {headerOne}

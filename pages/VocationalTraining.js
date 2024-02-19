@@ -25,6 +25,8 @@ const VocationalTraining = () => {
           provident blanditiis."
           bgImageShred="/bigabout.jpg"
           bgImageClean="/lsstock2.jpg"
+          bgImage2="/lsstock2.jpg"
+
           />
           </div>
           <Footer/>
