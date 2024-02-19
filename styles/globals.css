@@ -134,7 +134,7 @@ nav{
 
 }
 .headerscontainer{
-  background-image:url('/stok.jpeg');
+  background-image:url('/headerpic.jpg');
   background-size:cover;
   height:600px;
   padding-top:200px;
@@ -142,7 +142,7 @@ nav{
 }
 
 .homeheaderscontainer{
-  background-image:url('/stok.jpeg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url('/headerpic.jpg');
   background-size:cover;
   height:800px;
   padding-top:00px;

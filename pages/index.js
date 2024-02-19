@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className='homewrapper'>
-      <Parallax imageUrl="/lsstockone.jpg">
+      <Parallax imageUrl="/parallaxpic.jpg">
 
         <Navbar />
         <div>
