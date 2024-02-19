@@ -158,6 +158,15 @@ nav{
   .bluewrapper{
     background-color:rgba(29, 91, 121, 1);
   }
+
+  .headerstwo{
+    background-image:url('/layers.png');
+    height: 720px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    background-position: bottom;
+  }
 @media screen and (max-width: 1000px) {
 
   .homewrapper{
