@@ -8,10 +8,10 @@ export default function ServiceGrid({
       <SecondBorder backgroundImage={bgImage1} 
       header={header}
       />
-
+<div className="serviceswrapper">
       {services.map((service, index) => (
-        <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white'} items-center`}>
-          <div className="service-image w-1/2">
+        <div key={index} className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white'} items-center`}>
+            <div className="service-image">
             {service.backgroundImage && <img src= {service.backgroundImage} style={{ width: '100%', height: 'auto' }}/>}
           </div>
           <div className="service-content w-1/2 flex flex-col justify-center items-start px-4">
@@ -23,6 +23,7 @@ export default function ServiceGrid({
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

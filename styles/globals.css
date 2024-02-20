@@ -183,7 +183,7 @@ nav{
 @media screen and (max-width: 1000px) {
 
   .homewrapper{
-    width:1000px;
+    width:100%;
 
   }
   .content{
@@ -212,5 +212,19 @@ nav{
 .aboutcontainer {
   width:100vw;
   overflow-x: hidden;
+}
+
+.serviceswrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.serve{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  width:100%;
 }
 }

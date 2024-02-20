@@ -21,7 +21,7 @@ const navigation = [
 const stats = [
   { label: 'Business was founded', value: '1969' },
   { label: 'People on the team', value: '50+' },
-  { label: 'Community individuals served', value: '250k' },
+  { label: 'individuals served', value: '250k' },
   { label: 'Wages earned', value: '$70M' },
 ]
 const values = [
