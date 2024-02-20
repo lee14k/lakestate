@@ -15,7 +15,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
       </div>
      <div
         className="topimage"
-        style={{ backgroundImage: `url(${topImage1Src})` }}
+        style={{ backgroundImage: `url(${topImage2Src})` }}
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center mt-4">

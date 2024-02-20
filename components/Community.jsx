@@ -19,8 +19,8 @@ export default function Community({header}) {
             </p>
             </div>
             <ServicesCTA
-             topImage1Src="/lakestateplaceholder.jpg"
-             topImage2Src="/lakestateplaceholder.jpg"
+             topImage1Src="/vcone.jpg"
+             topImage2Src="/vctwo.jpg"
             />
         </div>
     )
