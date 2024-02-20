@@ -137,7 +137,7 @@ nav{
 .headerscontainer{
   background-image:url('/headerpic.jpg');
   background-size:cover;
-  height:600px;
+  height:700px;
   padding-top:200px;
 
 }
@@ -146,9 +146,22 @@ nav{
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url('/headerpic.jpg');
   background-size:cover;
   height:800px;
-  padding-top:00px;
+  padding-top:30px;
+
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: bottom;
 }
 .headers{
+ 
+    width: 100%; /* Adjust based on your needs */
+    margin-top: auto; /* Pushes it to the bottom if needed */
+
   background-image:url('/layers.png');
 }
 .lakerhead{

@@ -16,13 +16,10 @@ export default function Home() {
   return (
     <div className='homewrapper'>
       <Parallax imageUrl="/parallaxpic.jpg">
-
         <Navbar />
         <div>
-       
         <HomeBorder/>
         </div>
-
         <div className="flex flex-col items-center justify-center bg-white py-24">
           <h1 className=" text-8xl font-bold handcraftheadline">
             Lakestate Industries
@@ -37,19 +34,13 @@ export default function Home() {
             impact on our community.
           </p>
           <Link href="/Donate">
-
             <div className="mb-16 my-8">
               <span className="z-500 rounded-md bg-sky-900  px-10 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-48">
-
                 <span>Support our Mission</span>
-
               </span>
-
             </div>
           </Link>
-
         </div>
-
         <StoreCTA />
         <Community header="Community & Vocation" />
         <Parafill />
