@@ -5,7 +5,7 @@ export default function SecondBorder(props) {
   const containerStyle = {
     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(${props.backgroundImage})`,
     backgroundSize: 'cover',
-    height: '800px', // Adjust the height as necessary
+    height: '700px', // Adjust the height as necessary
     padding: '0px',
     position: 'relative', // Ensure we can position children absolutely within
   };
@@ -18,7 +18,7 @@ export default function SecondBorder(props) {
       </div>
       
       {/* Waves Overlay */}
-      <div className="headerstwo" style={{ position: 'absolute', bottom: '-40px', left: '0', right: '0' }}></div>
+      <div className="headerstwo" style={{ position: 'absolute', bottom: '-60px', left: '0', right: '0' }}></div>
     </div>
   );
 }

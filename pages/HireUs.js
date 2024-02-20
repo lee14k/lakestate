@@ -18,25 +18,25 @@ const HireUs = () => {
         services={[
           {
             header: "Janitorial Services",
-            para: "Description for Service One.",
+            para: "Janitorial services are essential for maintaining a clean and healthy environment in commercial buildings, offices, schools, healthcare facilities, and other public spaces. ",
             buttonText: "Learn More",
             backgroundImage: "/cleaner.jpg"
           },
           {
             header: "Document Destruction",
-            para: "Description for Service Two.",
+            para: "We secure and confidentially dispose of sensitive information by shredding your documents with industrial -grade shredding equipment into unreadable fragments. ",
             buttonText: "Discover",
             backgroundImage: "/shreds.jpg"
           },
           {
             header: "Survey Stakes",
-            para: "Description for Service Two.",
+            para: "Survey stakes come in a range of prices depending on the size and quantity. Contact us for current pricing.",
             buttonText: "Discover",
             backgroundImage: "/shreds.jpg"
           },
           {
             header: "Pallets and Pallet Stock  ",
-            para: "Description for Service Two.",
+            para: "We provide premium pallets and pallet stock, where quality meets sustainability. Our pallets and pallet stock are expertly crafted to meet the demands of various industries, offering durability, reliability, and eco-friendliness.",
             buttonText: "Discover",
             backgroundImage: "/shreds.jpg"
           },
