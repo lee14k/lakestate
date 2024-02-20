@@ -3,22 +3,22 @@ import React from 'react';
 export default function SecondBorder(props) {
   // Container style includes the background image
   const containerStyle = {
-    backgroundImage: `url(${props.backgroundImage})`,
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(${props.backgroundImage})`,
     backgroundSize: 'cover',
-    height: '700px', // Adjust the height as necessary
+    height: '800px', // Adjust the height as necessary
     padding: '0px',
     position: 'relative', // Ensure we can position children absolutely within
   };
 
   return (
-    <div className="headerscontainer mb-24" style={containerStyle}>
+    <div className="headerscontainer" style={containerStyle}>
       {/* Positioned Header */}
       <div className="header-content flex justify-center items-center h-full">
-        <h1 className="text-white text-8xl lakerhead">Headers</h1>
+        <h1 className="text-white text-8xl lakerhead ">{props.header}</h1>
       </div>
       
       {/* Waves Overlay */}
-      <div className="headerstwo" style={{ position: 'absolute', bottom: '-20px', left: '0', right: '0' }}></div>
+      <div className="headerstwo" style={{ position: 'absolute', bottom: '-40px', left: '0', right: '0' }}></div>
     </div>
   );
 }

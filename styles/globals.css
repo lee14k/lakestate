@@ -161,7 +161,7 @@ nav{
 
   .headerstwo{
     background-image:url('/layers.png');
-    height: 720px;
+    height: 500px;
     width: 100%;
     background-size: cover;
     display: flex;

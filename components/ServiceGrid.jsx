@@ -1,14 +1,16 @@
 import SecondBorder from "./SecondBorder";
 
 export default function ServiceGrid({
-  headerOne, paraOne, buttonOne, services = [], bgImage1
+  headerOne, paraOne, buttonOne, services = [], bgImage1, header
 }) {
   return (
     <div>
-      <SecondBorder backgroundImage={bgImage1} />
+      <SecondBorder backgroundImage={bgImage1} 
+      header={header}
+      />
 
       {services.map((service, index) => (
-        <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center mb-8`}>
+        <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white'} items-center`}>
           <div className="service-image w-1/2">
             {service.backgroundImage && <img src= {service.backgroundImage} style={{ width: '100%', height: 'auto' }}/>}
           </div>
