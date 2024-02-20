@@ -14,7 +14,7 @@ export default function SecondBorder(props) {
     <div className="headerscontainer" style={containerStyle}>
       {/* Positioned Header */}
       <div className="header-content flex justify-center items-center h-full">
-        <h1 className="text-white text-8xl lakerhead ">{props.header}</h1>
+        <h1 className="text-white text-5xl sm:text-8xl lakerhead ">{props.header}</h1>
       </div>
       
       {/* Waves Overlay */}

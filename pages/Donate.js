@@ -1,12 +1,12 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import DonateFill from "@/components/DonateFill";
 
 const Donate = () => {
     return (
         <div>
             <Navbar/>
-            <h1>About Page</h1>
-            <p>Welcome to our About page!</p>
+           <DonateFill/>
             <Footer/>
         </div>
     );

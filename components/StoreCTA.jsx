@@ -18,7 +18,7 @@ export default function StoreCTA() {
             </h1>
             </div>
             </div>
-            <p className="sm:mx-60 mb-10 text-2xl text-white text-center">
+            <p className="sm:mx-60 mb-10 text-xl sm:text-2xl text-white text-center">
                 Our products are made with love by our students and staff. We
                 offer a wide range of products, from woodwork to sewing, and
                 everything in between. We also offer custom orders. If you have

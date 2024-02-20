@@ -28,14 +28,14 @@ const values = [
   {
     name: 'Provide high quality employees to our business community.',
     description: 'By focusing on the strengths and capabilities of each individual, we aim to bridge the gap between talented disabled individuals and the needs of businesses.',
-    icon: RocketLaunchIcon,
+    icon: SparklesIcon,
   },
 
 
     {
     name: 'Produce quality hand-crafted specialty products.',
     description: 'Each item we produce is a testament to the creativity, precision, and hard work of our talented workforce. ',
-    icon: HandRaisedIcon,
+    icon: SparklesIcon,
   },
 
   {
@@ -46,7 +46,7 @@ const values = [
   {
     name: 'Provide sub-contracting services',
     description: 'Our sub-contracting services offer businesses a reliable and high-quality solution for their needs while providing meaningful work opportunities for our participants.',
-    icon: SunIcon,
+    icon: SparklesIcon,
   },
 ]
 
@@ -182,7 +182,7 @@ export default function AboutFill() {
           <img
             src="/aboutlong.jpg"
             alt=""
-            className="h-3/5 w-3/5"
+            className="sm:h-3/5 sm:w-3/5"
           />
         </div>
 
@@ -190,10 +190,7 @@ export default function AboutFill() {
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our goals</h2>
-            <p className="mt-6 text-lg leading-8 ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-              dolor cupiditate blanditiis.
-            </p>
+           
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7  sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
             {values.map((value) => (
