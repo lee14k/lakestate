@@ -21,10 +21,10 @@ export default function Home() {
         <HomeBorder/>
         </div>
         <div className="flex flex-col items-center justify-center bg-white py-24">
-          <h1 className=" text-8xl font-bold handcraftheadline">
+          <h1 className=" text-4xl sm:text-8xl font-bold handcraftheadline">
             Lakestate Industries
           </h1>
-          <p className="mx-48 my-4 text-xl justify-center items-center text-center">
+          <p className=" sm:mx-48 my-4 text-xl justify-center items-center text-center ">
             Lakestate Industries is a private, non-profit agency that serves
             people in our community with intellectual disabilities to enhance
             their lives and the lives of the families who love them. Lakestate
