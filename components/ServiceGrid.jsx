@@ -14,7 +14,7 @@ export default function ServiceGrid({
             <div className="service-image w-1/2">
             {service.backgroundImage && <img src= {service.backgroundImage} style={{ width: '100%', height: 'auto' }}/>}
           </div>
-          <div className="service-content sm:w-48 w-1/2  flex flex-col justify-center items-start px-4">
+          <div className="service-content w-1/2 flex flex-col justify-center items-start px-4">
             {service.header && <h2 className="text-4xl mb-4">{service.header}</h2>}
             {service.para && <p className="mb-4">{service.para}</p>}
             {service.buttonText && (
