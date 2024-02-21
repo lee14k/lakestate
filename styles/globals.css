@@ -3,31 +3,20 @@
 @tailwind utilities;
 
 .header {
-  background-image: url("/lilogo.png");
   height: 500px;
   width: 100%;
   background-size: contain;
   background-position: center;
   display: flex;
-  background-repeat:no-repeat;
-  background-color:white;
-}
-
-.wave {
-  position: absolute;
-  top: 520px;
-  width: 2000px;
-  height: 1000px;
-  /* Adjust if necessary to fit your design */
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .storehome {
   background: rgb(91, 113, 199);
-  background: linear-gradient(
-    180deg,
-    rgba(29, 91, 121, 1) 0%,
-    rgba(255, 255, 255, 1) 86%
-  );
+  background: linear-gradient(180deg,
+      rgba(29, 91, 121, 1) 0%,
+      rgba(255, 255, 255, 1) 86%);
 }
 
 .handcraftheadline {
@@ -51,34 +40,34 @@
 }
 
 .gradient-overlay {
-width:100%;
-height:100%;
-border-radius: 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%);
 }
-.gridbackground{
-    background-image: url("/lsstock2.jpg");
+
+.gridbackground {
+  background-image: url("/lsstock2.jpg");
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   display: flex;
- 
+
 }
 
-.gridheadline{
-  z-index: 10;  
+.gridheadline {
+  z-index: 10;
 }
 
 /* BackgroundCutout.css */
 .background-cutout {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh;
+  /* Adjust as needed */
 }
 
 .fixed-background {
@@ -96,37 +85,32 @@ border-radius: 20px;
 .content {
   position: relative;
   z-index: 2;
-  width:100vw;
+  width: 100vw;
 }
-nav{
-  background-color:white;
-  z-index:100;
+
+nav {
+  background-color: white;
+  z-index: 100;
 }
-.paracontainer{
-  height:700px;
+
+.paracontainer {
+  height: 700px;
 }
 
 .shredwrapper {
-  height:500px;
-  width:auto;
-  background-size:cover;
-}
-.cleanwrapper{
-  height:500px;
-  width:auto;
-  background-position:center;
-  background-size:cover;
-  
+  height: 500px;
+  width: auto;
+  background-size: cover;
 }
 
-.waver{
-   position: absolute;
-  top: 300px;
-  width: 2000px;
-  height: 1000px;
+.cleanwrapper {
+  height: 500px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
 }
-.headers{
 
+.headers {
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -134,102 +118,120 @@ nav{
   background-position: bottom;
 
 }
-.headerscontainer{
-  background-image:url('/headerpic.jpg');
-  background-size:cover;
-  height:700px;
-  padding-top:200px;
+
+.headerscontainer {
+  background-image: url('/headerpic.jpg');
+  background-size: cover;
+  height: 700px;
+  padding-top: 200px;
 
 }
 
-.homeheaderscontainer{
+.homeheaderscontainer {
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url('/headerpic.jpg');
+  padding-top:180px;
+  height:1200px;
   background-size:cover;
-  height:800px;
-  padding-top:30px;
+  background-repeat:no-repeat;
+
+}
+
+.headers {
+  height:350px;
+  width: 100%;
+  margin-top: auto;
+  background-image: url('/layers.png');
+}
+
+.lakerhead {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bluewrapper {
+  background-color: rgba(29, 91, 121, 1);
+}
+
+.headerstwo {
+  background-image: url('/layers.png');
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  background-position: bottom;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .homewrapper,
+  .content {
+    width: 100vw;
+
+  }
+
+  .content {
+    overflow-x: hidden;
+
+  }
+
+  .footer {
+    padding-bottom: 100px;
     width: 100%;
-    background-size: cover;
+    overflow-x: hidden;
+    margin-top: 00px;
+
+  }
+
+  .background-cutout {
+    height: 1000px;
+
+  }
+
+  .paracontainer {
+    margin-top: 100px;
+    padding-bottom: 100px;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  .aboutcontainer {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .serviceswrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-position: bottom;
-}
-.headers{
- 
-    width: 100%; /* Adjust based on your needs */
-    margin-top: auto; /* Pushes it to the bottom if needed */
-
-  background-image:url('/layers.png');
-}
-.lakerhead{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
-  .bluewrapper{
-    background-color:rgba(29, 91, 121, 1);
-  }
-
-  .headerstwo{
-    background-image:url('/layers.png');
-    height: 400px;
+  .serve {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    background-size: cover;
-    display: flex;
-    background-position: bottom;
   }
-@media screen and (max-width: 1000px) {
 
-  .homewrapper, .content{
-    width:100vw;
-
+  .service-content,
+  .service-image {
+    width: 100%;
   }
-  .content{
-    overflow-x:hidden;
 
+  .headerscontainer {
+    height: 500px !important;
+    background-position: 600px !important;
   }
-  
-  .footer{
-    padding-bottom:100px;
-    width:100%;
-    overflow-x:hidden;
-    margin-top:00px;
-
+  .homeheaderscontainer {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url('/headerpic.jpg');
+    padding-top:180px;
+    height:1200px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
   }
-  .background-cutout{
-  height:1000px; 
-  
-}
-
-.paracontainer{
-  margin-top:100px;
-  padding-bottom:100px;
-  height: 100vh;
-  overflow: auto;
-}
-.aboutcontainer {
-  width:100vw;
-  overflow-x: hidden;
-}
-
-.serviceswrapper {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.serve{
-  display:grid;
-  grid-template-columns:repeat(1,1fr);
-  width:100%;
-}
-.service-content, .service-image {
-  width:100%;
-}
-
-.headerscontainer {
-  height:500px !important;
-  background-position:600px!important;
-}
+  .headers {
+    height:450px;
+    width: 100%;
+    margin-top: auto;
+    background-image: url('/layers.png');
+  }
 }

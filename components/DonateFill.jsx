@@ -1,11 +1,11 @@
 import Link from "next/link";
 export default function DonateFill () {
     return (
-              <div className="relative bg-gray-900">
-                <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+              <div className="relative">
+                <div className="relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
                   <img
                     className="h-full w-full object-cover"
-                    src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
+                    src="/donate.jpg"
                     alt=""
                   />
                   <svg
@@ -36,14 +36,14 @@ export default function DonateFill () {
                 <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
                   <div className="pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
                     <h2 className="text-base font-semibold leading-7 text-indigo-400">Support your local community</h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Donate to Our Cause</p>
-                    <p className="mt-6 text-base leading-7 text-gray-300">
+                    <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Donate to Lakestate Industries </p>
+                    <p className="mt-6 text-base leading-7 ">
                     100% of your generous donation goes directly to help people with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for persons with barriers to employment (people with cognitive, emotional, and/or physical disabilities) long into the future.
                     </p>
                     <div className="mt-8">
                       <Link
                         href="https://www.paypal.com/donate?token=s9hyq8_M0HcglhdjIujOn0L70gpC_pP-sgIWfdb_QoXQmE_FQDKvDLwtkC5lqGVpuG4q0UiScd32e9lM"
-                        className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="inline-flex rounded-md px-3.5 bg-orange-400 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                       >
 Donate                      </Link>
                     </div>
