@@ -44,7 +44,7 @@ const VocationalTraining = () => {
           {
             header: "Assistive Technology and Accommodations",
             para: "We provide access to assistive devices, adaptive technologies, and reasonable accommodations in the workplace to ensure individuals can perform their job duties effectively and comfortably.",
-            backgroundImage: "/shreds.jpg"
+            backgroundImage: "/donate.jpg"
           },
         ]}
       />
