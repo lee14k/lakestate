@@ -28,7 +28,7 @@ export default function Home() {
             Lakestate Industries is a private, non-profit agency that serves
             people in our community with intellectual, mental, and/or disabilities to enhance
             their lives. Lakestate Industries provides vocational career exploration, job development,
-            work training and job services to adult and student populations. We
+            work training, job services, and residential services to adult and student populations. We
             provide contracted services to businesses that make a significant
             impact on our community.
           </p>
