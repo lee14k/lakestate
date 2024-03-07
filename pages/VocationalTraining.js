@@ -12,7 +12,7 @@ const VocationalTraining = () => {
           headerOne="Quality Services for Hire"
           headerTwo="Confidential Shredding and Document Destruction"
         headerThree="Janitorial Services"
-        bgImage1='/vchead.jpg'
+        bgImage1='/donate.jpg'
         header="Vocational Training"
           
         services={[

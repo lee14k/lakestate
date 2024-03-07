@@ -42,7 +42,7 @@ export default function Home() {
           </Link>
         </div>
         <StoreCTA />
-        <Community header="Community & Vocational Services" />
+        <Community header="Community & Vocation" />
         <Parafill />
         <Footer />
       </Parallax>
