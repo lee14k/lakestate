@@ -28,7 +28,7 @@ const VocationalTraining = () => {
           },
           {
             header: "Job Placement Services",
-            para: "We provide assistance with job searches, resume building, interview preparation, and connecting individuals with inclusive employers who value inclusion and diversity..",
+            para: "We provide assistance with job searches, resume building, interview preparation, and connecting individuals with inclusive employers who value inclusion and diversity.",
             backgroundImage: "/vcthree.jpg"
           },
           {
@@ -38,7 +38,7 @@ const VocationalTraining = () => {
           },
           {
             header: "Social and Life Skills Training",
-            para: "We provide opportunities for individuals to develop essential life skills, such as time management, personal hygiene, interpersonal communication, and self-advocacy, to enhance their overall independence and well-being.",
+            para: "We provide opportunities for individuals to develop essential life skills, such as time management, interpersonal communication, and self-advocacy, to enhance their overall independence and well-being.",
             backgroundImage: "/shreds.jpg"
           },
           {
