@@ -5,8 +5,8 @@ export default function HomeBorder() {
             <div className="logo-container mt-72">
                 <Image
                     src='/lilogo.png'
-                    width={500}
-                    height={500}
+                    width={700}
+                    height={700}
                 />
             </div>
             <div className="headers pb-12"></div>
