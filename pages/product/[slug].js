@@ -100,8 +100,8 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
         </a>
         <div className="flex flex-col items-center mr-12">
           <div className="flex flex-col">
-            <h2 className="text-2xl">{title}</h2>
-            <p className>{formattedPrice.format(price)}</p>
+            <h2 className="text-4xl">{title}</h2>
+            <p className="text-2xl">{formattedPrice.format(price)}</p>
             <p className="sm:mx-24">{description}</p>
             <BuyButton product={Product} />
           </div>
