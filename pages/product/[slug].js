@@ -93,7 +93,7 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 
   return (
     <div>
-    <div className="flex mx-12 my-24">
+    <div className="sm:flex mx-12 my-24">
       <a href={`/product/${slug}`}>
         <Image src={imageSrc} alt={imageAlt} width={600} height={600} />
       </a>
