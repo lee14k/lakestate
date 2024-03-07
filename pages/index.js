@@ -1,24 +1,24 @@
-import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import ImageBorder from "@/components/ImageBorder";
-import Community from "@/components/Community";
-import StoreCTA from "@/components/StoreCTA";
-import Link from "next/link";
-import Parallax from "@/components/Parallax";
-import Parafill from "@/components/Parafill";
-import Footer from "@/components/Footer";
-import SecondBorder from "@/components/SecondBorder";
-import HomeBorder from "@/components/HomeBorder";
-import Image from "next/image";
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar'
+import ImageBorder from '@/components/ImageBorder'
+import Community from '@/components/Community'
+import StoreCTA from '@/components/StoreCTA'
+import Link from 'next/link'
+import Parallax from '@/components/Parallax'
+import Parafill from '@/components/Parafill'
+import Footer from '@/components/Footer'
+import SecondBorder from '@/components/SecondBorder'
+import HomeBorder from '@/components/HomeBorder'
+import Image from 'next/image'
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='homewrapper'>
+    <div className="homewrapper">
       <Parallax imageUrl="/parallaxpic.jpg">
         <Navbar />
         <div>
-        <HomeBorder/>
+          <HomeBorder />
         </div>
         <div className="flex flex-col items-center justify-center bg-white py-24 ">
           <h1 className=" text-4xl sm:text-8xl font-bold handcraftheadline">
@@ -26,10 +26,11 @@ export default function Home() {
           </h1>
           <p className="sm:mx-48 my-4 text-xl justify-center items-center text-center ">
             Lakestate Industries is a private, non-profit agency that serves
-            people in our community with intellectual, mental, and/or disabilities to enhance
-            their lives. Lakestate Industries provides vocational career exploration, job development,
-            work training, job services, and residential services to adult and student populations. We
-            provide contracted services to businesses that make a significant
+            people in our community with intellectual, mental, and/or
+            disabilities to enhance their lives. Lakestate Industries provides
+            vocational career exploration, job development, work training, job
+            services, and residential services to adult and student populations.
+            We provide contracted services to businesses that make a significant
             impact on our community.
           </p>
           <Link href="/Donate">
@@ -41,11 +42,10 @@ export default function Home() {
           </Link>
         </div>
         <StoreCTA />
-        <Community header="Community & Vocation" />
+        <Community header="Community & Vocational Services" />
         <Parafill />
         <Footer />
-
       </Parallax>
     </div>
-  );
+  )
 }

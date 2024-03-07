@@ -19,7 +19,7 @@ export default function StoreCTA() {
             </div>
           </div>
           <p className="sm:mx-60 mb-10 text-xl sm:text-2xl text-white text-center">
-          Our products are meticulously crafted with care and dedication, thanks to the collaboration between our valued clients and our dedicated staff. This partnership ensures that each item is made with the utmost attentions to detail and quality. If you have a project, idea or need help with a product for an event, please contact us for more details.
+          Our products are meticulously crafted with care and dedication, thanks to the collaboration between our valued clients and our dedicated staff. This partnership ensures that each item is made with the utmost attention to detail and quality. If you have a project, idea or need help with a product for an event, please contact us for more details.
 
           </p>
         </div>
