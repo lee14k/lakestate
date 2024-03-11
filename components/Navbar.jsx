@@ -1,26 +1,32 @@
-import { useEffect, useState } from "react";
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import { useEffect, useState } from 'react'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
   const [navigation, setNavigation] = useState([
-    { name: "Home", href: "/", current: false },
-    { name: "About", href: "/About", current: false },
-    { name: "Store", href: "/Shop", current: false },
-    { name: "Hire Us", href: "/HireUs", current: false },
+    { name: 'Home', href: '/', current: false },
+    { name: 'About', href: '/About', current: false },
+    { name: 'Store', href: '/Shop', current: false },
+    { name: 'Hire Us', href: '/HireUs', current: false },
     {
-      name: "Vocational Training",
-      href: "/VocationalTraining",
+      name: 'Vocational Training',
+      href: '/VocationalTraining',
       current: false,
     },
-    { name: "Forms", href: "Forms", current: false },
-    { name: "Contact", href: "/Contact", current: false },
-  ]);
+    {
+      name: 'Residential Services',
+      href: '/ResidentialServices',
+      current: false,
+    },
+
+    { name: 'Partners', href: '/Partners', current: false },
+    { name: 'Contact', href: '/Contact', current: false },
+  ])
 
   return (
     <Disclosure as="nav">
@@ -56,11 +62,11 @@ export default function Navbar() {
                         passHref
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                            ? 'bg-gray-900 text-white'
+                            : 'hover:bg-gray-700 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
                       </Link>
@@ -81,11 +87,11 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : " hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
+                      ? 'bg-gray-900 text-white'
+                      : ' hover:bg-gray-700 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-medium'
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -95,5 +101,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  );
+  )
 }
