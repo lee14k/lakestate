@@ -31,7 +31,9 @@ export default function ServiceGrid({
                   {service.header}
                 </h2>
               )}
-              {service.para && <p className="mb-4 mx-24">{service.para}</p>}
+              {service.para && (
+                <p className="mb-4 mx-24 text-2xl">{service.para}</p>
+              )}
               {service.buttonText && (
                 <button className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500">
                   {service.buttonText}
