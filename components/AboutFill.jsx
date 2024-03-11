@@ -40,7 +40,7 @@ const values = [
 
   {
     name: 'Provide vocational rehabilitation services.',
-    description: 'hrough personalized assessment, training, and support, we help our participants overcome barriers to employment. ',
+    description: 'Through personalized assessment, training, and support, we help our participants overcome barriers to employment. ',
     icon: SparklesIcon,
   },
   {

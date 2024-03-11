@@ -38,7 +38,7 @@ export default function DonateFill () {
                     <h2 className="text-base font-semibold leading-7 text-indigo-400">Support your local community</h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Donate to Lakestate Industries </p>
                     <p className="mt-6 text-base leading-7 ">
-                    100% of your generous donation goes directly to help people with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for persons with barriers to employment (people with cognitive, emotional, and/or physical disabilities) long into the future.
+                    100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future.
                     </p>
                     <div className="mt-8">
                       <Link
