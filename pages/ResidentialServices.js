@@ -20,14 +20,12 @@ const ResidentialServices = () => {
               backgroundImage: '/coaching.jpg',
             },
             {
-              header: 'Personalized Assistance',
-              para: "Whether it's help with daily tasks, medication management, or simply having someone to support the tasks of daily living, our staff is here to ensure that residents can live comfortably and confidently in their own homes.",
+              para: "Whether it's help with daily tasks, administration of medication, or simply having someone to support the tasks of daily living, our staff is here to ensure that residents can live comfortably and confidently in their own homes.",
               backgroundImage: '/vcthree.jpg',
             },
             {
-              header: 'Commmunity Engagement',
               para: "At Lakestate Industries, we understand the importance of community engagement. That's why we actively take our residents out and encourage their involvement in community activities and events. Whether it's attending local gatherings, participating in group outings, or volunteering for worthy causes, we strive to keep our residents connected and engaged with the community around them.",
-              backgroundImage: '/vcfour.jpg',
+              backgroundImage: '/donate.jpg',
             },
           ]}
         />
