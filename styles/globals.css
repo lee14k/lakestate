@@ -124,7 +124,7 @@ nav {
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.2)
     ),
-    url('/headerpic.jpg');
+    url('/headerpiccomp.jpg');
   padding-top: 180px;
   height: 1200px;
   background-size: cover;
@@ -134,7 +134,7 @@ nav {
 .headers {
   height: 55%;
   width: 100%;
-  margin-top: -70px;
+  margin-top: -50px;
   background-image: url('/layers.png');
 }
 
@@ -155,19 +155,8 @@ nav {
   background-position: bottom;
 }
 
-.blueguy {
-  background-image: url('/lsborder.png');
-  background-blend-mode: lighten;
-}
 .serviceheadline {
   text-shadow: 2px 2px 4px #757272;
-}
-
-.instacontainer {
-  position: relative;
-  border: 20px solid transparent;
-  border-image: url('/lsborder.png') 25 round;
-  box-shadow: inset 10p 0px 10px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 1000px) {
   .homewrapper,

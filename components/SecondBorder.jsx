@@ -5,7 +5,7 @@ export default function SecondBorder(props) {
   const containerStyle = {
     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(${props.backgroundImage})`,
     backgroundSize: 'cover',
-    height: '1000px', // Adjust the height as necessary
+    height: '100rem', // Adjust the height as necessary
     padding: '0px',
     position: 'relative', // Ensure we can position children absolutely within
   }
@@ -24,7 +24,7 @@ export default function SecondBorder(props) {
         className="headerstwo mb-24"
         style={{
           position: 'absolute',
-          bottom: '-120px',
+          bottom: '-100px',
           left: '0',
           right: '0',
         }}

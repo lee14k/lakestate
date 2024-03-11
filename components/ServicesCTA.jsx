@@ -3,7 +3,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
   return (
     <div className="grid  sm:grid-cols-2 gap-24 mb-36 servicectacontainer bg-white">
       <div
-        className="topimage h-72 "
+        className="topimage h-72  w-auto"
         style={{ backgroundImage: `url(${topImage1Src})` }}
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
