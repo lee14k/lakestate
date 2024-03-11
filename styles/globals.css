@@ -158,9 +158,10 @@ nav {
 .blueguy {
   background-image: url('/rw.png');
   background-blend-mode: lighten;
-
 }
-
+.serviceheadline {
+  text-shadow: 2px 2px 4px #757272;
+}
 @media screen and (max-width: 1000px) {
   .homewrapper,
   .content {

@@ -17,7 +17,7 @@ const ResidentialServices = () => {
             {
               header: 'Semi-Independent Living',
               para: "Residents can enjoy the independence of living in their own homes/apartments while benefiting from the peace of mind that comes with having support available whenever it's needed. Our professional staff members are committed to providing personalized assistance to ensure that each resident's unique needs are met while promoting independence and autonomy. ",
-              backgroundImage: '/vctwo.jpg',
+              backgroundImage: '/coaching.jpg',
             },
             {
               header: 'Personalized Assistance',
