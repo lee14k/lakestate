@@ -9,7 +9,7 @@ export default function HomeBorder() {
                     height={700}
                 />
             </div>
-            <div className="headers pb-12"></div>
+            <div className="headers"></div>
         </div>
     );
 }
