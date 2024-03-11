@@ -148,7 +148,7 @@ nav {
 
 .headerstwo {
   background-image: url('/layers.png');
-  height: 600px;
+  height: 55%;
   width: 100%;
   background-size: cover;
   display: flex;
@@ -228,4 +228,14 @@ nav {
     margin-top: auto;
     background-image: url('/layers.png');
   }
+  .headerstwo {
+    background-image: url('/layers.png');
+    height: 65%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    background-position: bottom;
+    margin-bottom:25%;
+  }
+  
 }
