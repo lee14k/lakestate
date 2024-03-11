@@ -13,7 +13,7 @@ export default function StoreCTA() {
         <div className>
           <div className={handlee.className}>
             <div className="flex flex-col justify-center items-center">
-              <h1 className="handcraftheadline text-4xl sm:text-6xl my-12 lakerhead">
+              <h1 className="handcraftheadline text-4xl sm:text-8xl my-12 lakerhead">
                 Michigan Made Products{' '}
               </h1>
             </div>
