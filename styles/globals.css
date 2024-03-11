@@ -156,11 +156,18 @@ nav {
 }
 
 .blueguy {
-  background-image: url('/rw.png');
+  background-image: url('/lsborder.png');
   background-blend-mode: lighten;
 }
 .serviceheadline {
   text-shadow: 2px 2px 4px #757272;
+}
+
+.instacontainer {
+  position: relative;
+  border: 20px solid transparent;
+  border-image: url('/lsborder.png') 25 round;
+  box-shadow: inset 10p 0px 10px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 1000px) {
   .homewrapper,

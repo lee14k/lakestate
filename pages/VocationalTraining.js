@@ -22,7 +22,7 @@ const VocationalTraining = () => {
             {
               header: 'Skill Development',
               para: "We offer specialized training in a wide range of vocational skills tailored to the individual's interests and capabilities, such as, job-specific tasks, communication skills, and workplace etiquette.",
-              backgroundImage: '/vctwo.jpg',
+              backgroundImage: '/coaching.jpg',
             },
             {
               header: 'Job Placement Services',
