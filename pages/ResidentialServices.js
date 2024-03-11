@@ -21,7 +21,7 @@ const ResidentialServices = () => {
             },
             {
               header: 'Personalized Assistance',
-              para: "Whether it's help with daily tasks, medication management, or simply having someone available for companionship and support, our staff is here to ensure that residents can live comfortably and confidently in their own homes.",
+              para: "Whether it's help with daily tasks, medication management, or simply having someone to support the tasks of daily living, our staff is here to ensure that residents can live comfortably and confidently in their own homes.",
               backgroundImage: '/vcthree.jpg',
             },
             {
