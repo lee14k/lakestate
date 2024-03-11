@@ -15,7 +15,7 @@ export default function ServiceGrid({
         {services.map((service, index) => (
           <div
             key={index}
-            className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white blueguy'} items-center`}
+            className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white '} items-center`}
           >
             <div className="service-image w-1/2">
               {service.backgroundImage && (
