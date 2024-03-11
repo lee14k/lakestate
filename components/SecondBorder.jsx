@@ -21,7 +21,7 @@ export default function SecondBorder(props) {
 
       {/* Waves Overlay */}
       <div
-        className="headerstwo"
+        className="headerstwo mb-24"
         style={{
           position: 'absolute',
           bottom: '-120px',

@@ -10,7 +10,7 @@ export default function ServiceGrid({
       />
 <div className="serviceswrapper">
       {services.map((service, index) => (
-        <div key={index} className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white'} items-center`}>
+        <div key={index} className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white blueguy'} items-center`}>
             <div className="service-image w-1/2">
             {service.backgroundImage && <img src= {service.backgroundImage} style={{ width: '100%', height: 'auto' }}/>}
           </div>
