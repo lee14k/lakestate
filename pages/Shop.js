@@ -8,6 +8,7 @@ import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WaveOther from '@/components/WaveOther';
 
 
 export async function getStaticProps() {
@@ -80,6 +81,7 @@ export default function Shop({ products }) {
   return (
     <div>
       <Navbar/>
+      <WaveOther imageUrl="/Plant-Markers-0423.jpg" header="Shop"/>
     <CartProvider>
       <div className={styles.container}>
         <NewCart />
