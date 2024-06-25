@@ -45,7 +45,7 @@ const WaveOther = ({ imageUrl, header}) => {
         ></path>
       </svg>
       <div className="absolute top-24 lg:top-64 left-1/2 transform -translate-x-1/2 z-10 bg-white bg-opacity-50 rounded-2xl text-center ">
-  <h1 className="mb-4 text-6xl lg:serviceheadline ">{header}</h1> 
+  <h1 className="mb-4 text-6xl serviceheadline ">{header}</h1> 
       </div>
     </div>
   );

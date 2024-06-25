@@ -165,7 +165,9 @@ nav {
 
 }
 @media screen and (max-width: 1000px) {
-
+  .serviceheadline {
+    font-size:4rem;
+  }
   .footer {
     padding-bottom: 100px;
     width: 100%;
