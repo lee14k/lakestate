@@ -45,7 +45,7 @@ const WaveBorder = () => {
         ></path>
       </svg>
 
-      <div className="absolute top-6 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
+      <div className="absolute top-2 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
         <Image
           src="/lilogo.png"
           alt="Logo"
