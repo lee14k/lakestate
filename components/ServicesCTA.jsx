@@ -1,18 +1,18 @@
 import Link from 'next/link'
 export default function ServicesCTA({ topImage1Src, topImage2Src }) {
   return (
-    <div className="grid  sm:grid-cols-2 gap-24 mb-36 servicectacontainer bg-white">
+    <div className="grid  sm:grid-cols-2 gap-24 mb-56 servicectacontainer bg-white">
       <div
-        className="topimage h-72  w-auto"
+        className="topimage h-80  w-11/12"
         style={{ backgroundImage: `url(${topImage1Src})` }}
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center mt-4">
-            <h1 className="text-white text-xl mb-6 bg-black bg-opacity-50">
+            <h1 className="text-white text-center text-4xl mb-6 bg-black bg-opacity-50">
               Interested in our vocational training?
             </h1>
             <Link href="/VocationalTraining">
-              <button className="rounded-md bg-orange-400 px-6 py-2 text-l font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <button className="rounded-md bg-orange-400 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 {' '}
                 Learn More
               </button>
@@ -26,9 +26,9 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center mt-4">
-            <h1 className="text-white text-xl mb-6 bg-black bg-opacity-50">Looking to hire us?</h1>
+            <h1 className="text-white text-4xl mb-6 bg-black bg-opacity-50 text-center">Looking to hire us?</h1>
             <Link href="/HireUs">
-              <button className="rounded-md bg-orange-400 px-6 py-2 text-l font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <button className="rounded-md bg-orange-400 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 Learn More
               </button>
             </Link>

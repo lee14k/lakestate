@@ -45,16 +45,14 @@ const WaveBorder = () => {
         ></path>
       </svg>
       
-      <div className="absolute top-48 left-1/4 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
+      <div className="absolute top-48 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
         <Image
           src="/lilogo.png"
           alt="Logo"
           width={800}
-          height={850}
+          height={800}
           // Adjust width and height as needed
-        />
-        <p>The Upper Peninsula's Leader in Employment and Training
-        </p>    
+        />  
       </div>
     </div>
   );
