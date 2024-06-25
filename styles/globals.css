@@ -165,14 +165,6 @@ nav {
 
 }
 @media screen and (max-width: 1000px) {
-  .homewrapper,
-  .content {
-    width: 100vw;
-  }
-
-  .content {
-    overflow-x: hidden;
-  }
 
   .footer {
     padding-bottom: 100px;

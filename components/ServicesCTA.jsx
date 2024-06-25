@@ -1,7 +1,7 @@
 import Link from 'next/link'
 export default function ServicesCTA({ topImage1Src, topImage2Src }) {
   return (
-    <div className="grid  sm:grid-cols-2 gap-24 mb-56 servicectacontainer bg-white">
+    <div className="grid ml-6 lg:ml-0 lg:grid-cols-2 gap-24 mb-56  bg-white">
       <div
         className="topimage h-80  w-11/12"
         style={{ backgroundImage: `url(${topImage1Src})` }}
@@ -21,7 +21,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
         </div>
       </div>
       <div
-        className="topimage "
+        className="topimage  h-80  w-11/12"
         style={{ backgroundImage: `url(${topImage2Src})` }}
       >
         <div className="gradient-overlay flex flex-col justify-center items-center">
