@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 const WaveBorder = () => {
   return (
@@ -44,18 +44,18 @@ const WaveBorder = () => {
           fill="#0066ff"
         ></path>
       </svg>
-      
-      <div className="absolute top-16 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
+
+      <div className="absolute top-6 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
         <Image
           src="/lilogo.png"
           alt="Logo"
           width={800}
           height={800}
           // Adjust width and height as needed
-        />  
+        />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WaveBorder;
+export default WaveBorder
