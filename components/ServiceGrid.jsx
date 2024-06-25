@@ -10,7 +10,6 @@ export default function ServiceGrid({
 }) {
   return (
     <div>
-      <SecondBorder backgroundImage={bgImage1} header={header} />
       <div className="serviceswrapper">
         {services.map((service, index) => (
           <div

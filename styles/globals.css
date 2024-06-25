@@ -157,6 +157,7 @@ nav {
 
 .serviceheadline {
   text-shadow: 2px 2px 4px #757272;
+  font-size:9rem;
 }
 @media screen and (max-width: 1000px) {
   .homewrapper,

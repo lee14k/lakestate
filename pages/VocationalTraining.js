@@ -1,18 +1,20 @@
 import ServiceGrid from '@/components/ServiceGrid'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import WaveOther from '@/components/WaveOther'
 
 const VocationalTraining = () => {
   return (
     <div>
       <Navbar />
       <div className="homewrapper">
+      <WaveOther imageUrl="/donate.jpg" header="Vocational Training"/>
+
         <ServiceGrid
           headerOne="Quality Services for Hire"
           headerTwo="Confidential Shredding and Document Destruction"
           headerThree="Janitorial Services"
-          bgImage1="/donate.jpg"
-          header="Vocational Training"
+         
           services={[
             {
               header: 'Individualized Assessments',
