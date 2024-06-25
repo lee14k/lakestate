@@ -13,15 +13,17 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div>
+    <div >
         <Navbar/>
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-     
+        <div className=' '>
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8 grid grid-cols-2">
+     <div className='grid gap-12'>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11132.1631751363!2d-87.0771579!3d45.7703727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4dbc6944e3be2d%3A0x2b03faa53618cc2!2sLakestate%20Industries!5e0!3m2!1sen!2sus!4v1719305765691!5m2!1sen!2sus" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.3177938934655!2d-87.40362158782384!3d46.54139997099154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4e3f95be03295d%3A0x2da50d69ef4cfb79!2sLakeState%20Industries!5e0!3m2!1sen!2sus!4v1719305816060!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
-       
-      </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -163,8 +165,11 @@ export default function Contact() {
           </button>
         </div>
       </form>
+      </div>
+   
     </div>
     <Footer/>
+    </div>
     </div>
   )
 }
