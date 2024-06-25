@@ -87,8 +87,6 @@ export default function Shop({ products }) {
         <NewCart />
 
         <main className={styles.main}>
-          <h1 className={styles.title}>Store</h1>
-
           <div className={styles.products}>
             {products && products.map((product) => (
               <Product key={product.id} product={product} />
