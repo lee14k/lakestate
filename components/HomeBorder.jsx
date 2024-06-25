@@ -1,15 +1,10 @@
 import Image from "next/image";
+import WaveBorder from "./WaveBorder";
 export default function HomeBorder() {
     return (
-        <div className="homeheaderscontainer">
-            <div className="logo-container mt-72">
-                <Image
-                    src='/lilogo.png'
-                    width={700}
-                    height={700}
-                />
-            </div>
-            <div className="headers"></div>
+        <div className="">
+          
+       <WaveBorder/>
         </div>
     );
 }
