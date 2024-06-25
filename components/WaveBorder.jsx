@@ -49,8 +49,8 @@ const WaveBorder = () => {
         <Image
           src="/lilogo.png"
           alt="Logo"
-          width={800}
-          height={800}
+          width={600}
+          height={600}
           // Adjust width and height as needed
         />
       </div>
