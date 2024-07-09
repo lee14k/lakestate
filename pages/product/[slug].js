@@ -90,16 +90,8 @@ export async function getStaticProps({ params }) {
   }
 }
 
-function Product({
-  slug,
-  imageSrc,
-  imageAlt,
-  title,
-  description,
-  price,
-  variants,
-}) {
-  const [selectedVariant, setSelectedVariant] = useState(variants[0])
+function Product({ slug, imageSrc, imageAlt, title, description, price, variants }) {
+  const [selectedVariant, setSelectedVariant] = useState(variants[0] || { price })
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -120,42 +112,30 @@ function Product({
         <h2 className="text-xl font-bold">{title}</h2>
         <p className="text-lg mt-2">{formattedPrice}</p>
         <p className="text-sm mt-2 text-center">{description}</p>
-        <div className="mt-4">
-          <label
-            htmlFor="variant"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Choose a variant:
-          </label>
-          <select
-            id="variant"
-            name="variant"
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            value={selectedVariant.id}
-            onChange={(e) => {
-              const variant = variants.find(
-                (variant) => variant.id === e.target.value
-              )
-              setSelectedVariant(variant)
-            }}
-          >
-            {variants.map((variant) => (
-              <option key={variant.id} value={variant.id}>
-                {variant.title}
-              </option>
-            ))}
-          </select>
-        </div>
-        <BuyButton
-          product={{
-            slug,
-            imageSrc,
-            imageAlt,
-            title,
-            description,
-            price: selectedVariant.price,
-          }}
-        />
+        {variants.length > 0 && (
+          <div className="mt-4">
+            <label htmlFor="variant" className="block text-sm font-medium text-gray-700">
+              Choose a variant:
+            </label>
+            <select
+              id="variant"
+              name="variant"
+              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              value={selectedVariant.id}
+              onChange={(e) => {
+                const variant = variants.find(variant => variant.id === e.target.value)
+                setSelectedVariant(variant)
+              }}
+            >
+              {variants.map((variant) => (
+                <option key={variant.id} value={variant.id}>
+                  {variant.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        <BuyButton product={{ slug, imageSrc, imageAlt, title, description, price: selectedVariant.price }} />
       </div>
     </div>
   )
