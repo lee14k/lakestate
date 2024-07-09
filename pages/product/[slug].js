@@ -1,11 +1,32 @@
+'use client'
+
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import NewCart from '@/components/NewCart'
-import { CartProvider } from '../../context/CartContext' // Update the path to CartContext
+import { CartProvider } from '../../context/CartContext'
 import BuyButton from '@/components/BuyButton'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Radio,
+  RadioGroup,
+  Tab,
+  TabGroup,
+  TabList,
+  TabPanel,
+  TabPanels,
+} from '@headlessui/react'
+import { StarIcon } from '@heroicons/react/20/solid'
+import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
 export async function getStaticPaths() {
   const url = new URL('https://lakestate.vercel.app')
@@ -13,16 +34,13 @@ export async function getStaticPaths() {
 
   const res = await fetch(url.toString())
 
-  // Check for a successful response
   if (!res.ok) {
     console.error('Failed to fetch products:', res)
-    // Return an empty paths array in case of an error
     return { paths: [], fallback: false }
   }
 
   const data = await res.json()
 
-  // Map data to paths
   const paths = data.products.edges.map(({ node }) => ({
     params: { slug: node.handle },
   }))
@@ -46,11 +64,10 @@ export async function getStaticProps({ params }) {
   const data = await res.json()
   const defaultImageSrc = '/lakestatelogo.png'
 
-  let product = null // Define product variable
+  let product = null
 
   data.products.edges.forEach(({ node }) => {
     if (node.handle === params.slug) {
-      // Find the product with matching slug
       const imageSrc =
         node.images.edges.length > 0
           ? node.images.edges[0].node.src
@@ -91,24 +108,25 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-  })
+  }).format(price)
 
   return (
-    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-72 h-96 shadow-lg rounded-lg">
+    
+    <div className="grid lg:grid-cols-2">
       <Link href={`/product/${slug}`}>
         <Image
-          className="w-full h-64 object-cover rounded-lg"
+          className=""
           src={imageSrc}
           alt={imageAlt}
-          width={600}
-          height={600}
+          width={800}
+          height={800}
         />
       </Link>
       <div className="flex flex-col items-center mt-4">
         <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-lg mt-2">{formattedPrice.format(price)}</p>
+        <p className="text-lg mt-2">{formattedPrice}</p>
         <p className="text-sm mt-2 text-center">{description}</p>
-        <BuyButton product={Product} />
+        <BuyButton product={{ slug, imageSrc, imageAlt, title, description, price }} />
       </div>
     </div>
   )
@@ -127,8 +145,8 @@ export default function ProductPage({ product }) {
           <Link href="/Shop">&larr; back to the store</Link>
           <div>
             <NewCart />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-              <Product {...product} />
+            <div className="grid grid-cols-1">
+              {product ? <Product {...product} /> : <p>Product not found</p>}
             </div>
           </div>
         </main>
