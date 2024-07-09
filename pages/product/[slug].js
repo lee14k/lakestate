@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../../styles/Shop.module.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import NewCart from '@/components/NewCart'
 import { CartProvider } from '../../context/CartContext' // Update the path to CartContext
 import BuyButton from '@/components/BuyButton'
+
 export async function getStaticPaths() {
   const url = new URL('https://lakestate.vercel.app')
   url.pathname = '/api/products'
@@ -32,6 +32,7 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
+
 export async function getStaticProps({ params }) {
   const url = new URL('https://lakestate.vercel.app')
   url.pathname = '/api/products'
@@ -93,19 +94,21 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
   })
 
   return (
-    <div>
-      <div className="sm:flex mx-12 my-24 gap-12">
-        <a href={`/product/${slug}`}>
-          <Image src={imageSrc} alt={imageAlt} width={600} height={600} />
-        </a>
-        <div className="flex flex-col items-center mr-12">
-          <div className="flex flex-col">
-            <h2 className="text-4xl">{title}</h2>
-            <p className="text-2xl">{formattedPrice.format(price)}</p>
-            <p className="sm:mx-24">{description}</p>
-            <BuyButton product={Product} />
-          </div>
-        </div>
+    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-72 h-96 shadow-lg rounded-lg">
+      <Link href={`/product/${slug}`}>
+        <Image
+          className="w-full h-64 object-cover rounded-lg"
+          src={imageSrc}
+          alt={imageAlt}
+          width={600}
+          height={600}
+        />
+      </Link>
+      <div className="flex flex-col items-center mt-4">
+        <h2 className="text-xl font-bold">{title}</h2>
+        <p className="text-lg mt-2">{formattedPrice.format(price)}</p>
+        <p className="text-sm mt-2 text-center">{description}</p>
+        <BuyButton product={Product} />
       </div>
     </div>
   )
@@ -113,7 +116,7 @@ function Product({ slug, imageSrc, imageAlt, title, description, price }) {
 
 export default function ProductPage({ product }) {
   return (
-    <div className>
+    <div>
       <CartProvider>
         <Head>
           <title>Lakestate Industries</title>
@@ -121,12 +124,12 @@ export default function ProductPage({ product }) {
 
         <main>
           <Navbar />
-
           <Link href="/Shop">&larr; back to the store</Link>
-
           <div>
             <NewCart />
-            <Product {...product} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+              <Product {...product} />
+            </div>
           </div>
         </main>
       </CartProvider>

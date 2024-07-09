@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/Shop.module.css';
 import dynamic from 'next/dynamic';
 import { CartProvider } from '../context/CartContext'; // Update the path to CartContext
-import BuyButton from '../components/BuyButton'
+import BuyButton from '../components/BuyButton';
 import NewCart from '@/components/NewCart';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WaveOther from '@/components/WaveOther';
-
 
 export async function getStaticProps() {
   const url = new URL(process.env.URL);
@@ -32,7 +30,6 @@ export async function getStaticProps() {
       title: node.title,
       price: node.priceV2.amount,
       quantityAvailable: node.quantityAvailable
-      // Add more variant details here if needed
     }));
     return {
       id: node.id,
@@ -41,8 +38,7 @@ export async function getStaticProps() {
       imageAlt: node.title || 'Product Image',
       price: node.variants.edges[0]?.node.priceV2.amount,
       slug: node.handle,
-      variants: variants // Include variants array
-
+      variants: variants
     };
   });
 
@@ -51,7 +47,6 @@ export async function getStaticProps() {
   };
 }
 
-
 function Product({ product }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -59,43 +54,42 @@ function Product({ product }) {
   });
 
   return (
-    <div className={styles.product}>
-
+    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-80 h-[28rem] shadow-lg rounded-lg">
       <Link href={`/product/${product.slug}`}>
         <Image
+          className="w-full h-72 object-cover rounded-lg"
           src={product.imageSrc}
           alt={product.imageAlt}
           width={400}
           height={400}
         />
       </Link>
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <p className={styles.price}>{formattedPrice.format(product.price)}</p>
-      <BuyButton product={product} /> {/* Add the BuyButton here */}
-
+      <h2 className="text-xl font-bold mt-4">{product.title}</h2>
+      <p className="text-sm mt-2 text-center">{product.description}</p>
+      <p className="text-lg mt-2">{formattedPrice.format(product.price)}</p>
+      <BuyButton product={product} />
     </div>
   );
 }
+
 export default function Shop({ products }) {
   return (
     <div>
-      <Navbar/>
-      <WaveOther imageUrl="/Plant-Markers-0423.jpg" header="Shop"/>
-    <CartProvider>
-      <div className={styles.container}>
-        <NewCart />
-
-        <main className={styles.main}>
-          <div className={styles.products}>
-            {products && products.map((product) => (
-              <Product key={product.id} product={product} />
-            ))}
-          </div>
-        </main>
-      </div>
-    </CartProvider>
-    <Footer/>
+      <Navbar />
+      <WaveOther imageUrl="/Plant-Markers-0423.jpg" header="Shop" />
+      <CartProvider>
+        <div className="container mx-auto px-4">
+          <NewCart />
+          <main className="py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {products && products.map((product) => (
+                <Product key={product.id} product={product} />
+              ))}
+            </div>
+          </main>
+        </div>
+      </CartProvider>
+      <Footer />
     </div>
   );
 }
