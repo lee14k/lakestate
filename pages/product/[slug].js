@@ -9,20 +9,7 @@ import Footer from '@/components/Footer'
 import NewCart from '@/components/NewCart'
 import { CartProvider } from '../../context/CartContext'
 import BuyButton from '@/components/BuyButton'
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Radio,
-  RadioGroup,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-} from '@headlessui/react'
-import { StarIcon } from '@heroicons/react/20/solid'
-import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
