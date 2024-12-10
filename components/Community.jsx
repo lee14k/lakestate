@@ -24,7 +24,7 @@ export default function Community({ header }) {
           inclusion networks.
         </p>
       </div>
-      <ServicesCTA topImage1Src="/vcone.jpg" topImage2Src="/cleaner.jpg" />
+      <ServicesCTA topImage1Src="/Paper-Sorting-3005.jpg" topImage2Src="/cleaner.jpg" />
     </div>
   )
 }

@@ -1,59 +1,46 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const WaveBorder = () => {
   return (
-    <div className="w-full relative">
+    <div className="w-full bg-white">
+      <div className="flex flex-col justify-center items-center gap-10">
+        <Image
+          src="/lilogo.png"
+          alt="Logo"
+          width={1000}
+          height={1000}
+          className="w-auto h-auto"
+        />
+        <p className="text-6xl">The Upper Peninsula's Leader in Employment and Training
+        </p>
+        <Link href="/About">
+          <span className="rounded-md bg-orange-400 px-10 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <span>Learn More</span>
+          </span>
+        </Link>
+      </div>
+
       <svg
         id="visual"
-        viewBox="0 0 900 600"
+        viewBox="0 0 900 300"
         width="100%"
         height="100%"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         version="1.1"
         preserveAspectRatio="none"
+        className="-mt-20"
       >
-        <defs>
-          <pattern
-            id="imgPattern"
-            patternUnits="userSpaceOnUse"
-            width="900"
-            height="600"
-          >
-            <image
-              href="/Paper-Sorting-3005.jpg"
-              x="0"
-              y="0"
-              width="1100"
-              height="600"
-              preserveAspectRatio="xMidYMid slice"
-            />
-          </pattern>
-        </defs>
-        <rect width="900" height="600" fill="url(#imgPattern)" />
         <path
-          d="M0 600L25 600C50 600 100 600 150 600C200 600 250 600 300 600C350 600 400 600 450 600C500 600 550 600 600 600C650 600 700 600 750 600C800 600 850 600 875 600L900 600L900 315L875 319C850 323 800 331 750 335C700 339 650 335 600 347C550 359 500 379 450 395C400 411 350 423 300 419C250 415 200 399 150 395C100 391 50 399 25 403L0 407Z"
-          fill="url(#imgPattern)"
-        ></path>
-        <path
-          d="M0 600L25 600C50 600 100 600 150 600C200 600 250 600 300 600C350 600 400 600 450 600C500 600 550 600 600 600C650 600 700 600 750 600C800 600 850 600 875 600L900 600L900 421L875 434C850 447 800 473 750 467C700 461 650 423 600 419C550 415 500 445 450 469C400 493 350 513 300 517C250 521 200 509 150 508C100 507 50 517 25 522L0 527Z"
+          d="M0 300L25 300C50 300 100 300 150 300C200 300 250 300 300 300C350 300 400 300 450 300C500 300 550 300 600 300C650 300 700 300 750 300C800 300 850 300 875 300L900 300L900 121L875 134C850 147 800 173 750 167C700 161 650 123 600 119C550 115 500 145 450 169C400 193 350 213 300 217C250 221 200 209 150 208C100 207 50 217 25 222L0 227Z"
           fill="#3c80ff"
         ></path>
         <path
-          d="M0 600L25 600C50 600 100 600 150 600C200 600 250 600 300 600C350 600 400 600 450 600C500 600 550 600 600 600C650 600 700 600 750 600C800 600 850 600 875 600L900 600L900 493L875 511C850 529 800 565 750 559C700 553 650 505 600 495C550 485 500 513 450 537C400 561 350 581 300 585C250 589 200 577 150 576C100 575 50 585 25 590L0 595Z"
+          d="M0 300L25 300C50 300 100 300 150 300C200 300 250 300 300 300C350 300 400 300 450 300C500 300 550 300 600 300C650 300 700 300 750 300C800 300 850 300 875 300L900 300L900 193L875 211C850 229 800 265 750 259C700 253 650 205 600 195C550 185 500 213 450 237C400 261 350 281 300 285C250 289 200 277 150 276C100 275 50 285 25 290L0 295Z"
           fill="#0066ff"
         ></path>
       </svg>
-
-      <div className="absolute top-12 left-1/3 transform -translate-x-1/2 z-10 bg-white bg-opacity-30 rounded-2xl">
-        <Image
-          src="/lilogo.png"
-          alt="Logo"
-          width={600}
-          height={600}
-          // Adjust width and height as needed
-        />
-      </div>
     </div>
   )
 }
