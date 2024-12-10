@@ -11,7 +11,7 @@ export default function PictureGrid() {
           <img className="w-full h-full object-cover" src="/Firestarter-0419.jpg"></img>
         </div>
         <div className="productwrapper">
-          <img className="w-full h-full object-cover" src="/Books--3.jpg"></img>
+          <img className="w-full h-full object-cover" src="/Box-0339.jpg"></img>
         </div>
       </div>
     </div>
