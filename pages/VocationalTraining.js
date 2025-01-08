@@ -8,7 +8,7 @@ const VocationalTraining = () => {
     <div>
       <Navbar />
       <div className="homewrapper">
-      <WaveOther imageUrl="/donate.jpg" header="Vocational Training"/>
+      <WaveOther imageUrl="/helping.jpg" header="Vocational Training"/>
 
         <ServiceGrid
           headerOne="Quality Services for Hire"
@@ -19,7 +19,7 @@ const VocationalTraining = () => {
             {
               header: 'Individualized Assessments',
               para: "We conduct comprehensive assessments to identify each individual's strengths, abilities, interests, and support needs.",
-              backgroundImage: '/helping.jpg',
+              backgroundImage: '/new-pic-1-8-2025.jpg',
             },
             {
               header: 'Skill Development',
@@ -29,22 +29,22 @@ const VocationalTraining = () => {
             {
               header: 'Job Placement Services',
               para: 'We provide assistance with job searches, resume building, interview preparation, and connecting individuals with inclusive employers who value inclusion and diversity.',
-              backgroundImage: '/vcthree.jpg',
+              backgroundImage: '/LS-v1-3130.jpg',
             },
             {
               header: 'Job Coaching and Support',
               para: 'We offer ongoing support and job coaching to help individuals succeed in their chosen roles, including on-the-job training, and problem-solving assistance.',
-              backgroundImage: '/coaching.jpg',
+              backgroundImage: '/LS-v1-3056.jpg',
             },
             {
               header: 'Social and Life Skills Training',
               para: 'We provide opportunities for individuals to develop essential life skills, such as time management, interpersonal communication, and self-advocacy, to enhance their overall independence and well-being.',
-              backgroundImage: '/shreds.jpg',
+              backgroundImage: '/vcthree.jpg',
             },
             {
               header: 'Assistive Technology and Accommodations',
               para: 'We provide access to assistive devices, adaptive technologies, and reasonable accommodations in the workplace to ensure individuals can perform their job duties effectively and comfortably.',
-              backgroundImage: '/donate.jpg',
+              backgroundImage: '/Lumber-3096.jpg',
             },
           ]}
         />

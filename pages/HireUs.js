@@ -8,7 +8,7 @@ const HireUs = () => {
     <div>
       <Navbar />
       <div className="homewrapper">
-        <WaveOther imageUrl="/cleaner.jpg" header="Hire Our Team" />
+        <WaveOther imageUrl="/1-8-25-new-pic.jpg" header="Hire Our Team" />
         <ServiceGrid
           headerOne="Quality Services for Hire"
           headerTwo="Confidential Shredding and Document Destruction"
@@ -34,7 +34,7 @@ const HireUs = () => {
             {
               header: 'Pallets and Pallet Stock  ',
               para: 'We provide premium pallets and pallet stock, where quality meets sustainability. We understand that different businesses have unique requirements. Our pallets adhere to industry standards and regulations for safety and compliance. You can trust that our products meet the highest quality and safety requirements. Whether you are looking to streamline your supply chain, optimize storage space, or enhance efficiency in material handling, our premium pallets and pallet stock is the ideal choice. Contact us today to discuss your requirements and experience the difference quality pallets and pallet stock can make for your business.',
-              backgroundImage: '/woodshop.jpg',
+              backgroundImage: '/LS-v1-3111.jpg',
             },
           ]}
         />

@@ -25,13 +25,7 @@ export default function Home() {
             Lakestate Industries
           </h1>
           <p className="sm:mx-48 my-4 justify-center items-center text-center text-2xl">
-            Lakestate Industries is a private, non-profit 501(c)(3) agency that serves
-            individuals in our community with intellectual, mental, and/or physical
-            disabilities to enhance their lives. Lakestate Industries provides
-            vocational career exploration, job development, work training, job
-            services, and residential services to adult and student populations.
-            We provide contracted services to businesses that make a significant
-            impact on our community.
+            At Lakestate Industries, we are committed to fostering an environment where every individual is empowered to recognize and maximize their unique abilities. We work diligently to help people overcome barriers and support their journey towards achieving their highest level of employment and community inclusion. Our dedication lies in creating opportunities that embrace diversity, promote equality, and enable each person to thrive and contribute meaningfully to their communities.
           </p>
           <Link href="/Donate">
             <div className="mb-16 my-8">
