@@ -31,9 +31,7 @@ const ResidentialServices = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-primary" />
             <h1 className="text-4xl font-bold">Residential Services</h1>
-            <Sparkles className="w-6 h-6 text-primary" />
           </div>
         </div>
 
@@ -61,7 +59,7 @@ const ResidentialServices = () => {
     height={800}
     />
           <Image
-            src="/vcone.jpg"
+            src="/Firestarter-3022.jpg"
             alt="Residential Services"
             width={800}
             height={800}

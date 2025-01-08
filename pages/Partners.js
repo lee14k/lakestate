@@ -8,7 +8,7 @@ const Forms = () => {
     return (
         <div>
             <Navbar />
-            <WaveOther imageUrl="/donate.jpg" header={"Our Partners"}/>    
+            <WaveOther imageUrl="/Firestarter-3071.jpg" header={"Our Partners"}/>
             <LogoContent/>
            <FormFill/>
             <Footer/>
