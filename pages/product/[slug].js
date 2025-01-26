@@ -98,29 +98,79 @@ function Product({ slug, imageSrc, imageAlt, title, description, price, variants
   }).format(selectedVariant.price)
 
   return (
-    <div className="grid lg:grid-cols-2">
-      <Link href={`/product/${slug}`}>
-        <Image
-          className=""
-          src={imageSrc}
-          alt={imageAlt}
-          width={800}
-          height={800}
-        />
-      </Link>
-      <div className="flex flex-col items-center mt-4">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-lg mt-2">{formattedPrice}</p>
-        <p className="text-sm mt-2 text-center">{description}</p>
-        {variants.length > 0 && (
-          <div className="mt-4 flex gap-10">
-
-              {variants.map((variant) => (
-                <button key={variant.id} value={variant.id}>{variant.title}</button>
-              ))}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="grid lg:grid-cols-2 gap-x-8 gap-y-10">
+        {/* Image Section */}
+        <div className="relative">
+          <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={800}
+              height={800}
+              className="w-full h-full object-center object-cover hover:scale-105 transition-transform duration-200"
+            />
           </div>
-        )}
-        <BuyButton product={{ slug, imageSrc, imageAlt, title, description, price: selectedVariant.price }} />
+        </div>
+
+        {/* Product Details Section */}
+        <div className="flex flex-col space-y-6">
+          <div className="border-b border-gray-200 pb-6">
+            <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+            <p className="mt-4 text-2xl text-gray-900">{formattedPrice}</p>
+          </div>
+
+          {/* Variants Selection */}
+          {variants.length > 0 && (
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium text-gray-900">Options</h3>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {variants.map((variant) => (
+                  <button
+                    key={variant.id}
+                    onClick={() => setSelectedVariant(variant)}
+                    className={classNames(
+                      selectedVariant.id === variant.id
+                        ? 'border-black bg-black text-white'
+                        : 'border-gray-200 bg-white text-gray-900 hover:bg-gray-50',
+                      'group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase focus:outline-none sm:flex-1'
+                    )}
+                  >
+                    <span>{variant.title}</span>
+                    {variant.quantityAvailable <= 0 && (
+                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                        Sold Out
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Description */}
+          <div className="mt-6 space-y-6">
+            <h3 className="text-sm font-medium text-gray-900">Description</h3>
+            <div className="text-base text-gray-700 space-y-4">
+              {description}
+            </div>
+          </div>
+
+          {/* Buy Button */}
+          <div className="mt-8">
+            <BuyButton
+              product={{
+                slug,
+                imageSrc,
+                imageAlt,
+                title,
+                description,
+                price: selectedVariant.price,
+              }}
+              className="w-full bg-black text-white py-4 px-8 rounded-md hover:bg-gray-800 transition-colors duration-200"
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -128,24 +178,39 @@ function Product({ slug, imageSrc, imageAlt, title, description, price, variants
 
 export default function ProductPage({ product }) {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <CartProvider>
         <Head>
-          <title>Lakestate Industries</title>
+          <title>{product?.title || 'Product'} | Lakestate Industries</title>
+          <meta name="description" content={product?.description || ''} />
         </Head>
 
-        <main>
-          <Navbar />
-          <Link href="/Shop">&larr; back to the store</Link>
-          <div>
-            <NewCart />
-            <div className="grid grid-cols-1">
-              {product ? <Product {...product} /> : <p>Product not found</p>}
+        <Navbar />
+        
+        <main className="flex-grow bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <Link
+              href="/Shop"
+              className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 mb-8"
+            >
+              <span className="mr-2">&larr;</span>
+              Back to Store
+            </Link>
+
+            <div className="relative">
+              <NewCart />
+              {product ? <Product {...product} /> : (
+                <div className="text-center py-16">
+                  <h2 className="text-2xl font-semibold text-gray-900">Product not found</h2>
+                  <p className="mt-2 text-gray-600">The product you're looking for doesn't exist or has been removed.</p>
+                </div>
+              )}
             </div>
           </div>
         </main>
+
+        <Footer />
       </CartProvider>
-      <Footer />
     </div>
   )
 }
