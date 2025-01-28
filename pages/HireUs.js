@@ -17,12 +17,12 @@ const HireUs = () => {
        
             {
               header: 'Document Destruction',
-              para: 'We secure and confidentially dispose of sensitive information by shredding your documents with industrial -grade shredding equipment into unreadable fragments. For over 25 years, we have been providing document destruction services to area medical facilities, financial institutions, law firms, accounting firms, area businesses, as well as individuals with personal documents.  Price:  Drop off at our Escanaba or Marquette location $.35 per pound. We pick up at your business $.40 per pound ($25 minimum)',
+              para: 'We secure and confidentially dispose of sensitive information by shredding your documents with industrial-grade shredding equipment into unreadable fragments. For over 25 years, we have been providing document destruction services to area medical facilities, financial institutions, law firms, accounting firms, area businesses, as well as individuals with personal documents.  Price:  Drop off at our Escanaba or Marquette location $.35 per pound. We pick up at your business $.40 per pound ($25 minimum)',
               backgroundImage: '/shreds.jpg',
             },
             {
               header: 'Janitorial Services',
-              para: 'Janitorial services are essential for maintaining a clean and healthy environment in commercial buildings, offices, schools, healthcare facilities, and other public spaces. Our janitorial crews will keep your building clean by sweeping, mopping, vacuuming, dusting, trash removal, restroom cleaning, and surface disinfection. We can provide services on a regular schedule or as needed, tailored to the specific needs and requirements of each facility. Let us help you with your cleaning needs by contacting us in Escanaba at (906) 786-9212 or Marquette at (906) 273-2131 for a free quote.',
+              para: 'Janitorial services are essential for maintaining a clean and healthy environment in commercial buildings, offices, schools, healthcare facilities, and other public spaces. Our janitorial crews will keep your building clean by sweeping, mopping, vacuuming, dusting, trash removal, restroom cleaning, and surface disinfecting. We can provide services on a regular schedule or as needed, tailored to the specific needs and requirements of each facility. Let us help you with your cleaning needs by contacting us in Escanaba at (906) 786-9212 or Marquette at (906) 273-2131 for a free quote.',
 
               backgroundImage: '/cleaner.jpg',
             },

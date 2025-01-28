@@ -15,12 +15,12 @@ const ResidentialServices = () => {
     {
       icon: <Heart className="w-6 h-6 text-primary" />,
       title: "Daily Support",
-      description: "Whether it's help with daily tasks, administration of medication, or simply having someone to support the tasks of daily living, our staff is here to ensure that residents can live comfortably and confidently in their own homes."
+      description: "Whether it is help with daily tasks, administration of medication, or simply having someone to support the tasks of daily living, our staff is here to ensure that residents can live comfortably and confidently in their own homes."
     },
     {
       icon: <Users className="w-6 h-6 text-primary" />,
       title: "Community Engagement",
-      description: "At Lakestate Industries, we understand the importance of community engagement. That's why we actively take our residents out and encourage their involvement in community activities and events. Whether it's attending local gatherings, participating in group outings, or volunteering for worthy causes, we strive to keep our residents connected and engaged with the community around them."
+      description: "At Lakestate Industries, we understand the importance of community engagement. That's why we actively take our residents out and encourage their involvement in community activities and events. Whether it is attending local gatherings, participating in group outings, or volunteering for worthy causes, we strive to keep our residents connected and engaged with the community around them."
     }
   ];
 
