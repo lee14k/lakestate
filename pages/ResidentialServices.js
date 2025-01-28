@@ -53,13 +53,13 @@ const ResidentialServices = () => {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
     <Image
-    src="/vcone.jpg"
+    src="/unspalshstockphoto1.jpg"
     alt="Residential Services"
     width={800}
     height={800}
     />
           <Image
-            src="/Firestarter-3022.jpg"
+            src="/unsplashstockphoto2.jpg"
             alt="Residential Services"
             width={800}
             height={800}
