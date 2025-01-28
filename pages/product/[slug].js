@@ -26,13 +26,8 @@ export async function getStaticPaths() {
   }
 
   const data = await res.json()
-  
-  if (!data || !data.products || !data.products.edges) {
-    console.error('Invalid data structure received:', data)
-    return { paths: [], fallback: false }
-  }
 
-  const paths = data.products.edges.map(({ node }) => ({
+  const paths = data.products.map(({ node }) => ({
     params: { slug: node.handle },
   }))
 
@@ -43,139 +38,140 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const url = new URL('https://lakestate.vercel.app')
-  url.pathname = '/api/products'
+  try {
+    const url = new URL(process.env.URL || 'http://localhost:3000')
+    url.pathname = '/api/products'
 
-  const res = await fetch(url.toString())
-
-  if (!res.ok) {
-    return { props: {} }
-  }
-
-  const data = await res.json()
-  const defaultImageSrc = '/lakestatelogo.png'
-
-  let product = null
-
-  data.products.edges.forEach(({ node }) => {
-    if (node.handle === params.slug) {
-      const imageSrc =
-        node.images.edges.length > 0
-          ? node.images.edges[0].node.src
-          : defaultImageSrc
-
-      const variants = node.variants.edges.map(({ node }) => ({
-        id: node.id,
-        title: node.title,
-        price: node.priceV2.amount,
-        quantityAvailable: node.quantityAvailable,
-      }))
-
-      product = {
-        id: node.id,
-        title: node.title,
-        description: node.description,
-        imageSrc,
-        imageAlt: node.title || 'Product Image',
-        price: node.variants.edges[0]?.node.priceV2.amount,
-        slug: node.handle,
-        variants,
-      }
+    const res = await fetch(url.toString())
+    if (!res.ok) throw new Error('Failed to fetch')
+    
+    const data = await res.json()
+    
+    const productData = data.products?.find(({ node }) => node.handle === params.slug)
+    if (!productData?.node) {
+      return { props: { product: null }, revalidate: 10 }
     }
-  })
 
-  if (!product) {
-    console.log('No product found for slug:', params.slug)
+    const { node } = productData
+    
+    // Get the first product image from images.edges
+    const productImage = node.images?.edges?.[0]?.node?.src
+    // Get the first variant image as backup
+    const variantImage = node.variants?.edges?.[0]?.node?.image?.src
+    // Use product image, variant image, or default image
+    const imageSrc = productImage || variantImage || '/lakestatelogo.png'
+
+    const product = {
+      id: node.id || '',
+      title: node.title || '',
+      description: node.description || '',
+      imageSrc,
+      imageAlt: node.title || 'Product Image',
+      price: String(node.priceRange?.minVariantPrice?.amount || '0'),
+      slug: node.handle || '',
+      variants: (node.variants?.edges || []).map(({ node: variantNode }) => ({
+        id: variantNode?.id || '',
+        title: variantNode?.title || '',
+        price: String(variantNode?.priceV2?.amount || '0'),
+        quantityAvailable: variantNode?.quantityAvailable || 0,
+        selectedOptions: (variantNode?.selectedOptions || []).map(option => ({
+          name: option?.name || '',
+          value: option?.value || '',
+        })),
+        image: variantNode?.image?.src || imageSrc,
+      }))
+    }
+
+    return {
+      props: { product },
+      revalidate: 10
+    }
+  } catch (error) {
+    console.error('Error in getStaticProps:', error)
     return { props: { product: null }, revalidate: 10 }
-  }
-
-  return {
-    props: { product },
-    revalidate: 10,
   }
 }
 
-function Product({ slug, imageSrc, imageAlt, title, description, price, variants }) {
-  const [selectedVariant, setSelectedVariant] = useState(variants[0] || { price })
+function Product({ product }) {
+  if (!product) return null;
+  const safeVariants = Array.isArray(product.variants) ? product.variants : [];
+
+  const [selectedVariant, setSelectedVariant] = useState(product.variants?.[0] || { price: product.price })
+  
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-  }).format(selectedVariant.price)
+  }).format(Number(selectedVariant?.price || product.price || 0))
 
+  // Ensure variants is always an array
+  {safeVariants.map((variant) => (
+    <button
+      key={variant?.id || Math.random()}
+      onClick={() => setSelectedVariant(variant)}
+      className={`px-4 py-2 rounded ${
+        selectedVariant?.id === variant?.id
+          ? 'bg-blue-500 text-white'
+          : 'bg-gray-200'
+      }`}
+    >
+      {variant?.title || ''}
+      <div>
+        {variant?.selectedOptions?.map((option) => (
+          <p key={option?.name}>
+            {option?.name}: {option?.value}
+          </p>
+        ))}
+      </div>
+      -{' '}
+      {new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      }).format(Number(variant?.price || 0))}
+    </button>
+  ))}
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="grid lg:grid-cols-2 gap-x-8 gap-y-10">
-        {/* Image Section */}
-        <div className="relative">
-          <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={800}
-              height={800}
-              className="w-full h-full object-center object-cover hover:scale-105 transition-transform duration-200"
-            />
+    <div className="grid lg:grid-cols-2">
+      <div>
+        <Image
+          src={product.imageSrc || '/lakestatelogo.png'}
+          alt={product.imageAlt || 'Product Image'}
+          width={800}
+          height={800}
+        />
+      </div>
+      <div className="flex flex-col items-center mt-4">
+        <h2 className="text-xl font-bold">{product.title || ''}</h2>
+        <p className="text-lg mt-2">{formattedPrice}</p>
+        <p className="text-sm mt-2 text-center">{product.description || ''}</p>
+        
+        {safeVariants.length > 0 && (
+          <div className="mt-4 flex gap-10">
+            {safeVariants.map((variant) => (
+              <button
+                key={variant?.id || Math.random()}
+                onClick={() => setSelectedVariant(variant)}
+                className={`px-4 py-2 rounded ${
+                  selectedVariant?.id === variant?.id
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-200'
+                }`}
+              >
+                {variant?.title || ''} - {new Intl.NumberFormat('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                }).format(Number(variant?.price || 0))}
+              </button>
+            ))}
           </div>
-        </div>
-
-        {/* Product Details Section */}
-        <div className="flex flex-col space-y-6">
-          <div className="border-b border-gray-200 pb-6">
-            <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
-            <p className="mt-4 text-2xl text-gray-900">{formattedPrice}</p>
-          </div>
-
-          {/* Variants Selection */}
-          {variants.length > 0 && (
-            <div className="space-y-4">
-              <h3 className="text-sm font-medium text-gray-900">Options</h3>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                {variants.map((variant) => (
-                  <button
-                    key={variant.id}
-                    onClick={() => setSelectedVariant(variant)}
-                    className={classNames(
-                      selectedVariant.id === variant.id
-                        ? 'border-black bg-black text-white'
-                        : 'border-gray-200 bg-white text-gray-900 hover:bg-gray-50',
-                      'group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase focus:outline-none sm:flex-1'
-                    )}
-                  >
-                    <span>{variant.title}</span>
-                    {variant.quantityAvailable <= 0 && (
-                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                        Sold Out
-                      </span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Description */}
-          <div className="mt-6 space-y-6">
-            <h3 className="text-sm font-medium text-gray-900">Description</h3>
-            <div className="text-base text-gray-700 space-y-4">
-              {description}
-            </div>
-          </div>
-
-          {/* Buy Button */}
-          <div className="mt-8">
-            <BuyButton
-              product={{
-                slug,
-                imageSrc,
-                imageAlt,
-                title,
-                description,
-                price: selectedVariant.price,
-              }}
-              className="w-full bg-black text-white py-4 px-8 rounded-md hover:bg-gray-800 transition-colors duration-200"
-            />
-          </div>
-        </div>
+        )}
+        
+        <BuyButton
+          product={{
+            ...product,
+            price: selectedVariant?.price || product.price,
+            variant: selectedVariant,
+          }}
+        />
       </div>
     </div>
   )
@@ -183,39 +179,23 @@ function Product({ slug, imageSrc, imageAlt, title, description, price, variants
 
 export default function ProductPage({ product }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div>
       <CartProvider>
         <Head>
-          <title>{product?.title || 'Product'} | Lakestate Industries</title>
-          <meta name="description" content={product?.description || ''} />
+          <title>Lakestate Industries</title>
         </Head>
-
-        <Navbar />
-        
-        <main className="flex-grow bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link
-              href="/Shop"
-              className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 mb-8"
-            >
-              <span className="mr-2">&larr;</span>
-              Back to Store
-            </Link>
-
-            <div className="relative">
-              <NewCart />
-              {product ? <Product {...product} /> : (
-                <div className="text-center py-16">
-                  <h2 className="text-2xl font-semibold text-gray-900">Product not found</h2>
-                  <p className="mt-2 text-gray-600">The product you're looking for doesn't exist or has been removed.</p>
-                </div>
-              )}
+        <main>
+          <Navbar />
+          <Link href="/Shop">&larr; back to the store</Link>
+          <div>
+            <NewCart />
+            <div className="grid grid-cols-1">
+              {product ? <Product product={product} /> : <p>Product not found</p>}
             </div>
           </div>
         </main>
-
-        <Footer />
       </CartProvider>
+      <Footer />
     </div>
   )
 }
