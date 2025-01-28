@@ -14,9 +14,9 @@ const handlee = Handlee({
 export default function Community({ header }) {
   return (
     <div className="flex flex-col justify-center items-center bg-white">
-      <div className="flex flex-col justify-center mx-48 px-24 text-center">
-        <h1 className="text-6xl my-8">{header}</h1>
-        <p className="mx-2 mb-8 text-2xl">
+      <div className="flex flex-col justify-center mx-48 px-24 text-center ">
+        <h1 className="text-8xl my-8 font-bold text-sky-900">{header}</h1>
+        <p className="mx-2 mb-8 text-3xl">
           Lakestate Industries is a vocational training center for individuals
           with disabilities. Lakestate Industries is dedicated to helping people
           recognize and maximize their abilities, overcome barriers, and support

@@ -10,7 +10,7 @@ const ResidentialServices = () => {
     {
       icon: <Home className="w-6 h-6 text-primary" />,
       title: "Semi-Independent Living",
-      description: "Residents can enjoy the independence of living in their own homes/apartments while benefiting from the peace of mind that comes with having support available whenever it's needed. Our professional staff members are committed to providing personalized assistance to ensure that each resident's unique needs are met while promoting independence and autonomy."
+      description: "Residents can enjoy the independence of living in their own homes/apartments while benefiting from the peace of mind that comes with having support available whenever it's needed. Our professional staff members are committed to providing personalized assistance to ensure that each resident's unique needs are met while promoting independence."
     },
     {
       icon: <Heart className="w-6 h-6 text-primary" />,
@@ -20,7 +20,7 @@ const ResidentialServices = () => {
     {
       icon: <Users className="w-6 h-6 text-primary" />,
       title: "Community Engagement",
-      description: "At Lakestate Industries, we understand the importance of community engagement. That's why we actively take our residents out and encourage their involvement in community activities and events. Whether it is attending local gatherings, participating in group outings, or volunteering for worthy causes, we strive to keep our residents connected and engaged with the community around them."
+      description: "At Lakestate Industries, we understand the importance of community engagement. That's why we actively take our residents out and encourage their involvement in community activities and events. Whether it is attending local gatherings, participating in group outings, or volunteering in their community, we strive to keep our residents connected and engaged with the community around them."
     }
   ];
 
@@ -55,8 +55,8 @@ const ResidentialServices = () => {
     <Image
     src="/unspalshstockphoto1.jpg"
     alt="Residential Services"
-    width={800}
-    height={800}
+    width={660}
+    height={660}
     />
           <Image
             src="/unsplashstockphoto2.jpg"

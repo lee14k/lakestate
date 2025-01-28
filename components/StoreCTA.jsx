@@ -12,13 +12,13 @@ export default function StoreCTA() {
       <div className="flex flex-col justify-center items-center  py-10">
         <div className>
           <div >
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="handcraftheadline text-4xl sm:text-8xl my-12 lakerhead">
+            <div className="flex flex-col justify-center items-center gap-10">
+              <h1 className="text-orange-400 text-8xl  my-12  font-bold">
                 Michigan Made Products{' '}
               </h1>
             </div>
           </div>
-          <p className="sm:mx-60 mb-10 text-xl sm:text-2xl text-white text-center">
+          <p className="sm:mx-60 mb-10 text-3xl  text-white text-center">
           Our products are meticulously crafted with care and dedication, thanks to the collaboration between our valued clients and our dedicated staff. This partnership ensures that each item is made with the utmost attention to detail and quality. If you have a project, idea or need help with a product for an event, please contact us for more details.
 
           </p>
