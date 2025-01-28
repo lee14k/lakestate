@@ -26,7 +26,7 @@ export default function ServiceGrid({
             </div>
             <div className="service-content w-1/2 flex flex-col justify-center items-start px-4">
               {service.header && (
-                <h2 className="text-6xl mb-4 serviceheadlinetwo mx-24">
+                <h2 className="text-7xl font-bold mb-4 serviceheadlinetwo mx-24">
                   {service.header}
                 </h2>
               )}
