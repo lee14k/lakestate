@@ -26,6 +26,11 @@ export async function getStaticPaths() {
   }
 
   const data = await res.json()
+  
+  if (!data || !data.products || !data.products.edges) {
+    console.error('Invalid data structure received:', data)
+    return { paths: [], fallback: false }
+  }
 
   const paths = data.products.edges.map(({ node }) => ({
     params: { slug: node.handle },

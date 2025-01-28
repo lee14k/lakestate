@@ -26,7 +26,7 @@ const stats = [
 ]
 const values = [
   {
-    name: 'Provide high quality employees to our business community.',
+    name: 'Provide high quality individuals to our business community.',
     description: 'By focusing on the strengths and capabilities of each individual, we aim to bridge the gap between talented disabled individuals and the needs of businesses.',
     icon: SparklesIcon,
   },
@@ -44,7 +44,7 @@ const values = [
     icon: SparklesIcon,
   },
   {
-    name: 'Provide sub-contracting services',
+    name: 'Provide sub-contracting services.',
     description: 'Our sub-contracting services offer businesses a reliable and high-quality solution for their needs while providing meaningful work opportunities for our participants.',
     icon: SparklesIcon,
   },
@@ -134,9 +134,9 @@ export default function AboutFill() {
         {/* Header section */}
         <div className="px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-            <h2 className="text-4xl font-bold tracking-tight text sm:text-6xl">We are dedicated to helping people maximize their abilities</h2>
+            <h2 className="text-4xl font-bold tracking-tight text sm:text-6xl">We are dedicated to helping individuals maximize their abilities</h2>
             <p className="mt-6 text-lg leading-8 ">
-            Founded in 1969, Lakestate began as an outgrowth of a parents group concerned with the lack of opportunities available for people with disabilities. Thus, Lakestate's focus has been giving persons with disabilities the opportunity to experience the rewards of working for "real pay" while removing barriers to employment and promoting community inclusion.
+            Founded in 1969, Lakestate Industries began as an outgrowth of a parents group concerned with the lack of opportunities available for individuals with disabilities. Thus, Lakestate Industries' focus has been giving individuals with disabilities the opportunity to experience the rewards of working for "real pay" while removing barriers to employment and promoting community inclusion.
 
 
             </p>
@@ -152,28 +152,21 @@ export default function AboutFill() {
                  Lakestate Industries provides vocational career exploration, job development, work training and job services to adult and student populations. We provide contracted services to businesses that make a significant impact on our community.
                 </p>
                 <p className="mt-8">
-                 Many people in our area (8-10% of our population) experience difficulties getting and/or keeping employment because of their disability. Lakestate Industries serves individuals and gives them the opportunity to work either at Lakestate Industries or in the community with supports, which enables them to earn a paycheck, gain self-worth and live richer, more meaningful lives.
+                 Many individuals in our area experience difficulties getting and/or keeping employment because of their disability. Lakestate Industries serves individuals and gives them the opportunity to work either at Lakestate Industries or in the community with supports, which enables them to earn a paycheck, gain self-worth and live richer, more meaningful lives.
                 </p>
               </div>
               <div>
                 <p>
-                 As part of our Work Training and Job Placement, we have developed many community-based training sites. Work Training helps develop employable work skills, as an individual is exposed to more work opportunities, they will also develop more work skills to bring with them to an employment site.
+                 As part of our work training and job placement, we have developed many community-based training sites. Work training helps develop employable work skills, as an individual is exposed to more work opportunities, they will also develop more work skills to bring with them to an employment site.
 
 
                 </p>
                 <p className="mt-8">
-                 We base many of our work opportunities in the community in order for our employees to experience working alongside of individuals without barriers to employment. We have developed Mobile Crews and it has many benefits.
+                 We base many of our work opportunities in the community in order for our individuals to experience working alongside of individuals without barriers to employment. We have developed mobile crews and they have many benefits.
                 </p>
               </div>
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
-              {stats.map((stat, statIdx) => (
-                <div key={statIdx} className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
-                  <dt className="text-base leading-7 ">{stat.label}</dt>
-                  <dd className="text-3xl font-semibold tracking-tight ">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
+
           </div>
         </div>
 
@@ -220,7 +213,7 @@ export default function AboutFill() {
               <div className="w-full flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Help Our Cause</h2>
                 <p className="mt-6 text-lg leading-8 ">
-                  100% of your generous donation goes directly to help people with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for persons with barriers to employment (people with cognitive, emotional, and/or physical disabilities) long into the future.
+                  100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future.
                 </p>
                 <ul
                   role="list"

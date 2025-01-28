@@ -11,7 +11,7 @@ export default function StoreCTA() {
     <div className="storehome flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center  py-10">
         <div className>
-          <div className={handlee.className}>
+          <div >
             <div className="flex flex-col justify-center items-center">
               <h1 className="handcraftheadline text-4xl sm:text-8xl my-12 lakerhead">
                 Michigan Made Products{' '}

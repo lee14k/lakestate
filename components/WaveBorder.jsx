@@ -12,7 +12,7 @@ const WaveBorder = () => {
           height={1000}
           className="w-auto h-auto"
         />
-        <p className="text-6xl">The Upper Peninsula's Leader in Employment and Training
+        <p className="text-6xl text-center lg:mx-72">The Upper Peninsula's Leader in Employment and Training
         </p>
         <Link href="/About">
           <span className="rounded-md bg-orange-400 px-10 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">

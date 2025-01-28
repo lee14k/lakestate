@@ -1,6 +1,6 @@
 import { useCart } from '../context/CartContext';
 import { createCheckout } from '../utils/createCheckout';
-
+'use client'
 const Cart = () => {
   const { cartItems } = useCart();
 
