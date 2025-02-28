@@ -1,17 +1,11 @@
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
-import ImageBorder from '@/components/ImageBorder'
-import Community from '@/components/Community'
-import StoreCTA from '@/components/StoreCTA'
-import Link from 'next/link'
-import Parallax from '@/components/Parallax'
-import Parafill from '@/components/Parafill'
-import Footer from '@/components/Footer'
-import SecondBorder from '@/components/SecondBorder'
-import HomeBorder from '@/components/HomeBorder'
-import Image from 'next/image'
 import Slider from '@/components/Slider'
 import HomeOne from '@/components/home-section-1'
+import HomeTwo from '@/components/home-section-2'
+import HomeThree from '@/components/home-section-3'
+import HomeFour from '@/components/home-section-4'
+import HomeSix from '@/components/home-section-6'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -20,6 +14,11 @@ export default function Home() {
       <Navbar />
       <Slider />
       <HomeOne/>
+      <HomeTwo/>
+      <HomeThree header="Welcome" bodyText="Some text here" photoURL="donate.jpg" reverse={true} />
+      <HomeThree header="Welcome" bodyText="Some text here" photoURL="parallaxpic.jpg" reverse={false} />
+      <HomeFour/>
+      <HomeSix/>
     </div>
   )
 }

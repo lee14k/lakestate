@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.custom-white-width{
+  width: 10px !important;
+}
 .slider {
   overflow: hidden;
   width: 100%;

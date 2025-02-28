@@ -24,7 +24,6 @@ export default function Navbar() {
       current: false,
     },
 
-    { name: 'Partners', href: '/Partners', current: false },
     { name: 'Contact', href: '/Contact', current: false },
   ])
 
