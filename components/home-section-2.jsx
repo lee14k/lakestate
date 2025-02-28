@@ -4,29 +4,30 @@ export default function HomeTwo() {
   const sections = [
     {
       icon: AcademicCapIcon,
-      header: "Header 1",
-      text: "Text 1",
+      header: "Community",
+      text:
+        "Lakestate Industries is dedicated to creating opportunities for individuals that embrace diversity, promote equality, and enable each person to thrive and contribute meaningfully to their communities.",
     },
     {
       icon: SparklesIcon,
-      header: "Header 2",
-      text: "Text 2",
+      header:"Support",
+      text: "Lakestate Industries provides personalized assessments, training, and support to individuals that help them overcome barriers to employment.",
     },
     {
       icon: CheckCircleIcon,
-      header: "Header 3",
-      text: "Text 3",
+      header: "Opportunity",
+      text: "Lakestate Industries works diligently to help people overcome barriers and support their journey towards achieving their highest level of employment and community inclusion.",
     },
   ]
   return (
-    <div className="flex justify-around items-center">
-    <div className="grid grid-cols-3">
+    <div className="flex  justify-around items-center mx-12 my-12">
+    <div className="grid grid-cols-3 gap-12">
       {sections.map((section, index) => (
         <div key={index}>
-          <div>
-            <section.icon className="h-6 w-6 text-gray-500" />
-            <h2>{section.header}</h2>
-            <p>{section.text}</p>
+          <div className="px-12 border-2 border-b-blue-200 flex flex-col justify-center items-center">
+            <section.icon className="h-20 w-20 text-lakestate-blue " />
+            <h2 className="text-2xl">{section.header}</h2>
+            <p className="text-xl">{section.text}</p>
           </div>
           <div>
           </div>

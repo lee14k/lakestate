@@ -9,11 +9,11 @@ export default function HomeOne () {
       <div className="bg-orange-500 w-12 flex-grow"></div>
       <div className="container col-span-3 flex-grow">
         <div className="flex flex-col justify-center items-center">
-          <h1>The Upper Peninsula's Leader in Employment and Training</h1>
+          <h1 className="text-5xl text-center">The Upper Peninsula's Leader in Employment and Training</h1>
           <Image src="/new-pic-1-8-2025.jpg"       width={500}
                  height={500} />
-          <p>At Lakestate Industries, we are committed to fostering an environment where every individual is empowered to recognize and maximize their unique abilities. We work diligently to help people overcome barriers and support their journey towards achieving their highest level of employment and community inclusion. Our dedication lies in creating opportunities that embrace diversity, promote equality, and enable each person to thrive and contribute meaningfully to their communities.</p>
-          <button>Learn More</button>
+          <p className="text-center">At Lakestate Industries, we are committed to fostering an environment where every individual is empowered to recognize and maximize their unique abilities. We work diligently to help people overcome barriers and support their journey towards achieving their highest level of employment and community inclusion. By focusing on the strengths and capabilities of each individual, Lakestate Industries aims to bridge the gap between talented disabled individuals and the needs of businesses.</p>
+          <button className="rounded-md bg-orange-400 px-10 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">Learn More</button>
         </div>
         <div className="col-span-1"></div>
       </div>
