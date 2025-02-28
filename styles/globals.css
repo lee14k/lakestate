@@ -13,10 +13,10 @@
 }
 
 .storehome {
-  background: rgb(91, 113, 199);
+  background: rgb(28, 70, 138);
   background: linear-gradient(
     180deg,
-    rgba(29, 91, 121, 1) 0%,
+    rgba(28, 70, 138, 1) 0%,
     rgba(255, 255, 255, 1) 86%
   );
 }

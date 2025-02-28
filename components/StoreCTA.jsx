@@ -27,7 +27,7 @@ export default function StoreCTA() {
       <PictureGrid />
       <div className="my-36">
         <Link href="/Shop">
-          <span className="rounded-md bg-orange-400 px-10 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <span className="rounded-md bg-orange-400 px-10 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
             <span>Shop now</span>
           </span>
         </Link>

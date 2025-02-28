@@ -8,11 +8,11 @@ const WaveBorder = () => {
         <Image
           src="/lilogo.png"
           alt="Logo"
-          width={1000}
-          height={1000}
+          width={2000}
+          height={2000}
           className="w-auto h-auto"
         />
-        <p className="text-8xl text-center lg:mx-72 font-bold pb-12">The Upper Peninsula's Leader in Employment and Training
+        <p className="text-6xl text-center lg:mx-72 font-bold pb-12">The Upper Peninsula's Leader in Employment and Training
         </p>
 
       </div>

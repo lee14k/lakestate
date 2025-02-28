@@ -14,7 +14,7 @@ export default function ServiceGrid({
         {services.map((service, index) => (
           <div
             key={index}
-            className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-sky-900 text-white blueguy '} items-center`}
+            className={`serve flex ${index % 2 === 0 ? 'flex-row ' : 'flex-row-reverse bg-lakestate-blue text-white blueguy '} items-center`}
           >
             <div className="service-image w-1/2">
               {service.backgroundImage && (
@@ -34,7 +34,7 @@ export default function ServiceGrid({
                 <p className="mb-4 mx-24 text-2xl">{service.para}</p>
               )}
               {service.buttonText && (
-                <button className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500">
+                <button className="rounded-md bg-orange-400 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue">
                   {service.buttonText}
                 </button>
               )}

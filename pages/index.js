@@ -21,7 +21,7 @@ export default function Home() {
           <HomeBorder />
         </div>
         <div className="flex flex-col items-center justify-center bg-white py-24 gap-10 ">
-          <h1 className="text-8xl font-bold text-sky-900 ">
+          <h1 className="text-8xl font-bold text-lakestate-blue ">
             Lakestate Industries
           </h1>
           <p className="sm:mx-48 my-4 justify-center items-center text-center text-3xl">
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <Link href="/About">
             <div className="mb-16 my-8">
-              <span className="z-500 rounded-md bg-sky-900  px-12 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-48">
+              <span className="z-500 rounded-md bg-lakestate-blue px-12 py-6 text-5xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-48">
                 <span>Learn More</span>
               </span>
             </div>
