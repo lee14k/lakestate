@@ -14,16 +14,10 @@ export default function Navbar() {
     { name: 'Store', href: '/Shop', current: false },
     { name: 'Hire Us', href: '/HireUs', current: false },
     {
-      name: 'Vocational Training',
+      name: 'Our Services',
       href: '/VocationalTraining',
       current: false,
     },
-    {
-      name: 'Residential Services',
-      href: '/ResidentialServices',
-      current: false,
-    },
-
     { name: 'Contact', href: '/Contact', current: false },
   ])
 

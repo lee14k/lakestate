@@ -10,7 +10,7 @@ const About = () => {
         <div>
          <PageHeader header="About Us"/>
         </div>
-        <HomeThree header="Welcome" bodyText="Some text here" photoURL="donate.jpg" reverse={true} color="lakestate-blue" />
+        <HomeThree header="Our Story" bodyText="Some text here" photoURL="donate.jpg" reverse={true} color="lakestate-blue" />
         <HomeThree header="Welcome" bodyText="Some text here" photoURL="parallaxpic.jpg" reverse={false} color="orange-500" />
         <div className="bg-lakestate-blue text-white flex flex-col justify-center items-center">
           <h2>Learn More</h2>

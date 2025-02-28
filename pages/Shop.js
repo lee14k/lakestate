@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import PageHeader from '@/components/page-header'
+
 import { CartProvider } from '../context/CartContext' // Update the path to CartContext
 import BuyButton from '../components/BuyButton'
 import NewCart from '@/components/NewCart'
@@ -100,7 +102,7 @@ export default function Shop({ products }) {
   return (
     <div>
       <Navbar />
-      <WaveOther imageUrl="/store.jpg" header="Shop" />
+      <PageHeader header="Shop"/>
       <CartProvider>
         <div className="container mx-auto px-4">
           <NewCart />

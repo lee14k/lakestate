@@ -25,7 +25,7 @@ export default function HomeSix () {
   return (
     <div>
       <h5>Our Partners</h5>
-      <div>
+      <div className="grid grid-cols-4">
         {logos.map((logo, index) => (
           <div key={index}>
             <img src={logo.image} width="200px" height="200px" />
