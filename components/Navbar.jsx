@@ -33,10 +33,10 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8 bg-white navbarcontainer">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-48 items-center justify-between">
               <div className="flex flex-shrink-0 items-center">
                 <img
-                  className="h-16 w-auto"
+                  className="h-48 w-auto"
                   src="/lilogo.png"
                   alt="Your Company"
                 />
