@@ -12,7 +12,7 @@ export default function HomeFour() {
   ]
   return (
     <div className="flex flex-col justify-center items-center my-10">
-      <div className="bg-blue-200 w-full flex flex-col justify-center items-center h-36"><h4 className="text-5xl">Support our
+      <div className="bg-blue-100 w-full flex flex-col justify-center items-center h-36"><h4 className="text-5xl">Support our
         individuals</h4>
         <p className="text-xl text-center mx-48">Each item we produce is a testament to the creativity, precision, and hard work of our talented
           workforce.</p>

@@ -9,7 +9,7 @@ export default function HomeThree({ header, bodyText, photoURL, color, reverse, 
         <p className="mx-4 md:mx-20 text-center">{bodyText}</p>
         {button && (
           <Link href={button.url}>
-            <span className="mt-4 inline-block rounded-md bg-blue-500 px-6 py-3 text-white font-semibold hover:bg-blue-600">
+            <span className="mt-4 inline-block rounded-md bg-lakestate-blue px-6 py-3 text-white font-semibold hover:bg-blue-600">
               {button.text}
             </span>
           </Link>
