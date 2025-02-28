@@ -1,3 +1,4 @@
+import Image from 'next/image'
 const navigation = [
   {
     name: 'Facebook',
@@ -18,18 +19,38 @@ const navigation = [
 export default function Footer() {
   return (
     <footer className="bg-orange-500 footer text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
+        <div className="max-w-7xl py-12 md:flex md:items-center md:justify-between ">
+        <div className="flex justify-center items-center gap-6 md:order-2">
+          <Image
+            src="/carf.png"
+            alt="CARF Accredited"
+            width={100}
+            height={100}
+          />
           {navigation.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="h-12 w-12" aria-hidden="true" />
             </a>
           ))}
+
+        </div>
+        <div className="grid grid-cols-2">
+          <div>
+            Address
+          </div>
+          <div className="text-center text-lg font-semibold">
+            Your Company Name
+          </div>
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
+          <img
+            className="h-52 w-auto"
+            src="/lilogo.png"
+            alt="Your Company"
+          />
           <p className="text-center text-xs leading-5 ">
-            &copy; 2024 Lakestate Industries, All rights reserved.
+            &copy; 2025 Lakestate Industries, All rights reserved.
           </p>
         </div>
       </div>

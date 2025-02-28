@@ -6,7 +6,7 @@ export default function HomeThree({ header, bodyText, photoURL, color, reverse, 
     <div className={`flex flex-col md:${reverse ? 'flex-row-reverse' : 'flex-row'} items-center gap-8 md:gap-0 px-4 md:px-0`}>
       <div className="flex-1 flex flex-col justify-center items-center">
         <h1 className="text-4xl md:text-6xl font-bold my-4 md:my-8 text-center">{header}</h1>
-        <p className="mx-4 md:mx-20 text-center">{bodyText}</p>
+        <p className="mx-4 md:mx-20 text-center text-2xl">{bodyText}</p>
         {button && (
           <Link href={button.url}>
             <span className="mt-4 inline-block rounded-md bg-lakestate-blue px-6 py-3 text-white font-semibold hover:bg-blue-600">
@@ -25,9 +25,12 @@ export default function HomeThree({ header, bodyText, photoURL, color, reverse, 
           </div>
           
           <div 
-            className="absolute inset-[3px] bg-cover bg-center z-10" 
+            className="absolute inset-[3px] z-10"
             style={{ 
-              backgroundImage: `url(${photoURL})`
+              backgroundImage: `url(${photoURL})`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
             }}
           ></div>
         </div>
