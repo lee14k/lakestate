@@ -221,9 +221,16 @@ export default function NewCart() {
                             onClick={handleCheckout} 
                             color="primary"
                             variant="contained"
+                            size="large"
+                            sx={{ 
+                                fontWeight: 'bold', 
+                                px: 4,
+                                backgroundColor: 'orange.400',
+                                '&:hover': { backgroundColor: '#1c468a' }
+                            }}
                             disabled={cartItems.length === 0 || isCheckingOut}
                         >
-                            {isCheckingOut ? 'Processing...' : 'Checkout'}
+                            {isCheckingOut ? 'Processing...' : 'Checkout Now'}
                         </Button>
                     </Box>
                 </DialogActions>

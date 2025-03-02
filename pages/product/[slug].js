@@ -7,8 +7,9 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import NewCart from '@/components/NewCart'
-import { CartProvider } from '../../context/CartContext'
+import { CartProvider, useCart } from '../../context/CartContext'
 import BuyButton from '@/components/BuyButton'
+import { createCheckout } from '../../utils/createCheckout'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -103,6 +104,28 @@ function Product({ product }) {
     currency: 'USD',
   }).format(Number(selectedVariant?.price || product.price || 0))
 
+  const { addToCart } = useCart();
+
+  const handleCheckout = async () => {
+    addToCart({
+      ...product,
+      price: selectedVariant?.price || product.price,
+      variant: selectedVariant,
+    });
+    
+    try {
+      const checkoutUrl = await createCheckout([{
+        ...product,
+        price: selectedVariant?.price || product.price,
+        variant: selectedVariant,
+        quantity: 1
+      }]);
+      window.location.href = checkoutUrl;
+    } catch (error) {
+      console.error('Error during checkout:', error);
+    }
+  };
+
   // Ensure variants is always an array
   {safeVariants.map((variant) => (
     <button
@@ -165,13 +188,25 @@ function Product({ product }) {
           </div>
         )}
         
-        <BuyButton
-          product={{
-            ...product,
-            price: selectedVariant?.price || product.price,
-            variant: selectedVariant,
-          }}
-        />
+        <div className="flex gap-4 mt-6">
+          <button
+            onClick={() => addToCart({
+              ...product,
+              price: selectedVariant?.price || product.price,
+              variant: selectedVariant,
+            })}
+            className="rounded-md bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Add to Cart
+          </button>
+          
+          <button
+            onClick={handleCheckout}
+            className="rounded-md bg-orange-400 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue"
+          >
+            Checkout
+          </button>
+        </div>
       </div>
     </div>
   )

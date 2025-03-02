@@ -1,18 +1,18 @@
-import { useCart } from '../context/CartContext'; // Path to your CartContext
+import { useRouter } from 'next/router';
 
 const BuyButton = ({ product }) => {
-  const { addToCart } = useCart();
+  const router = useRouter();
 
-  const handleBuy = () => {
-    addToCart(product);
+  const handleViewProduct = () => {
+    router.push(`/product/${product.slug}`);
   };
 
   return (
     <button 
       className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-1/2" 
-      onClick={handleBuy}
+      onClick={handleViewProduct}
     >
-      Add to Cart
+      View Product
     </button>
   );
 };

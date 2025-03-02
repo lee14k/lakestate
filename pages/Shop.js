@@ -76,7 +76,7 @@ function Product({ product }) {
   }).format(Number(product.price) || 0)
 
   return (
-    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-80 h-[36rem] shadow-lg rounded-lg">
+    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-80 h-[30rem] shadow-lg rounded-lg">
       <Link href={`/product/${product.slug}`} className="w-full h-72 relative">
         <Image
           className="object-cover w-full h-full rounded-lg"
@@ -88,7 +88,6 @@ function Product({ product }) {
         />
       </Link>
       <h2 className="text-xl font-bold mt-4">{product.title || ''}</h2>
-      <p className="text-sm mt-2 text-center line-clamp-3">{product.description || ''}</p>
       <p className="text-lg mt-2">{formattedPrice}</p>
       <BuyButton product={product} />
     </div>
