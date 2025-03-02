@@ -6,7 +6,7 @@ export default function HomeOne () {
   return (
     <div className="home-section-1 grid grid-cols-7 h-full">
       <div className="bg-lakestate-blue mr-2"></div>
-      <div className="bg-orange-500 w-12 flex-grow"></div>
+      <div className="bg-orange-400 w-12 flex-grow"></div>
       <div className="container col-span-3 flex-grow">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-5xl text-center my-4">The Upper Peninsula's Leader in Employment and Training</h1>

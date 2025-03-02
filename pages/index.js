@@ -17,7 +17,7 @@ export default function Home() {
       <HomeOne/>
       <HomeTwo/>
       <HomeThree header="Vocational Training" bodyText="We offer specialized training in a wide range of vocational skills tailored to the individual's interests and capabilities, such as job-specific tasks, communication skills, and workplace etiquette." photoURL="new-pic-1-8-2025.jpg " reverse={true}  button={{ text: "Learn More", url: "/learn-more" }} />
-      <HomeThree header="High Quality Services" bodyText="Our sub-contracting services offer businesses a reliable and high-quality solution for their needs while providing meaningful work opportunities for our participants." photoURL="survey.jpg" reverse={false} color="rgb(249, 115, 22)"  button={{ text: "Learn More", url: "/learn-more" }} />
+      <HomeThree header="High Quality Services" bodyText="Our sub-contracting services offer businesses a reliable and high-quality solution for their needs while providing meaningful work opportunities for our participants." photoURL="survey.jpg" reverse={false} color="#ffa726"  button={{ text: "Learn More", url: "/learn-more" }} />
       <HomeFour/>
       <HomeSix/>
       <Footer/>

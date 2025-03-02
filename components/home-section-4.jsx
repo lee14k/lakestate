@@ -11,11 +11,24 @@ export default function HomeFour() {
     }
   ]
   return (
-    <div className="flex flex-col justify-center items-center mt-8">
-      <div className="bg-blue-100 w-full flex flex-col justify-center items-center h-36"><h4 className="text-5xl font-bold">Support our
-        individuals</h4>
-        <p className="text-xl text-center mx-48">Each item we produce is a testament to the creativity, precision, and hard work of our talented
-          workforce.</p>
+    <div className="flex flex-col justify-center items-center mt-8 text-white">
+      <div className="w-full grid grid-cols-8 bg-lakestate-light-blue">
+        <div className="col-span-1 h-full flex items-center justify-end">
+          <div className="bg-lakestate-blue h-full flex-grow"></div>
+          <div className="h-full bg-white w-2 flex-shrink-0"></div>
+          <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+        </div>
+        
+        <div className="col-span-6 flex justify-center items-center flex-col text-center py-6">
+          <h4 className="text-5xl font-bold">Support our individuals</h4>
+          <p className="text-xl text-center mx-12">Each item we produce is a testament to the creativity, precision, and hard work of our talented workforce.</p>
+        </div>
+        
+        <div className="col-span-1 h-full flex items-center">
+          <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+          <div className="h-full bg-white w-2 flex-shrink-0"></div>
+          <div className="bg-lakestate-blue h-full flex-grow"></div>
+        </div>
       </div>
 
       <div className="flex justify-center items-center mt-4">
@@ -25,7 +38,7 @@ export default function HomeFour() {
               <img
                 src={product.image}
                 className="max-w-full max-h-full object-contain"
-                alt={`Product ${index}`}
+                alt={`Product ${index + 1}`}
               />
             </div>
           ))}

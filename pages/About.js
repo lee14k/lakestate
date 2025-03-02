@@ -22,16 +22,30 @@ const About = () => {
           <HomeThree header="Our Story" bodyText="Founded in 1969, Lakestate Industries began as an outgrowth of a parents group concerned with the lack of opportunities available for individuals with disabilities. Thus, Lakestate Industries' focus has been giving individuals with disabilities the opportunity to experience the rewards of working for pay while removing barriers to employment and promoting community inclusion. Many individuals in our area experience difficulties getting and/or keeping employment because of their disability." photoURL="/ls-sign.jpg" reverse={true} color="#1c468a" />
         </div>
         <div className="">
-          <HomeThree  bodyText=" Lakestate Industries serves individuals and gives them the opportunity to work either at Lakestate Industries or in the community with supports, which enables them to earn a paycheck, gain self-worth and live richer, more meaningful lives. As part of our work training and job placement, we have developed many community-based training sites. Work training helps develop employable work skills, as an individual is exposed to more work opportunities, they will also develop more work skills to bring with them to an employment site. We base many of our work opportunities in the community in order for our individuals to experience working alongside of individuals without barriers to employment. We have developed mobile crews and they have many benefits." photoURL="/parallaxpic.jpg" reverse={false} color="#f97316" />
+          <HomeThree  bodyText=" Lakestate Industries serves individuals and gives them the opportunity to work either at Lakestate Industries or in the community with supports, which enables them to earn a paycheck, gain self-worth and live richer, more meaningful lives. As part of our work training and job placement, we have developed many community-based training sites. Work training helps develop employable work skills, as an individual is exposed to more work opportunities, they will also develop more work skills to bring with them to an employment site. We base many of our work opportunities in the community in order for our individuals to experience working alongside of individuals without barriers to employment. We have developed mobile crews and they have many benefits." photoURL="/parallaxpic.jpg" reverse={false} color="#ffa726" />
         </div>
-        <div className="bg-lakestate-blue text-white flex flex-col justify-center items-center py-12 px-4 space-y-4">
-          <h2 className="text-5xl font-bold">Learn More</h2>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-md transition-colors text-2xl">Our Services</button>
+        <div className="w-full grid grid-cols-8 bg-lakestate-light-blue text-white">
+          <div className="col-span-1 h-full flex items-center justify-end">
+            <div className="bg-lakestate-blue h-full flex-grow"></div>
+            <div className="h-full bg-white w-2 flex-shrink-0"></div>
+            <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+          </div>
+          
+          <div className="col-span-6 flex flex-col justify-center items-center py-12 px-4 space-y-4">
+            <h2 className="text-5xl font-bold">Learn More</h2>
+            <button className="bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 px-6 rounded-md transition-colors text-2xl">Our Services</button>
+          </div>
+          
+          <div className="col-span-1 h-full flex items-center">
+            <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+            <div className="h-full bg-white w-2 flex-shrink-0"></div>
+            <div className="bg-lakestate-blue h-full flex-grow"></div>
+          </div>
         </div>
         <div className="py-8">
           <HomeThree header="Help Our Cause"
                      bodyText="100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future."
-                     photoURL="/vcthree.jpg" reverse={true} color="#f97316"
+                     photoURL="/vcthree.jpg" reverse={true} color="#ffa726"
                      button={{ text: 'Donate', url: '/learn-more' }} />
           <ul
             role="list"

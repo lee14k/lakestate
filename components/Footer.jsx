@@ -16,42 +16,70 @@ const navigation = [
 
 ]
 
+const adddresses = [
+  {
+    location:'Escanaba',
+    street: '1830 N 21st St',
+    city: 'Escanaba, MI 49829',
+    phone: '(906) 786-9212',
+  },
+  {
+    location:'Marquette',
+    street: '401 W Baraga Ave',
+    city: 'Marquette, MI 49855',
+    phone: '(906) 273-2131',
+  }
+]
+
 export default function Footer() {
   return (
-    <footer className="bg-orange-500 footer text-white">
-        <div className="max-w-7xl py-12 md:flex md:items-center md:justify-between ">
-        <div className="flex justify-center items-center gap-6 md:order-2">
-          <Image
-            src="/carf.png"
-            alt="CARF Accredited"
-            width={100}
-            height={100}
-          />
-          {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-12 w-12" aria-hidden="true" />
-            </a>
-          ))}
+    <footer className="bg-orange-400 footer text-white">
+      <div className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-2 gap-6 col-span-1">
+            {adddresses.map((address) => (
+              <div key={address.location} className="text-center">
+                <div className="text-lg font-semibold">
+                  {address.location}
+                </div>
+                <div className="text-md font-semibold">
+                  {address.street}
+                </div>
+                <div className="text-md font-semibold">
+                  {address.city}
+                </div>
+                <div className="text-md font-semibold">
+                  {address.phone}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-2 text-center">
+            <img
+              className="h-52 w-auto mx-auto"
+              src="/lilogo.png"
+              alt="Your Company"
+            />
+            <p className="text-center text-s leading-5 font-bold ">
+              &copy; 2025 Lakestate Industries, All rights reserved.
+            </p>
+          </div>
 
-        </div>
-        <div className="grid grid-cols-2">
-          <div>
-            Address
+          <div className="flex justify-center items-center gap-6">
+            <Image
+              src="/carf.png"
+              alt="CARF Accredited"
+              width={100}
+              height={100}
+            />
+            {navigation.map((item) => (
+              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-12 w-12" aria-hidden="true" />
+              </a>
+            ))}
           </div>
-          <div className="text-center text-lg font-semibold">
-            Your Company Name
-          </div>
-        </div>
-        <div className="mt-8 md:order-1 md:mt-0">
-          <img
-            className="h-52 w-auto"
-            src="/lilogo.png"
-            alt="Your Company"
-          />
-          <p className="text-center text-xs leading-5 ">
-            &copy; 2025 Lakestate Industries, All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
