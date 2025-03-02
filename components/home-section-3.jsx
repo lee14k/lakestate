@@ -24,6 +24,7 @@ export default function HomeThree({ header, bodyText, photoURL, color, reverse, 
             style={{ 
               backgroundImage: `url(${photoURL})`,
               backgroundSize: '100%',
+              backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               boxShadow: `clamp(40px, 6vw, 23px) clamp(-20px, -4vw, -82px) 0px 0px ${color || 'rgba(28,70,138,1)'}`
             }}
