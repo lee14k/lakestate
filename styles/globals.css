@@ -296,7 +296,6 @@ nav {
     background-size: cover;
     display: flex;
     background-position: bottom;
-    margin-bottom: 25%;
   }
 }
 @layer base {
