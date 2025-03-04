@@ -19,6 +19,7 @@ module.exports = {
   		},
   		colors: {
 				'lakestate-blue': '#1c468a',
+				'lakestate-light-blue':'#007cc3',
 				background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

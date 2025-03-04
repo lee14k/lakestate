@@ -14,17 +14,10 @@ export default function Navbar() {
     { name: 'Store', href: '/Shop', current: false },
     { name: 'Hire Us', href: '/HireUs', current: false },
     {
-      name: 'Vocational Training',
+      name: 'Our Services',
       href: '/VocationalTraining',
       current: false,
     },
-    {
-      name: 'Residential Services',
-      href: '/ResidentialServices',
-      current: false,
-    },
-
-    { name: 'Partners', href: '/Partners', current: false },
     { name: 'Contact', href: '/Contact', current: false },
   ])
 
@@ -33,10 +26,10 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8 bg-white navbarcontainer">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-48 items-center justify-between">
               <div className="flex flex-shrink-0 items-center">
                 <img
-                  className="h-16 w-auto"
+                  className="h-48 w-auto"
                   src="/lilogo.png"
                   alt="Your Company"
                 />
@@ -64,7 +57,7 @@ export default function Navbar() {
                           item.current
                             ? 'bg-gray-900 text-white'
                             : 'hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-lg font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
