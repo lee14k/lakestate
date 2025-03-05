@@ -12,7 +12,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
               Interested in our vocational training?
             </h1>
             <Link href="/VocationalTraining">
-              <button className="rounded-md bg-orange-400 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
+              <button className="rounded-md bg-orange-500 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
                 {' '}
                 Learn More
               </button>
@@ -28,7 +28,7 @@ export default function ServicesCTA({ topImage1Src, topImage2Src }) {
           <div className="flex flex-col justify-center items-center mt-4">
             <h1 className="text-white text-4xl mb-6 bg-black bg-opacity-10 text-center">Looking to hire us?</h1>
             <Link href="/HireUs">
-              <button className="rounded-md bg-orange-400 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
+              <button className="rounded-md bg-orange-500 px-6 py-2 text-2xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
                 Learn More
               </button>
             </Link>

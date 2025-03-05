@@ -33,7 +33,7 @@ const adddresses = [
 
 export default function Footer() {
   return (
-    <footer className="bg-orange-400 footer text-white">
+    <footer className="bg-orange-500 footer text-white">
       <div className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="grid grid-cols-2 gap-6 col-span-1">

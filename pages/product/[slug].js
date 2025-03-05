@@ -318,7 +318,7 @@ function Product({ product }) {
           
           <button
             onClick={handleCheckout}
-            className="rounded-md bg-orange-400 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue"
+            className="rounded-md bg-orange-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue"
           >
             Checkout
           </button>

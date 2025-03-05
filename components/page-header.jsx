@@ -5,7 +5,7 @@ export default function PageHeader({ header }) {
         <div className="bg-lakestate-blue h-full flex-grow"></div>
         <div className="h-full bg-white w-2 flex-shrink-0"></div>
       </div>
-      <div className="bg-orange-400 flex-grow w-12 h-full"></div>
+      <div className="bg-orange-500 flex-grow w-12 h-full"></div>
       <h1 className="text-6xl font-bold my-8 text-center col-span-5">{header}</h1>
     </div>
   )

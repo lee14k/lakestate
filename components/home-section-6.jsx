@@ -1,26 +1,30 @@
 export default function HomeSix() {
   const logos = [
     {
-      image: 'chamber.png'
+      image: 'pathways_community_mental_health_logo.jpeg'
+
     },
     {
-      image: 'fox-valley-logo.png'
+      image: 'mirehab.png'
+
     },
     {
       image: 'dsisd.png'
     },
     {
-      image: 'rrn.png'
-    },
-    {
-      image: 'pathways_community_mental_health_logo.jpeg'
+      image: 'fox-valley-logo.png'
     },
     {
       image: 'Pufahl-Pallet-Logo.png'
     },
+
     {
-      image: 'mirehab.png'
+      image: 'chamber.png'
     },
+    {
+      image: 'rrn.png'
+    },
+
   ]
   return (
     <div className="flex flex-col justify-center items-center">
@@ -28,7 +32,7 @@ export default function HomeSix() {
         <div className="col-span-1 h-full flex items-center justify-end">
           <div className="bg-lakestate-blue h-full flex-grow"></div>
           <div className="h-full bg-white w-2 flex-shrink-0"></div>
-          <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+          <div className="bg-orange-500 w-12 h-full flex-shrink-0"></div>
         </div>
         
         <div className="col-span-6 flex justify-center items-center text-white flex-col text-center py-6">
@@ -37,7 +41,7 @@ export default function HomeSix() {
         </div>
         
         <div className="col-span-1 h-full flex items-center">
-          <div className="bg-orange-400 w-12 h-full flex-shrink-0"></div>
+          <div className="bg-orange-500 w-12 h-full flex-shrink-0"></div>
           <div className="h-full bg-white w-2 flex-shrink-0"></div>
           <div className="bg-lakestate-blue h-full flex-grow"></div>
         </div>

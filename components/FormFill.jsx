@@ -13,23 +13,23 @@ export default function FormFill() {
             </p>
           </div>
           <div className="mx-auto grid w-full max-w-xl sm:grid-cols-3 items-center gap-6">
-            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-400  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Pathways Community Mental Health
             </button>
-            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-400  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">
+            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">
               {' '}
               Michigan Rehabilitation Services (MRS)
             </button>
-            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-400  px-2 py-8 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-8 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               {' '}
               Respite <br />
               Form
             </button>
-            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-400  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               {' '}
               Hiawatha Respite Form
             </button>
-            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-400  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">
+            <button className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">
               {' '}
               Employment Application
             </button>

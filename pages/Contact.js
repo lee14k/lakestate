@@ -36,7 +36,7 @@ export default function Contact() {
                     </iframe>
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg border-2 border-lakestate-blue"  
-                       style={{ boxShadow: 'clamp(40px, 6vw, 23px) clamp(-20px, -4vw, -82px) 0px 0px #ffa726' }}>
+                       style={{ boxShadow: 'clamp(40px, 6vw, 23px) clamp(-20px, -4vw, -82px) 0px 0px #e87b35' }}>
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.3177938934655!2d-87.40362158782384!3d46.54139997099154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4e3f95be03295d%3A0x2da50d69ef4cfb79!2sLakeState%20Industries!5e0!3m2!1sen!2sus!4v1719305816060!5m2!1sen!2sus" 
                       width="100%" 
@@ -161,7 +161,7 @@ export default function Contact() {
                             checked={agreed}
                             onChange={setAgreed}
                             className={classNames(
-                              agreed ? 'bg-orange-400' : 'bg-gray-200',
+                              agreed ? 'bg-orange-500' : 'bg-gray-200',
                               'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue'
                             )}
                           >
@@ -187,7 +187,7 @@ export default function Contact() {
                     <div className="mt-10">
                       <button
                         type="submit"
-                        className="block w-full rounded-md bg-orange-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors duration-200"
+                        className="block w-full rounded-md bg-orange-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors duration-200"
                       >
                         Let's talk
                       </button>

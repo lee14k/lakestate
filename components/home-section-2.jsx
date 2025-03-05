@@ -15,7 +15,7 @@ export default function HomeTwo() {
       header:"Support",
       text: "Lakestate Industries provides personalized assessments, training, and support to individuals that help them overcome barriers to employment.",
       iconColor: "text-white",
-      bgColor: "bg-orange-400"
+      bgColor: "bg-orange-500"
     },
     {
       icon: CheckCircleIcon,

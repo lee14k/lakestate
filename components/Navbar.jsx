@@ -25,7 +25,7 @@ export default function Navbar() {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="max-w-7xl px-2 sm:px-6 lg:px-8 bg-white navbarcontainer">
+          <div className="px-2 sm:px-6 lg:px-8 bg-white navbarcontainer border-b-orange-500 border-b-4 mb-2">
             <div className="relative flex h-48 items-center justify-between">
               <div className="flex flex-shrink-0 items-center">
                 <img
