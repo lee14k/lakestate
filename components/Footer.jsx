@@ -36,7 +36,7 @@ export default function Footer() {
     <footer className="bg-orange-500 footer text-white">
       <div className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <div className="grid grid-cols-2 gap-6 col-span-1">
+          <div className="grid lg:grid-cols-2 gap-6 col-span-1">
             {adddresses.map((address) => (
               <div key={address.location} className="text-center">
                 <div className="text-lg font-semibold">
@@ -66,7 +66,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex lg:flex-row flex-col justify-center items-center gap-6">
             <Image
               src="/carf.png"
               alt="CARF Accredited"

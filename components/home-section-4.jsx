@@ -36,7 +36,7 @@ export default function HomeFour() {
       </div>
 
       <div className="flex justify-center items-center mt-4">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
             <div key={index} className="flex justify-center items-center w-64 h-64 border-lakestate-light-blue border-2">
               <img

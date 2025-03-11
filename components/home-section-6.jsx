@@ -47,7 +47,7 @@ export default function HomeSix() {
         </div>
       </div>
 
-      <div className="grid grid-cols-7 mx-12 gap-12 my-8">
+      <div className="grid lg:grid-cols-7 mx-12 gap-12 my-8">
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center">
             <img src={logo.image} width="200px" height="200px" alt={`Partner logo ${index + 1}`} />

@@ -27,7 +27,7 @@ export default function HomeTwo() {
   ]
   return (
     <div className="flex justify-around items-center mx-12 my-12">
-      <div className="grid grid-cols-3 gap-12 w-full">
+      <div className="grid lg:grid-cols-3 gap-12 w-full">
         {sections.map((section, index) => (
           <div key={index} className="h-full">
             <div className={`px-12 border-2 border-b-blue-200 flex flex-col h-96 text-white ${section.bgColor}`}>
