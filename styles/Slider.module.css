@@ -1,0 +1,37 @@
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  --image-count: 7; /* Update this to match the number of images */
+}
+
+.sliderTrack {
+  display: flex;
+  width: calc(200%); /* Double the width to accommodate two sets of images */
+  animation: scroll 30s linear infinite;
+}
+
+.slider img {
+  width: auto;
+  height: 300px;
+  max-width: 700px;
+  flex-shrink: 0;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move exactly the width of all original images */
+    transform: translateX(-50%);
+  }
+} 
