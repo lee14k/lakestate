@@ -68,27 +68,41 @@ const About = () => {
         <div className="bg-lakestate-blue w-full h-6"></div>
         <div className="py-12 px-4">
           <h6 className="text-xl md:text-2xl font-bold text-center mb-8">Helpful Forms</h6>
-          <div className="mx-auto grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mx-auto grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <Link href="http://pathwaysup.org/">
             <button
               className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Pathways Community Mental Health
             </button>
+            </Link>
+            <Link href="https://www.michigan.gov/leo/bureaus-agencies/mrs">
+
             <button
               className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Michigan Rehabilitation Services (MRS)
             </button>
-            <button
-              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
-              Respite Form
-            </button>
+          </Link>
+            <Link href="https://cdn.shopify.com/s/files/1/0680/3210/2648/files/RESPITE_SERVICES_Time_Sheet_-_HBH_1.docx?v=1741885468">
+
             <button
               className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Hiawatha Respite Form
             </button>
+        </Link>
+            <Link href="https://cdn.shopify.com/s/files/1/0680/3210/2648/files/NEW_RESPITE_FORM_717.pdf?v=1741885468">
+
+            <button
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
+              Respite Form
+            </button>
+      </Link>
+            <Link href="https://cdn.shopify.com/s/files/1/0680/3210/2648/files/New_Employment_Application.pdf?v=1741885468">
+
             <button
               className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Employment Application
             </button>
+</Link>
           </div>
         </div>
         <Footer/>
