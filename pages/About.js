@@ -52,7 +52,7 @@ const About = () => {
           <HomeThree 
             header="Help Our Cause"
             bodyText="100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future."
-            photoURL="/vcthree.jpg" 
+            photoURL="/3011-thumb-up.jpg"
             reverse={true} 
             color="#e87b35"
             actionElement={
