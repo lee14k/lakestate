@@ -15,7 +15,7 @@
 .slider-track {
   display: flex;
   width: calc(200%); /* Double the width to accommodate two sets of images */
-  animation: scroll 16s linear infinite;
+  animation: scroll 12s linear infinite;
 }
 
 .slider img {

@@ -59,7 +59,7 @@ export default function Footer() {
             <img
               className="h-52 w-auto mx-auto"
               src="/lilogo.png"
-              alt="Your Company"
+              alt="Lakestate Industries Logo"
             />
             <p className="text-center text-s leading-5 font-bold ">
               &copy; 2025 Lakestate Industries, All rights reserved.
@@ -70,6 +70,12 @@ export default function Footer() {
             <Image
               src="/carf.png"
               alt="CARF Accredited"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="/incompass.png"
+              alt="Incompass Michigan Member"
               width={100}
               height={100}
             />

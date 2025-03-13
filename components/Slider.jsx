@@ -4,7 +4,11 @@ const images = [
   'cleaner.jpg',
   'woodshop.jpg',
   'helping.jpg',
-  // Add more image paths as needed
+  'PMMC6.jpg',
+  'ls-new-5.jpg',
+  'ls-new-6.jpg',
+  'ls-new-7.jpg'
+
 ];
 
 function Slider() {
