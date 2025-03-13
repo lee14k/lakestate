@@ -17,7 +17,7 @@ const VocationalTraining = () => {
                      color="#1c468a" />
         </div>
         <div className="py-8">
-          <HomeThree header="Job Placement, Coaching, and Support" bodyText="We provide assistance with job searches, resume building, interview preparation, and connecting individuals with inclusive employers who value inclusion and diversity. We offer ongoing support and job coaching to help individuals succeed in their chosen roles, including on-the-job training, and problem-solving assistance." photoURL="helping.jpg"
+          <HomeThree header="Job Placement, Coaching, and Support" bodyText="We provide assistance with job searches, resume building, interview preparation, and connecting individuals with inclusive employers who value inclusion and diversity. We offer ongoing support and job coaching to help individuals succeed in their chosen roles, including on-the-job training, and problem-solving assistance." photoURL="2996-staff-helping.jpg"
                      reverse={false}
                      color="#e87b35" />
         </div>

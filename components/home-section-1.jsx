@@ -7,12 +7,12 @@ export default function HomeOne () {
     <div className="home-section-1 grid grid-cols-7 h-full">
       <div className="bg-lakestate-blue mr-2 hidden md:block"></div>
       <div className="bg-orange-400 w-12 flex-grow hidden md:block"></div>
-      <div className="container col-span-7 md:col-span-3 flex-grow px-4 md:px-0">
+      <div className="container col-span-7 md:col-span-4 flex-grow px-4 md:px-0">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl text-center my-4 font-bold">The Upper Peninsula's Leader in Employment and Training</h1>
+          <h1 className="text-3xl md:text-5xl text-center font-bold py-8">The Upper Peninsula's Leader in Employment and Training</h1>
           <div className="w-full">
             <Image 
-              src="/Paper-Sorting-3006.jpg" 
+              src="/3005-hero-smiling.jpg"
               width={900}
               height={900}
               alt="Paper sorting at Lakestate Industries"

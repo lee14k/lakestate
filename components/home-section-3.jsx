@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function HomeThree({ header, bodyText, photoURL, color, reverse, button, colorTwo }) {
+export default function HomeThree({ header, bodyText, photoURL, color, reverse, button, colorTwo, actionElement }) {
   return (
     <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-24 px-4 md:px-0 my-6 md:my-10 mx-4 md:mx-16`}>
       <div className="flex-1 flex flex-col justify-center items-center">
@@ -13,6 +13,11 @@ export default function HomeThree({ header, bodyText, photoURL, color, reverse, 
               {button.text}
             </span>
           </Link>
+        )}
+        {actionElement && (
+          <div className="mt-6">
+            {actionElement}
+          </div>
         )}
       </div>
 

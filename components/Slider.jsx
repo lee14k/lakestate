@@ -3,12 +3,22 @@ import styles from '../styles/Slider.module.css';
 
 const images = [
   'cleaner.jpg',
+  'ls-new-5.jpg',
   'woodshop.jpg',
+  'ls-new-6.jpg',
   'helping.jpg',
   'PMMC6.jpg',
-  'ls-new-5.jpg',
-  'ls-new-6.jpg',
-  'ls-new-7.jpg'
+  'ls-new-7.jpg',
+  'PMMC4.jpg',
+  'PMMC8.jpg',
+  'ls-rez.jpg',
+  'ls-slider-9.jpg',
+  'ls-slider-10.jpg',
+  'ls-slider-11.jpg',
+  'ls-slider-12.jpg',
+  'ls-slider-13.jpg',
+  'ls-slider-14.jpg',
+
 ];
 
 function Slider() {
