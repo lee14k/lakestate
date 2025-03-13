@@ -1,28 +1,37 @@
+import Link from 'next/link';
+
 export default function HomeSix() {
   const logos = [
     {
-      image: 'pathways_community_mental_health_logo.jpeg'
+      image: 'pathways_community_mental_health_logo.jpeg',
+      link: 'https://www.pathwaysup.org/'
 
     },
     {
-      image: 'mirehab.png'
+      image: 'mirehab.png',
+      link: 'https://www.michigan.gov/leo/bureaus-agencies/mrs'
 
     },
     {
-      image: 'dsisd.png'
+      image: 'dsisd.png',
+      link: 'https://www.dsisd.net/'
     },
     {
-      image: 'fox-valley-logo.png'
+      image: 'fox-valley-logo.png',
+      link: 'https://www.foxvalleywoodproducts.com/'
     },
     {
-      image: 'Pufahl-Pallet-Logo.png'
+      image: 'Pufahl-Pallet-Logo.png',
+      link: 'https://pufahlpallet.com/'
     },
 
     {
-      image: 'chamber.png'
+      image: 'chamber.png',
+      link: 'https://deltami.org/'
     },
     {
-      image: 'rrn.png'
+      image: 'rrn.png',
+      link: 'https://www.radioresultsnetwork.com/'
     },
 
   ]
@@ -50,7 +59,9 @@ export default function HomeSix() {
       <div className="grid lg:grid-cols-7 mx-12 gap-12 my-8">
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center">
-            <img src={logo.image} width="200px" height="200px" alt={`Partner logo ${index + 1}`} />
+            <Link href={logo.link}>
+              <img src={logo.image} width="200px" height="200px" alt={`Partner logo ${index + 1}`} />
+            </Link>
           </div>
         ))}
       </div>

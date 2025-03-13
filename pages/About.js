@@ -55,12 +55,12 @@ const About = () => {
                      button={{ text: 'Donate', url: '/learn-more' }} />
           <ul
             role="list"
-            className="mt-10 flex justify-center gap-x-8 gap-y-3 text-base leading-7  sm:grid-cols-2 mr-6"
+            className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-8 text-base leading-7 max-w-3xl mx-auto px-4"
           >
             {benefits.map((benefit) => (
-              <li key={benefit} className="flex gap-x-3">
-                <CheckCircleIcon className="h-7 w-5 flex-none text-orange-500" aria-hidden="true" />
-                {benefit}
+              <li key={benefit} className="flex gap-x-3 items-center">
+                <CheckCircleIcon className="h-6 w-6 flex-none text-orange-500" aria-hidden="true" />
+                <span>{benefit}</span>
               </li>
             ))}
           </ul>
@@ -68,30 +68,25 @@ const About = () => {
         <div className="bg-lakestate-blue w-full h-6"></div>
         <div className="py-12 px-4">
           <h6 className="text-xl md:text-2xl font-bold text-center mb-8">Helpful Forms</h6>
-          <div className="mx-auto grid w-full max-w-xl sm:grid-cols-3 items-center gap-6">
+          <div className="mx-auto grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <button
-              className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Pathways Community Mental Health
             </button>
             <button
-              className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue ">
-              {' '}
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Michigan Rehabilitation Services (MRS)
             </button>
             <button
-              className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-8 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
-              {' '}
-              Respite <br />
-              Form
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
+              Respite Form
             </button>
             <button
-              className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue">
-              {' '}
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Hiawatha Respite Form
             </button>
             <button
-              className="max-h-52 w-full object-contain object-left rounded-md bg-orange-500  px-2 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue ">
-              {' '}
+              className="w-full rounded-md bg-orange-500 px-4 py-6 text-lg font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue transition-colors">
               Employment Application
             </button>
           </div>

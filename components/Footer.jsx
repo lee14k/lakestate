@@ -67,18 +67,22 @@ export default function Footer() {
           </div>
 
           <div className="flex lg:flex-row flex-col justify-center items-center gap-6">
+            <Link href='https://www.carf.org/'>
             <Image
               src="/carf.png"
               alt="CARF Accredited"
               width={100}
               height={100}
             />
+            </Link>
+            <Link href='https://incompassmi.org/'>
             <Image
               src="/incompass.png"
               alt="Incompass Michigan Member"
               width={100}
               height={100}
             />
+            </Link>
             {navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">{item.name}</span>
