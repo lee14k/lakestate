@@ -51,7 +51,7 @@ const About = () => {
         <div className="py-8 flex flex-col items-center">
           <HomeThree 
             header="Help Our Cause"
-            bodyText="100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. Lakestate Industries wants to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future."
+            bodyText="100% of your generous donation goes directly to help individuals with disabilities become independent, productive members in our community. We want to ensure they will be able to provide vocational services for individuals with barriers to employment long into the future."
             photoURL="/3011-thumb-up.jpg"
             reverse={true} 
             color="#e87b35"

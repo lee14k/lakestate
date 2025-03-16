@@ -14,7 +14,7 @@ const HireUs = () => {
           <PageHeader header="Hire Us" />
         </div>
         <div className="py-8">
-          <HomeThree header="Document Destruction" bodyText="We secure and confidentially dispose of sensitive information by shredding your documents with industrial-grade shredding equipment into unreadable fragments. For over 25 years, we have been providing document destruction services to area medical facilities, financial institutions, law firms, accounting firms, area businesses, as well as individuals with personal documents. Price: Drop off at our Escanaba or Marquette location $.35 per pound. We pick up at your business $.40 per pound ($25 minimum)" photoURL="shreds.jpg" reverse={true}
+          <HomeThree header="Document Destruction" bodyText="We secure and confidentially dispose of sensitive information by shredding your documents with industrial-grade shredding equipment into unreadable fragments. For over 25 years, we have been providing document destruction services to area medical facilities, financial institutions, law firms, accounting firms, area businesses, as well as individuals with personal documents. We are happy to accommodate your needs with our flexible service options. Whether you prefer to drop off or require pickup, we’ve got you covered! Please call us for pricing and more details" photoURL="shreds.jpg" reverse={true}
                      color="#1c468a" />
         </div>
         <div className="py-8">
