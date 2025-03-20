@@ -76,7 +76,7 @@ function Product({ product }) {
   }).format(Number(product.price) || 0)
 
   return (
-    <div className="flex flex-col items-center justify-between p-4 border border-gray-300 m-4 w-80 h-[30rem] shadow-lg rounded-lg">
+    <div className="flex flex-col items-center justify-between p-4 border border-lakestate-light-blue m-4 w-80 h-[30rem] shadow-lg rounded-lg">
       <Link href={`/product/${product.slug}`} className="w-full h-72 relative">
         <Image
           className="object-cover w-full h-full rounded-lg"

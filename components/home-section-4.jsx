@@ -2,16 +2,16 @@ import Link from 'next/link'
 export default function HomeFour() {
   const products = [
     {
-      image: 'Board-0392.jpg'
+      image: 'CuttingBoards1.jpg'
     },
     {
-      image: 'Firestarter-0419.png'
+      image: 'Firestarters1.jpg'
     },
     {
-      image: 'Medal.jpg'
+      image: 'Medallions1.jpg'
     },
     {
-      image: 'Box.jpg'
+      image: 'CratesWebsite2.jpg'
     }
   ]
   return (
@@ -38,11 +38,13 @@ export default function HomeFour() {
       <div className="flex justify-center items-center mt-4">
         <div className="grid lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
-            <div key={index} className="flex justify-center items-center w-64 h-64 border-lakestate-light-blue border-2">
+            <div key={index} className="w-72 h-72 border-lakestate-light-blue border-2 ">
               <img
                 src={product.image}
-                className="max-w-full max-h-full object-contain"
+                className="w-full h-full object-cover "
                 alt={`Product ${index + 1}`}
+                style={{ display: 'block', margin: 0, padding: 0, objectPosition: 'center bottom'
+                }}
               />
             </div>
           ))}
