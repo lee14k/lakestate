@@ -1,8 +1,8 @@
 import Client from 'shopify-buy';
 
 const client = Client.buildClient({
-  domain: 'lakestateindustriestest.myshopify.com',
-  storefrontAccessToken:'cae70742efae00db55b2c8056c70eea5'
+  domain: 'lakestate-industries.myshopify.com',
+  storefrontAccessToken:'1c50d36bcb3a7b21d6cae925dc193b1c'
 });
 
 export const createCheckout = async (cartItems) => {
