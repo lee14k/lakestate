@@ -12,7 +12,7 @@ export const createCheckout = async (cartItems) => {
     
         // Map cart items to line items with quantities
         const lineItemsToAdd = cartItems.map(item => ({
-          variantId: item.variants[0].id,
+          variantId: item.variant?.id || item.variants?.[0]?.id, // Use selected variant ID, fallback to first variant if needed
           quantity: item.quantity || 1 // Use the quantity from the cart item or default to 1
         }));
     
