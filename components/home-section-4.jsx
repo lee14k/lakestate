@@ -50,7 +50,7 @@ export default function HomeFour() {
           ))}
         </div>
       </div>
-      <Link href="/Shop">
+      <Link href="https://shop.lakestateindustries.org/" target="_blank">
         <button
           className="rounded-md bg-lakestate-blue px-12 py-6 text-xl font-semibold text-white shadow-sm hover:bg-lakestate-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lakestate-blue my-12">Shop
           now
