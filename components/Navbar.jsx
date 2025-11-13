@@ -11,7 +11,7 @@ export default function Navbar() {
   const [navigation, setNavigation] = useState([
     { name: 'Home', href: '/', current: false },
     { name: 'About', href: '/About', current: false },
-    { name: 'Store', href: '/Shop', current: false },
+    { name: 'Store', href: 'https://shop.lakestateindustries.org/', current: false },
     { name: 'Hire Us', href: '/HireUs', current: false },
     {
       name: 'Our Services',
